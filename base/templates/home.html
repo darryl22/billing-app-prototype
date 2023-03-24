@@ -1,0 +1,52 @@
+{% extends 'main.html' %}
+
+{% block content %}
+{% load static %}
+<div class="gradient d-flex align-items-center">
+    <div class="container">
+        <div class="row text-light align-items-center"> 
+            <div class="col pe-3">
+                <p class="fs-2 fw-bold">Streamlining utility management</p>
+                <p>Easily track you utility usage and get analytics of past expenses, pay for your expenses in one place</p>
+                <div class="row">
+                    <button class="btn btn-outline-light rounded-pill col-3 m-4 fw-bold">dashboard</button>
+                    <button class="btn btn-light rounded-pill col-3 m-4 fw-bold">signup</button>
+                </div>
+            </div>
+            <div class="dash-img col rounded-3">
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <h1 class="text-center my-5">How does it work?</h1>
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col d-flex flex-column align-items-center">
+                <h1>1</h1>
+                <div class="border border-dark rounded-circle p-4"><img src="{% static 'images/power-meter.png' %}" alt="logo" class="landing-logo"></div>
+                <p class="text-center mt-3">dial in your meter readings</p>
+            </div>
+
+            <div class="col d-flex flex-column align-items-center">
+                <h1>2</h1>
+                <div class="border border-dark rounded-circle p-4"><img src="{% static 'images/monitor.png' %}" alt="logo" class="landing-logo"></div>
+                <p class="text-center mt-3">Track your usage</p>
+            </div>
+
+            <div class="col d-flex flex-column align-items-center">
+                <h1>3</h1>
+                <div class="border border-dark rounded-circle p-4"><img src="{% static 'images/transaction.png' %}" alt="logo" class="landing-logo"></div>
+                <p class="text-center mt-3">Make payment to your provider easily</p>
+            </div>
+
+            <div class="col d-flex flex-column align-items-center">
+                <h1>4</h1>
+                <div class="border border-dark rounded-circle p-4"><img src="{% static 'images/invoice.png' %}" alt="logo" class="landing-logo"></div>
+                <p class="text-center mt-3">Get an invoice of your transaction</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

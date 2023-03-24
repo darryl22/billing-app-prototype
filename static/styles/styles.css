@@ -1,0 +1,20 @@
+.gradient{
+    background-image: url('../images/gradientbackground.jpg');
+    height: 500px;
+    background-size: cover;
+}
+
+.dash-img{
+    background-image: url('../images/watermeter.jpg');
+    background-size: cover;
+    height: 350px;
+}
+
+.login-img{
+    background-image: url('../images/gradientbackground.jpg');
+    background-size: cover;
+}
+
+.landing-logo{
+    width: 50px;
+}
