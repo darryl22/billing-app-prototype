@@ -1,13 +1,13 @@
 .gradient{
     background-image: url('../images/gradientbackground.jpg');
-    height: 500px;
+    height: 600px;
     background-size: cover;
 }
 
 .dash-img{
     background-image: url('../images/watermeter.jpg');
     background-size: cover;
-    height: 350px;
+    height: 400px;
 }
 
 .login-img{

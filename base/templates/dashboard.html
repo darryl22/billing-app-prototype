@@ -1,0 +1,36 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<h1 class="ms-3">Dashboard</h1>
+
+<div class="ms-3 container mt-4">
+    <div class="row gap-4">
+        <div class="col bg-primary text-light p-3 rounded-3">
+            <h3>Water</h3>
+            <p>Last reading: 123L</p>
+            <a href="#" class="btn btn-dark">update</a>
+            <a href="#" class="btn btn-dark">expand</a>
+        </div>
+        <div class="col bg-primary text-light p-3 rounded-3">
+            <h3>Electricity</h3>
+            <p>Last reading: 56Kwh</p>
+            <a href="#" class="btn btn-dark">update</a>
+            <a href="#" class="btn btn-dark">expand</a>
+        </div>
+        <div class="col bg-primary text-light p-3 rounded-3">
+            <h3>Gas</h3>
+            <p>Last reading: 10ccf</p>
+            <a href="#" class="btn btn-dark">update</a>
+            <a href="#" class="btn btn-dark">expand</a>
+        </div>
+        <div class="col bg-primary text-light p-3 rounded-3">
+            <h3>Other</h3>
+            <p>Last reading: 123L</p>
+            <a href="#" class="btn btn-dark">update</a>
+            <a href="#" class="btn btn-dark">expand</a>
+        </div>
+    </div>
+</div>
+<button class="btn btn-outline-primary m-3">Add Utility</button>
+{% endblock %}
