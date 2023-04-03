@@ -1,0 +1,11 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<h1 class="ms-3">{{utility}}</h1>
+
+<h3 class="ms-3">Usage from the last 5 readings</h3>
+<div style="width: 90%;">
+    {{line | safe}}
+</div>
+{% endblock %}

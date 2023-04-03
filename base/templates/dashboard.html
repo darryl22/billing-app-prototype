@@ -6,31 +6,115 @@
 
 <div class="ms-3 container mt-4">
     <div class="row gap-4">
-        <div class="col bg-primary text-light p-3 rounded-3">
+        <div class="col-3 bg-primary text-light p-3 rounded-3">
             <h3>Water</h3>
             <p>Last reading: 123L</p>
-            <a href="#" class="btn btn-dark">update</a>
-            <a href="#" class="btn btn-dark">expand</a>
+            <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#waterModal">update</button>
+            <a href="{% url 'utilityDetails' 'Water' %}" class="btn btn-dark">expand</a>
         </div>
-        <div class="col bg-primary text-light p-3 rounded-3">
+        <div class="modal fade" id="waterModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Update Water</h2>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <input type="number" class="form-control mb-3">
+                            <button class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-3 bg-primary text-light p-3 rounded-3">
             <h3>Electricity</h3>
             <p>Last reading: 56Kwh</p>
-            <a href="#" class="btn btn-dark">update</a>
-            <a href="#" class="btn btn-dark">expand</a>
+            <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#electricityModal">update</button>
+            <a href="{% url 'utilityDetails' 'Electricity' %}" class="btn btn-dark">expand</a>
         </div>
-        <div class="col bg-primary text-light p-3 rounded-3">
+        <div class="modal fade" id="electricityModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Update Electricity</h2>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <input type="number" class="form-control mb-3">
+                            <button class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-3 bg-primary text-light p-3 rounded-3">
             <h3>Gas</h3>
             <p>Last reading: 10ccf</p>
-            <a href="#" class="btn btn-dark">update</a>
-            <a href="#" class="btn btn-dark">expand</a>
+            <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#gasModal">update</button>
+            <a href="{% url 'utilityDetails' 'Gas' %}" class="btn btn-dark">expand</a>
         </div>
-        <div class="col bg-primary text-light p-3 rounded-3">
+        <div class="modal fade" id="gasModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Update Gas</h2>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <input type="number" class="form-control mb-3">
+                            <button class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-3 bg-primary text-light p-3 rounded-3">
             <h3>Other</h3>
             <p>Last reading: 123L</p>
-            <a href="#" class="btn btn-dark">update</a>
+            <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#otherModal">update</button>
             <a href="#" class="btn btn-dark">expand</a>
+        </div>
+        <div class="modal fade" id="otherModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Update Other</h2>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <input type="number" class="form-control mb-3">
+                            <button class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-<button class="btn btn-outline-primary m-3">Add Utility</button>
+<button class="btn btn-outline-primary m-3" data-bs-toggle="modal" data-bs-target="#createUtility">Add Utility</button>
+<div class="modal fade" id="createUtility">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Create Utility</h2>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <input type="text" class="form-control mb-3" placeholder="name">
+                    <input type="text" class="form-control mb-3" placeholder="provider">
+                    <button class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
