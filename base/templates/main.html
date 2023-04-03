@@ -5,12 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BILLING APP - {{HOME}}</title>
     <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
-    {% load django_bootstrap5 %}
-    {% bootstrap_css %}
-    {% bootstrap_javascript %}
-</head>
+    <link rel="stylesheet" href="..\..\static\plugin\bootstrap-5.2.3-dist\bootstrap-5.2.3-dist\css\bootstrap.min.css">
+</head> 
 <body class="bg-light">
     <div class="navbar navbar-expand navbar-dark bg-dark">
         <div class="container">
@@ -25,5 +23,6 @@
     {% block content %}
 
     {% endblock %}
+    <script src="..\..\static\plugin\bootstrap-5.2.3-dist\bootstrap-5.2.3-dist\js\bootstrap.bundle.min.js" ></script>
 </body>
 </html>
