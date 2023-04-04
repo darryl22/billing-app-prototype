@@ -17,16 +17,15 @@ def loginUser(request):
 
         try:
             user = User.objects.get(username = username)
+            if user is not None:
+                login(request, user)
+                return redirect("dashboard")
+            else:
+                messages.error(request, "invalid login credentials")
         except:
             messages.error(request, "user not found")
         
         user = authenticate(request, username = username, password = password)
-
-        if user is not None:
-            login(request, user)
-            return redirect("dashboard")
-        else:
-            messages.error(request, "invalid login credentials")
 
     return render(request, 'login.html')
 
