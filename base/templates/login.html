@@ -2,6 +2,13 @@
 
 {% block content %}
 
+{% for message in messages %}
+<div class="alert m-3 alert-danger alert-dismissible fade show" role="alert">
+    <strong>{{message.tags}}</strong> {{message}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+
 <div class="container rounded-4 mt-5 shadow" style="overflow: hidden;">
     <div class="row" style="height: 70vh;">
         <div class="login-img col-7 d-flex flex-column justify-content-center align-items-center">
@@ -9,11 +16,14 @@
             <a href="/signup/" class="text-light">sign up</a>
         </div>
         <div class="col d-flex justify-content-center align-items-center" style="background-color: white;">
-            <form action="" class="my-5 col-8">
+            <form action="{% url 'login' %}" method="post" class="my-5 col-8">
+                {% csrf_token %}
                 <label for="" class="form-label">Usename</label>
-                <input type="text" class="form-control mb-3">
+                <input type="text" name="username" class="form-control mb-3" required>
+
                 <label for="password">Password</label>
-                <input type="password" name="password" class="form-control mb-4">
+                <input type="password" name="password" class="form-control mb-4" required>
+
                 <input type="submit" value="Login" class="btn btn-primary col-4">
             </form>
         </div>

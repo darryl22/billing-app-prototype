@@ -4,6 +4,7 @@ from django.db import models
 
 class Utility(models.Model):
     name = models.CharField(max_length=30)
+    unit = models.CharField(max_length=10, null=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 

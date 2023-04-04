@@ -2,25 +2,33 @@
 
 {% block content %}
 
+{% for message in messages %}
+<div class="alert m-3 alert-danger alert-dismissible fade show" role="alert">
+    <strong>{{message.tags}}</strong> {{message}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+
 <div class="container rounded-4 mt-5 shadow" style="overflow: hidden;">
     <div class="row" style="height: 70vh;">
         <div class="login-img col-7 d-flex flex-column justify-content-center align-items-center">
             <h1 class="text-light">Already have an account?</h1>
-            <a href="#" class="text-light">Login</a>
+            <a href="/login/" class="text-light">Login</a>
         </div>
         <div class="col d-flex justify-content-center align-items-center" style="background-color: white;">
-            <form action="" class="my-5 col-8">
-                <label for="" class="form-label">Username</label>
-                <input type="text" class="form-control mb-3">
+            <form action="{% url 'signup' %}" method="post" class="my-5 col-8">
+                {% csrf_token %}
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control mb-3" name="username" required>
 
                 <label for="email" class="form-label">Email</label>
-                <input type="email" name="email" class="form-control mb-3">
+                <input type="email" name="email" class="form-control mb-3" required>
 
                 <label for="password" class="form-label">Password</label>
-                <input type="password" name="password" class="form-control mb-4">
+                <input type="password" name="password" class="form-control mb-4" required>
 
                 <label for="confirm-password" class="form-label">Confirm password</label>
-                <input type="password" name="confirm-password" class="form-control mb-4">
+                <input type="password" name="confirm-password" class="form-control mb-4" required>
 
                 <input type="submit" value="Signup" class="btn btn-primary col-4">
             </form>
