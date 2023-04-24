@@ -5,6 +5,8 @@ name = "pypi"
 
 [packages]
 django = "*"
+pandas = "*"
+plotly = "==5.14.1"
 
 [dev-packages]
 

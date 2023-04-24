@@ -50,13 +50,26 @@ def logoutUser(request):
     return redirect('main')
 
 def dashboard(request):
+    ctx = []
+    if request.user.is_authenticated:
+        utility = Utility.objects.filter(user = request.user)
+        for x in utility:
+            ctx.append(x)
     
-    return render(request, 'dashboard.html')
+    if request.method == "POST":
+        reading = request.POST.get("reading")
+        utilId = request.POST.get("utility")
+        util = Utility.objects.get(id = utilId)
+        print(reading, utility)
+        r = Reading(utility = util, reading = reading)
+        r.save()
+    
+    return render(request, 'dashboard.html', {"data": ctx, "length": len(ctx)})
 
 def UtilityDetails(request, pk):
     data = []
     labels = []
-    utility = Utility.objects.get(name = pk)
+    utility = Utility.objects.filter(user = request.user).get(name = pk)
     readings = Reading.objects.filter(utility = utility)
     for x in readings:
         data.append(x.reading)
@@ -82,7 +95,7 @@ def UtilityDetails(request, pk):
 
     ctx = {
         "utility": utility,
-        "redings": readings,
+        "readings": readings,
         "line": line,
         "unit": unit
     }

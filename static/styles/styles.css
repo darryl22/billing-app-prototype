@@ -18,3 +18,15 @@
 .landing-logo{
     width: 50px;
 }
+
+.signature-canvas{
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: url('../images/pen-tool.png'), pointer;
+}
+
+@media (pointer: coarse){
+    body{
+        overflow: hidden;
+    }
+}
