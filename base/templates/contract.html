@@ -1,0 +1,210 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<style>
+    @media print{
+        .notprintable{
+            display: none;
+        }
+    }
+</style>
+
+<div class="p-4">
+    <h1 class="mb-5">BOREHOLE WATER SUPPLY AGREEMENT</h1>
+    <hr>
+    <p>This agreement is made this 4th day of November 2021 between;</p>
+    <ol type="A">
+        <li>Bico Noriss Hamalah of P.O Box 5824-00200, Nairobi (hereinafter referred to as the Supplier.) and;</li>
+        <li>Alex mbatha, National Identity Number – 21768969 of P.O Box 75825, 00200 Nairobi, (hereinafter referred to as the Consumer).</li>
+    </ol>
+
+    <h4>Background</h4>
+    <ol type="A">
+        <li>The Supplier is the owner of a Borehole.</li>
+        <li>The Supplier has agreed to supply the Consumer with piped water for domestic consumption.</li>
+        <li>The parties agree to be bound by the terms and conditions hereinafter appearing.</li>
+    </ol>
+    <h4>Terms and Conditions</h4>
+    <ol type="1">
+        <li>
+            <h4>The Supply</h4>
+            <ol type="i">
+                <li>The Consumer will at his cost terminate a connection pipe to the Supplier’s premises.</li>
+                <li>The Consumer will pay non-refundable connection charge of KSH 20,000.00.</li>
+                <li>The Supplier has installed and connected Consumer’s through Meter No. 2107067 (the Supply Meter).</li>
+                <li>The Supply Meter was connected on 06th day of November 2021 and the Consumer verified the meter reading as 0 units.</li>
+                <li>The Supplier will bill the Consumer on periodic basis against the meter readings (monthly).</li>
+                <li>The Main Outflow pipe from the source will be from a 63mm pipe and distributed at an output supply to the client of between 32mm - 40mm pipe upon approval by the supplier.</li>
+            </ol>
+        </li>
+        <li>
+            <h4>Water Charges</h4>
+            <ol type="i">
+                <li>The cost of water will be KSH 100.00 per Cubic Meter (M3). 1M3 =1,000 liters.</li>
+                <li>The Consumer will not pay a security deposit (the Deposit).</li>
+                <li>The Consumer shall not utilize the deposit payment for billing for any period.</li>
+                <li>The billing will generally be made on monthly basis or on such other convenient periods depending on consumption.</li>
+                <li>It is mutually agreed that any billed charges will be paid on or before the 5th day of the month. Proof of payment must be supported with a receipt.</li>
+            </ol>
+            <p>Payments to be done to:</p>
+            <p>1.<br>
+                Bank Name: Standard Chartered<br>
+                Branch: harambee avenue branch <br>
+                account number: 0100328420500 <br>
+                account name: Bico Noriss Hamalah <br>
+                swift code: SCBLKENXXXX
+            </p>
+            <p>Or</p>
+            <p>2. <br>
+                lipa na mpesa paybill number 329329 <br>
+                and the a/c number is 0100328420500
+            </p>
+            <p>Or</p>
+            <p>3. <br>
+                Sent to mpesa line number 0724856614 <br><br>
+                The payment confirmation/receipt to be sent to bico@kobby.co.ke or 0724856614 for acknowledgement of the same.
+            </p>
+            <ol type="i" start="6">
+                <li>The unit cost of water may be revised from time to time based on the cost of
+                    extraction including power/electricity and other regulatory charges and costs.</li>
+                <li>For any cost variation the Supplier will give one month notice to the Consumer.</li>
+            </ol>
+        </li>
+        <li>
+            <h4>Consumer’s Verification of Consumption</h4>
+            <ol type="i">
+                <li>The Consumer is at liberty to install a check meter to verify his consumption.</li>
+                <li>Either party may request for installation of a check meter at the metering
+                    point. The requesting party will meet the cost of installation of a check meter.</li>
+                <li>If there is any discrepancy between the Supply meter and check meter
+                    readings, the Supplier may replace the Supply Meter.</li>
+                <li>The Supplier will upon request at convenient times allow the Consumer verify meter readings.</li>
+            </ol>
+        </li>
+        <li>
+            <h4>Term and Termination</h4>
+            <ol type="i">
+                <li>This agreement shall continue in force unless otherwise terminated or revised.</li>
+                <li>Either party shall be at liberty to terminate this agreement upon giving three (3) month(s) notice to the other.</li>
+                <li>The Supplier shall be at liberty to disconnect the supply of water to the Consumer if any billed charges will remain not paid on the due date (Disconnection).</li>
+                <li>In case of disconnection, it will be at the discretion of the Supplier to reconnect or terminate this agreement.</li>
+                <li>Upon termination and subject to the Consumer performing all the obligations under this agreement, the Supplier will refund the Deposit.</li>
+            </ol>
+        </li>
+        <li>
+            <h4>Obligations of the Consumer</h4>
+            <ol type="i">
+                <li>To monitor and repair any water leakages after the meter.</li>
+                <li>To pay for billed charges on the due date.</li>
+                <li>To periodically verify all meter readings.</li>
+                <li>To notify the Supplier of any abnormality noticed on the supplied water.</li>
+            </ol>
+        </li>
+        <li>
+            <h4>Obligations of the Supplier</h4>
+            <ol type="i">
+                <li>To ensure that the water supply is not unnecessarily interrupted.</li>
+                <li>To ensure that the extracted water is not contaminated.</li>
+                <li>To be responsible for costs of extraction.</li>
+                <li>To bill the Consumer regularly and in time to meet the payment deadlines.</li>
+            </ol>
+        </li>
+        <li>
+            <h4>General Terms and Conditions</h4>
+            <p>It is mutually understood that extraction of water is dependent on availability of power (KPLC power or solar panels). There may be no supply if there is power interruption.
+                The supply may be interrupted during period of borehole and equipment
+                service.
+                Any dispute arising out of this agreement shall as much as possible be resolved amicably through reconciliation between the parties and failure to which to be resolved before a respectable Arbiters</p>
+        </li>
+    </ol>
+
+    <p>SIGNED by the supplier</p>
+    <p class="fw-bold">Bico Noriss Hamalah</p>
+    <canvas class="signature-canvas" id="suppliersign"></canvas><br>
+    <button class="btn btn-primary notprintable" onclick="clearSupplier()">clear</button>
+
+    <p class="mt-5">SIGNED by the consumer</p>
+    <p class="fw-bold">Alex Mbatha</p>
+    <canvas class="signature-canvas" id="consumersign"></canvas><br>
+    <button class="btn btn-primary notprintable" onclick="clearConsumer()">clear</button>
+
+    <p class="fw-bold">Drawn by:</p>
+    <p>Bico Noriss Hamalah, <br>P.O. Box 5824-00200,</p>
+    <p class="fw-bold">Nairobi.</p>
+    <button class="btn btn-dark notprintable" onclick="window.print()">Save copy</button>
+</div>
+
+<script>
+    const suppliercanvas = document.getElementById("suppliersign")
+    const consumercanvas = document.getElementById("consumersign")
+    const supplierctx = suppliercanvas.getContext("2d")
+    const consumerctx = consumercanvas.getContext("2d")
+    let writingMode = false
+
+    const clearSupplier = () => {
+        supplierctx.clearRect(0, 0, suppliercanvas.width, suppliercanvas.height)
+    }
+
+    const clearConsumer = () => {
+        consumerctx.clearRect(0, 0, consumercanvas.width, consumercanvas.height)
+    }
+
+    const gettargetPosition = (event) => {
+        positionX = event.clientX - event.target.getBoundingClientRect().x
+        positionY = event.clientY - event.target.getBoundingClientRect().y
+
+        return [positionX, positionY]
+    }
+
+    const setPointerUp = () => {
+        writingMode = false
+    }
+
+    const supplierPointerDown = (event) => {
+        writingMode = true
+        supplierctx.beginPath()
+
+        const [positionX, positionY] = gettargetPosition(event)
+        supplierctx.moveTo(positionX, positionY)
+    }
+
+    const consumerPointerDown = (event) => {
+        writingMode = true
+        consumerctx.beginPath()
+
+        const [positionX, positionY] = gettargetPosition(event)
+        consumerctx.moveTo(positionX, positionY)
+    }
+
+    const supplierPointerMove = (event) => {
+        if (!writingMode) return
+        
+        const [positionX, positionY] = gettargetPosition(event)
+        supplierctx.lineTo(positionX, positionY)
+        supplierctx.stroke()
+    }
+
+    const consumerPointerMove = (event) => {
+        if (!writingMode) return
+        
+        const [positionX, positionY] = gettargetPosition(event)
+        consumerctx.lineTo(positionX, positionY)
+        consumerctx.stroke()
+    }
+
+    supplierctx.lineWidth = 3
+    consumerctx.lineWidth = 3
+    supplierctx.lineJoin = supplierctx.lineCap = "round"
+    consumerctx.lineJoin = consumerctx.lineCap = "round"
+
+    suppliercanvas.addEventListener("pointerdown", supplierPointerDown, {passive: true})
+    suppliercanvas.addEventListener("pointerup", setPointerUp, {passive: true})
+    suppliercanvas.addEventListener("pointermove", supplierPointerMove, {passive: true})
+
+    consumercanvas.addEventListener("pointerdown", consumerPointerDown, {passive: true})
+    consumercanvas.addEventListener("pointerup", setPointerUp, {passive: true})
+    consumercanvas.addEventListener("pointermove", consumerPointerMove, {passive: true})
+</script>
+
+{% endblock %}

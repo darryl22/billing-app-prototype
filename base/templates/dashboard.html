@@ -35,87 +35,14 @@
         {% endfor %}
     </div>
 </div>
-<button class="btn btn-outline-primary m-3" data-bs-toggle="modal" data-bs-target="#createUtility">Add Utility</button>
-<div class="modal fade" id="createUtility">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title">Create Utility</h2>
-                <button class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body">
-                <form action="" id="signature-form">
-                    <label>Select Utility</label>
-                    <select class="form-control">
-                        <option value="" disabled>--select--</option>
-                        <option value="Water">Water</option>
-                        <option value="Electricity">Electricity</option>
-                        <option value="Gas">Gas</option>
-                    </select>
 
-                    <p>Sign here</p>
-                    <canvas class="signature-canvas"></canvas><br>
-                    <input type="button" value="clear signature" class="btn btn-dark mb-3" onclick="clearPad()"><br>
-                    <input type="submit" class="btn btn-primary">
-                </form>
-            </div>
-        </div>
-    </div>
+<div class="dropdown m-3">
+    <button class="btn btn-primary dropdown-toggle" type="button" id="utilityDropdown" data-bs-toggle="dropdown" aria-expanded="false">Add Utility</button>
+    <ul class="dropdown-menu" aria-labelledby="utilityDropdown">
+        <li><a href="{% url 'contract' %}" class="dropdown-item">Water</a></li>
+        <li><a href="#Electricity" class="dropdown-item">electricity</a></li>
+        <li><a href="#Gas" class="dropdown-item">Gas</a></li>
+    </ul>
 </div>
-<script>
-    const canvas = document.querySelector("canvas")
-    const form = document.getElementById("signature-form")
-    const ctx = canvas.getContext("2d")
-    let writingMode = false
 
-    form.addEventListener("submit", (event) => {
-        event.preventDefault()
-        const imageURL = canvas.toDataURL()
-        const image = document.createElement('img')
-        image.src = imageURL
-        image.height = canvas.height
-        image.width = canvas.width
-        image.style.display = "block"
-        form.appendChild(image)
-        clearPad()
-    })
-
-    const clearPad = () => {
-        ctx.clearRect(0, 0, canvas.width, canvas.height)
-    }
-
-    const gettargetPosition = (event) => {
-        positionX = event.clientX - event.target.getBoundingClientRect().x
-        positionY = event.clientY - event.target.getBoundingClientRect().y
-
-        return [positionX, positionY]
-    }
-
-    const setPointerUp = () => {
-        writingMode = false
-    }
-
-    const setPointerDown = (event) => {
-        writingMode = true
-        ctx.beginPath()
-
-        const [positionX, positionY] = gettargetPosition(event)
-        ctx.moveTo(positionX, positionY)
-    }
-
-    const setPointerMove = (event) => {
-        if (!writingMode) return
-        
-        const [positionX, positionY] = gettargetPosition(event)
-        ctx.lineTo(positionX, positionY)
-        ctx.stroke()
-    }
-
-    ctx.lineWidth = 3
-    ctx.lineJoin = ctx.lineCap = "round"
-
-    canvas.addEventListener("pointerdown", setPointerDown, {passive: true})
-    canvas.addEventListener("pointerup", setPointerUp, {passive: true})
-    canvas.addEventListener("pointermove", setPointerMove, {passive: true})
-</script>
 {% endblock %}

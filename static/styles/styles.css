@@ -25,14 +25,14 @@
     cursor: url('../images/pen-tool.png'), pointer;
 }
 
+@media screen and (max-width: 375px) {
+    .signature-canvas{
+        width: 100%;
+    }    
+}
+
 @media print {
     .main-nav{
         display: none;
-    }
-}
-
-@media (pointer: coarse){
-    body{
-        overflow: hidden;
     }
 }

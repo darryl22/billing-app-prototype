@@ -36,4 +36,5 @@ class Invoice(models.Model):
     consumptionamount = models.CharField(max_length=20)
     arrears = models.CharField(max_length=20)
     amountpayable = models.CharField(max_length=20)
+    approved = models.BooleanField(default=False)
 

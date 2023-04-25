@@ -103,3 +103,6 @@ def UtilityDetails(request, pk):
 
 def invoice(request):
     return render(request, 'invoice.html')
+
+def contract(request):
+    return render(request, 'contract.html')
