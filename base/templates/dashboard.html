@@ -6,9 +6,6 @@
 
 <div class=" ms-3 container mt-4">
     <div class="row gap-4">
-        {% if length < 1 %}
-        <h3>You are not tracking any utilities</h3>
-        {% else %}
         {% for x in data %}
         <div class="col-3 bg-primary text-light p-3 rounded-3">
             <h3>{{x.name}}</h3>
@@ -36,7 +33,6 @@
             </div>
         </div>
         {% endfor %}
-        {% endif %}
     </div>
 </div>
 <button class="btn btn-outline-primary m-3" data-bs-toggle="modal" data-bs-target="#createUtility">Add Utility</button>
@@ -49,8 +45,14 @@
             </div>
             <div class="modal-body">
                 <form action="" id="signature-form">
-                    <input type="text" class="form-control mb-3" placeholder="name">
-                    <input type="text" class="form-control mb-3" placeholder="provider">
+                    <label>Select Utility</label>
+                    <select class="form-control">
+                        <option value="" disabled>--select--</option>
+                        <option value="Water">Water</option>
+                        <option value="Electricity">Electricity</option>
+                        <option value="Gas">Gas</option>
+                    </select>
+
                     <p>Sign here</p>
                     <canvas class="signature-canvas"></canvas><br>
                     <input type="button" value="clear signature" class="btn btn-dark mb-3" onclick="clearPad()"><br>
@@ -85,8 +87,6 @@
     const gettargetPosition = (event) => {
         positionX = event.clientX - event.target.getBoundingClientRect().x
         positionY = event.clientY - event.target.getBoundingClientRect().y
-        // positionX = event.clientX
-        // positionY = event.clientY
 
         return [positionX, positionY]
     }

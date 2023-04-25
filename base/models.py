@@ -21,3 +21,11 @@ class Reading(models.Model):
 
     def __str__(self):
         return str(self.reading)
+
+class Invoice(models.Model):
+    user = models.CharField(max_length=30)
+    address = models.CharField(max_length=30)
+    phone = models.CharField(max_length=20)
+    receiver = models.CharField(max_length=30)
+    receiverAddress = models.CharField(max_length=30)
+    billingmonth = models.CharField(max_length=30)

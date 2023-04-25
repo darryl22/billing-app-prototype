@@ -25,6 +25,12 @@
     cursor: url('../images/pen-tool.png'), pointer;
 }
 
+@media print {
+    .main-nav{
+        display: none;
+    }
+}
+
 @media (pointer: coarse){
     body{
         overflow: hidden;

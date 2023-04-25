@@ -1,0 +1,93 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="p-5">
+    <div class="d-flex flex-column align-items-end">
+        <h3>BICO HAMALAH</h3>
+        <h4>P.O. BOX 5824-00200</h4>
+        <h4>Nairobi-Kenya</h4>
+        <h4>+254 724 856 614</h4>
+    </div>
+    <hr>
+    <h1 style="background-color: rgb(198, 198, 198);" class="mb-4">INVOICE</h1>
+    <div class="d-flex justify-content-between">
+        <div>
+            <p class="mb-4">To:</p>
+            <p class="mb-4">Client Name: Alex Mbatha</p>
+            <p class="mb-4">Address: 75825 - 00200 Nairobi</p>
+            <hr>
+        </div>
+        <table class="table table-bordered w-50">
+            <tr>
+                <td>Date:</td>
+                <td>01st May 2022</td>
+            </tr>
+            <tr>
+                <td>Invoice No:</td>
+                <td>1000017</td>
+            </tr>
+            <tr>
+                <td>Customer ID:</td>
+                <td>003</td>
+            </tr>
+        </table>
+    </div>
+    <hr class="my-5" style="background-color: rgb(31, 31, 31); height: 4px;">
+    <table class="table table-bordered">
+        <tr>
+            <td>Billing Month</td>
+            <td>April</td>
+        </tr>
+        <tr>
+            <td>Previous Reading</td>
+            <td>117</td>
+        </tr>
+        <tr>
+            <td>Current Reading</td>
+            <td>151</td>
+        </tr>
+        <tr>
+            <td>Units Consumed</td>
+            <td>34</td>
+        </tr>
+        <tr>
+            <td>Consumer Rate</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>Total</td>
+            <td>KES</td>
+        </tr>
+        <tr>
+            <td>Consumption Amount</td>
+            <td>3400</td>
+        </tr>
+        <tr>
+            <td>Arrears</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Amount Payable</td>
+            <td>3400</td>
+        </tr>
+    </table>
+    
+    <div class="mt-5 border border-dark">
+        <p style="background-color: rgb(173, 114, 48);">Special Notes and Instructions</p>
+        <div class="p-3">
+            <p class="my-3">Payment due by 5th of every month</p>
+            <p class="fw-bold">Payment Details:</p>
+            <p>MPESA: Send money to 0724856614</p>
+            <p>Or</p>
+            <p>Lipa na Mpesa paybill number 329329</p>
+            <p>and the a/c number is 0100328420500</p>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

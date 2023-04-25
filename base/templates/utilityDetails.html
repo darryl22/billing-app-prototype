@@ -5,7 +5,7 @@
 <h1 class="ms-3">{{utility}}</h1>
 
 <h3 class="ms-3">Usage history</h3>
-<button class="btn btn-primary m-3" id="invoiceButton">get invoice</button>
+<a href="{% url 'invoice' %}" class="btn btn-primary m-3">get invoice</a>
 <div style="width: 90%;">
     {{line | safe}}
 </div>
@@ -32,14 +32,14 @@
 </div>
 
 <script>
-    const invoiceButton = document.getElementById("invoiceButton")
-    const content = document.getElementById("invoice")
-    invoiceButton.addEventListener("click", () => {
-        let invWindow = window.open("", "PRINT")
-        invWindow.document.write(content.innerHTML)
-        invWindow.document.close()
-        invWindow.focus()
-        invWindow.print()
-    })
+    // const invoiceButton = document.getElementById("invoiceButton")
+    // const content = document.getElementById("invoice")
+    // invoiceButton.addEventListener("click", () => {
+    //     let invWindow = window.open("", "PRINT")
+    //     invWindow.document.write(content.innerHTML)
+    //     invWindow.document.close()
+    //     invWindow.focus()
+    //     invWindow.print()
+    // })
 </script>
 {% endblock %}
