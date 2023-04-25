@@ -29,3 +29,11 @@ class Invoice(models.Model):
     receiver = models.CharField(max_length=30)
     receiverAddress = models.CharField(max_length=30)
     billingmonth = models.CharField(max_length=30)
+    previousreading = models.CharField(max_length=20)
+    currentreading = models.CharField(max_length=20)
+    consumed = models.CharField(max_length=20)
+    rate = models.CharField(max_length=20)
+    consumptionamount = models.CharField(max_length=20)
+    arrears = models.CharField(max_length=20)
+    amountpayable = models.CharField(max_length=20)
+
