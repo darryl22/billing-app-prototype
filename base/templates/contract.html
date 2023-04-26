@@ -125,7 +125,7 @@
     <button class="btn btn-primary notprintable" onclick="clearSupplier()">clear</button>
 
     <p class="mt-5">SIGNED by the consumer</p>
-    <p class="fw-bold">Alex Mbatha</p>
+    <p class="fw-bold">{{request.user}}</p>
     <canvas class="signature-canvas" id="consumersign"></canvas><br>
     <button class="btn btn-primary notprintable" onclick="clearConsumer()">clear</button>
 
