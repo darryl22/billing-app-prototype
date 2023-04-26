@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect
-from .models import Utility, Reading
+from .models import Utility, Reading, Profile
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 import plotly.express as px
+import datetime
 
 # Create your views here.
 
@@ -35,10 +36,16 @@ def signup(request):
         email = request.POST.get("email")
         password = request.POST.get("password")
         confirmpassword = request.POST.get("confirm-password")
+        phone = request.POST.get("phone")
+        address = request.POST.get("address")
+        nationalID = request.POST.get("nationalID")
+        usertype = request.POST.get("usertype")
 
         if password == confirmpassword:
             user = User.objects.create_user(username, email, password)
             user.save()
+            profile = Profile(user = user, name = user.username, usertype = usertype, nationalID = nationalID, address = address, phone = phone)
+            profile.save()
             login(request, user)
             return redirect("dashboard")
         else:
@@ -110,11 +117,19 @@ def invoice(request, pk):
         data.append(x.reading)
         labels.append(x.created)
     print(data)
+    consumed = data[-1] - data[-2]
+    consumedAmount = consumed * 100
+    month = datetime.datetime.now()
+
     ctx = {
         "utility": utility,
         "current": data[-1],
         "previous": data[-2],
-        "consumed": (data[-1] - data[-2])
+        "consumed": consumed,
+        "consumedAmount": consumedAmount,
+        "month": month.strftime("%B"),
+        "day": month.strftime("%d"),
+        "year": month.strftime("%Y")
     }
     return render(request, 'invoice.html', ctx)
 
