@@ -101,8 +101,22 @@ def UtilityDetails(request, pk):
     }
     return render(request, 'utilityDetails.html', ctx)
 
-def invoice(request):
-    return render(request, 'invoice.html')
+def invoice(request, pk):
+    data = []
+    labels = []
+    utility = Utility.objects.filter(user = request.user).get(name = pk)
+    readings = Reading.objects.filter(utility = utility)
+    for x in readings:
+        data.append(x.reading)
+        labels.append(x.created)
+    print(data)
+    ctx = {
+        "utility": utility,
+        "current": data[-1],
+        "previous": data[-2],
+        "consumed": (data[-1] - data[-2])
+    }
+    return render(request, 'invoice.html', ctx)
 
 def contract(request):
     return render(request, 'contract.html')

@@ -5,7 +5,7 @@
 <h1 class="ms-3">{{utility}}</h1>
 
 <h3 class="ms-3">Usage history</h3>
-<a href="{% url 'invoice' %}" class="btn btn-primary m-3">get invoice</a>
+<a href="{% url 'invoice' utility %}" class="btn btn-primary m-3">get invoice</a>
 <div style="width: 90%;">
     {{line | safe}}
 </div>
