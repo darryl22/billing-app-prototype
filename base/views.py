@@ -83,6 +83,8 @@ def UtilityDetails(request, pk):
         labels.append(x.created)
     
     unit = utility.unit
+    if len(data) < 2:
+        return redirect("dashboard")
 
     fig = px.line(
         x = labels,
@@ -111,15 +113,15 @@ def UtilityDetails(request, pk):
 def invoice(request, pk):
     data = []
     labels = []
+    profile = Profile.objects.get(name = request.user)
     utility = Utility.objects.filter(user = request.user).get(name = pk)
     readings = Reading.objects.filter(utility = utility)
     for x in readings:
         data.append(x.reading)
         labels.append(x.created)
-    print(data)
     consumed = data[-1] - data[-2]
     consumedAmount = consumed * 100
-    month = datetime.datetime.now()
+    day = datetime.datetime.now()
 
     ctx = {
         "utility": utility,
@@ -127,11 +129,21 @@ def invoice(request, pk):
         "previous": data[-2],
         "consumed": consumed,
         "consumedAmount": consumedAmount,
-        "month": month.strftime("%B"),
-        "day": month.strftime("%d"),
-        "year": month.strftime("%Y")
+        "month": day.strftime("%B"),
+        "day": day.strftime("%d"),
+        "year": day.strftime("%Y"),
+        "profile": profile
     }
     return render(request, 'invoice.html', ctx)
 
 def contract(request):
-    return render(request, 'contract.html')
+    profile = Profile.objects.get(name = request.user)
+    day = datetime.datetime.now()
+    ctx = {
+        "profile": profile,
+        "day": day.strftime("%d"),
+        "month": day.strftime("%B"),
+        "year": day.strftime("%Y")
+    }
+
+    return render(request, 'contract.html', ctx)

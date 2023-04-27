@@ -13,10 +13,10 @@
 <div class="p-4">
     <h1 class="mb-5">BOREHOLE WATER SUPPLY AGREEMENT</h1>
     <hr>
-    <p>This agreement is made this 4th day of November 2021 between;</p>
+    <p>This agreement is made this day {{day}} {{month}} {{year}} between;</p>
     <ol type="A">
         <li>Bico Noriss Hamalah of P.O Box 5824-00200, Nairobi (hereinafter referred to as the Supplier.) and;</li>
-        <li>Alex mbatha, National Identity Number – 21768969 of P.O Box 75825, 00200 Nairobi, (hereinafter referred to as the Consumer).</li>
+        <li>{{request.user}}, National Identity Number – {{profile.nationalID}} of P.O Box {{profile.address}} Nairobi, (hereinafter referred to as the Consumer).</li>
     </ol>
 
     <h4>Background</h4>
@@ -133,6 +133,11 @@
     <p>Bico Noriss Hamalah, <br>P.O. Box 5824-00200,</p>
     <p class="fw-bold">Nairobi.</p>
     <button class="btn btn-dark notprintable" onclick="window.print()">Save copy</button>
+    <form action="" method="post">
+        <input type="file">
+        <input type="file">
+    </form>
+    <button onclick="saveImage()">Confirm</button>
 </div>
 
 <script>
@@ -141,6 +146,13 @@
     const supplierctx = suppliercanvas.getContext("2d")
     const consumerctx = consumercanvas.getContext("2d")
     let writingMode = false
+
+    const saveImage = () => {
+        imageone = suppliercanvas.toDataURL()
+        imagetwo = consumercanvas.toDataURL()
+        console.log(imageone)
+        console.log(imagetwo)
+    }
 
     const clearSupplier = () => {
         supplierctx.clearRect(0, 0, suppliercanvas.width, suppliercanvas.height)
