@@ -22,7 +22,7 @@
     <div class="d-flex justify-content-between flex-column flex-md-row">
         <div>
             <p class="mb-4">To:</p>
-            <p class="mb-4">Client Name: {{request.user}}</p>
+            <p class="mb-4">Client Name: {{request.user.first_name}} {{request.user.last_name}}</p>
             <p class="mb-4">Address: {{profile.address}} Nairobi</p>
             <hr>
         </div>
@@ -37,7 +37,7 @@
             </tr>
             <tr>
                 <td>Customer ID:</td>
-                <td>003</td>
+                <td>{{request.user.id}}</td>
             </tr>
         </table>
     </div>
@@ -61,7 +61,7 @@
         </tr>
         <tr>
             <td>Consumer Rate</td>
-            <td>100</td>
+            <td>{{utility.rate}}</td>
         </tr>
         <tr>
             <td>Total</td>

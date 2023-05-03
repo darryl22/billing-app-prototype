@@ -1,0 +1,39 @@
+{% extends 'main.html' %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles/profile.css' %}">
+
+<div class="profile-banner">
+    <div class="circle">
+        <img src="{% static 'images/avatar.svg'%}" alt="profile picture" class="profile-picture">
+        <!-- <button class="change-picture btn btn-primary rounded-circle" data-bs-toggle="modal" data-bs-target="#imageModal">+</button> -->
+    </div>
+    <button class="change-picture btn btn-primary rounded-circle" data-bs-toggle="modal" data-bs-target="#imageModal">+</button>
+    <div class="modal fade" id="imageModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Change profile image</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="form">
+                        <input type="file" class="form-control mb-3">
+                        <input type="submit" class="btn btn-primary">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="profile-info d-flex flex-column align-items-center">
+    <h2>General</h2>
+    <p>username: {{user.username}}</p>
+    <p>first name: {{user.first_name}}</p>
+    <p>last name: {{user.last_name}}</p>
+    <p>email: {{user.email}}</p>
+    <p>date joined: {{user.date_joined}}</p>
+</div>
+{% endblock %}

@@ -16,7 +16,7 @@
     <p>This agreement is made this day {{day}} {{month}} {{year}} between;</p>
     <ol type="A">
         <li>Bico Noriss Hamalah of P.O Box 5824-00200, Nairobi (hereinafter referred to as the Supplier.) and;</li>
-        <li>{{request.user}}, National Identity Number – {{profile.nationalID}} of P.O Box {{profile.address}} Nairobi, (hereinafter referred to as the Consumer).</li>
+        <li>{{request.user.first_name}} {{request.user.last_name}}, National Identity Number – {{profile.nationalID}} of P.O Box {{profile.address}} Nairobi, (hereinafter referred to as the Consumer).</li>
     </ol>
 
     <h4>Background</h4>
@@ -32,7 +32,7 @@
             <ol type="i">
                 <li>The Consumer will at his cost terminate a connection pipe to the Supplier’s premises.</li>
                 <li>The Consumer will pay non-refundable connection charge of KSH 20,000.00.</li>
-                <li>The Supplier has installed and connected Consumer’s through Meter No. 2107067 (the Supply Meter).</li>
+                <li>The Supplier has installed and connected Consumer’s through Meter No. {{utility.meternumber}} (the Supply Meter).</li>
                 <li>The Supply Meter was connected on 06th day of November 2021 and the Consumer verified the meter reading as 0 units.</li>
                 <li>The Supplier will bill the Consumer on periodic basis against the meter readings (monthly).</li>
                 <li>The Main Outflow pipe from the source will be from a 63mm pipe and distributed at an output supply to the client of between 32mm - 40mm pipe upon approval by the supplier.</li>
@@ -41,13 +41,13 @@
         <li>
             <h4>Water Charges</h4>
             <ol type="i">
-                <li>The cost of water will be KSH 100.00 per Cubic Meter (M3). 1M3 =1,000 liters.</li>
+                <li>The cost of water will be KSH {{utility.rate}}.00 per Cubic Meter (M3). 1M3 =1,000 liters.</li>
                 <li>The Consumer will not pay a security deposit (the Deposit).</li>
                 <li>The Consumer shall not utilize the deposit payment for billing for any period.</li>
                 <li>The billing will generally be made on monthly basis or on such other convenient periods depending on consumption.</li>
                 <li>It is mutually agreed that any billed charges will be paid on or before the 5th day of the month. Proof of payment must be supported with a receipt.</li>
             </ol>
-            <p>Payments to be done to:</p>
+            <p class="mt-4">Payments to be done to:</p>
             <p>1.<br>
                 Bank Name: Standard Chartered<br>
                 Branch: harambee avenue branch <br>
@@ -125,7 +125,7 @@
     <button class="btn btn-primary notprintable" onclick="clearSupplier()">clear</button>
 
     <p class="mt-5">SIGNED by the consumer</p>
-    <p class="fw-bold">{{request.user}}</p>
+    <p class="fw-bold">{{request.user.first_name}} {{request.user.last_name}}</p>
     <canvas class="signature-canvas" id="consumersign"></canvas><br>
     <button class="btn btn-primary notprintable" onclick="clearConsumer()">clear</button>
 
@@ -133,11 +133,7 @@
     <p>Bico Noriss Hamalah, <br>P.O. Box 5824-00200,</p>
     <p class="fw-bold">Nairobi.</p>
     <button class="btn btn-dark notprintable" onclick="window.print()">Save copy</button>
-    <form action="" method="post">
-        <input type="file">
-        <input type="file">
-    </form>
-    <button onclick="saveImage()">Confirm</button>
+    <button onclick="saveImage()" class="btn btn-dark ms-4 notprintable">Confirm</button>
 </div>
 
 <script>
@@ -148,10 +144,9 @@
     let writingMode = false
 
     const saveImage = () => {
-        imageone = suppliercanvas.toDataURL()
-        imagetwo = consumercanvas.toDataURL()
-        console.log(imageone)
-        console.log(imagetwo)
+        signone = suppliercanvas.toDataURL()
+        signtwo = consumercanvas.toDataURL()
+        console.log(signone)
     }
 
     const clearSupplier = () => {

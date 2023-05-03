@@ -5,19 +5,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BILLING APP - {{HOME}}</title>
+    <title>BILLING APP</title>
     <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
     <link rel="stylesheet" href="..\..\static\plugin\bootstrap-5.2.3-dist\bootstrap-5.2.3-dist\css\bootstrap.min.css">
-</head> 
+</head>
 <body class="bg-light">
     <div class="navbar navbar-expand navbar-dark bg-dark notprintable">
         <div class="container">
+            <div class="dropdown d-block d-md-none me-4">
+                <button class="btn btn-primary" type="button" id="dropDownButton" data-bs-toggle="dropdown" aria-expanded="false">menu</button>
+                <ul class="dropdown-menu" aria-labelledby="dropDownButton">
+                    <li><a href="/dashboard/" class="dropdown-item">dashboard</a></li>
+                    {%if request.user.is_authenticated%}
+                    <li><a href="/logout/" class="dropdown-item">logout</a></li>
+                    <li><a href="{% url 'profile' %}" class="dropdown-item">{{request.user}}</a></li>
+                    {% else %}
+                    <li><a href="/signup/" class="dropdown-item">signup</a></li>
+                    <li><a href="/login/" class="dropdown-item">login</a></li>
+                    {% endif %}
+                </ul>
+            </div>
             <a href="/" class="navbar-brand">BILLING APP</a>
-            <div class="navbar-nav">
+            <div class="navbar-nav d-md-flex d-none">
                 <a href="/dashboard/" class="nav-link navbar-brand">Dashboard</a>
                 {% if request.user.is_authenticated %}
                 <a href="/logout/" class="btn btn-outline-primary me-4">logout</a>
-                <div class="text-light d-flex align-items-center">logged in as {{request.user}}</div>
+                <div class="text-light d-flex align-items-center">logged in as <a href="{% url 'profile' %}" class="ms-1 text-decoration-none">{{request.user}}</a></div>
                 
                 {% else %}
                 <a href="/login/" class="nav-link">login</a>
@@ -29,6 +42,6 @@
     {% block content %}
 
     {% endblock %}
-    <script src="..\..\static\plugin\bootstrap-5.2.3-dist\bootstrap-5.2.3-dist\js\bootstrap.bundle.min.js" ></script>
+    <script defer src="..\..\static\plugin\bootstrap-5.2.3-dist\bootstrap-5.2.3-dist\js\bootstrap.bundle.min.js" ></script>
 </body>
 </html>

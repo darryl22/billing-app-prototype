@@ -2,47 +2,63 @@
 
 {% block content %}
 
+<style>
+    .utilitycontainer{
+        width: 50%;
+    }
+
+    @media screen and (max-width: 720px){
+        .utilitycontainer{
+            width: auto;
+        }
+    }
+</style>
+
 <h1 class="ms-3">Dashboard</h1>
 
-<div class=" ms-3 container mt-4">
-    <div class="row gap-4">
-        {% for x in data %}
-        <div class="col-3 bg-primary text-light p-3 rounded-3">
-            <h3>{{x.name}}</h3>
-            <p>Last reading: 123{{x.unit}}</p>
-            <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#{{x.name}}">update</button>
-            <a href="{% url 'utilityDetails' x.name %}" class="btn btn-dark">details</a>
-        </div>
-        <div class="modal fade" id="{{x.name}}">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h2 class="modal-title">Update {{x.name}}</h2>
-                        <button class="btn-close" data-bs-dismiss="modal"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form action="" method="POST">
-                            {% csrf_token %}
-                            <label class="form-label">Reading</label>
-                            <input type="hidden" name="utility" value="{{x.id}}"/>
-                            <input type="number" class="form-control mb-3" name="reading"/>
-                            <button class="btn btn-primary">Submit</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-</div>
-
+{% if request.user.profile.usertype == "consumer" %}
 <div class="dropdown m-3">
     <button class="btn btn-primary dropdown-toggle" type="button" id="utilityDropdown" data-bs-toggle="dropdown" aria-expanded="false">Add Utility</button>
     <ul class="dropdown-menu" aria-labelledby="utilityDropdown">
-        <li><a href="{% url 'contract' %}" class="dropdown-item">Water</a></li>
+        <li><a href="{% url 'contract' 'Water'%}" class="dropdown-item">Water</a></li>
         <li><a href="#Electricity" class="dropdown-item">electricity</a></li>
         <li><a href="#Gas" class="dropdown-item">Gas</a></li>
     </ul>
+</div>
+{% endif %}
+<div>
+    {% for x in data %}
+    <div class="bg-primary text-light p-3 m-3 rounded-3 utilitycontainer">
+        <h3>{{x.0.name}}</h3>
+        <p>connected since: {{x.0.created}}</p>
+        <p>Last reading: {{x.1}} {{x.0.unit}}</p>
+        <p>provider: {{x.0.supplier}}</p>
+        {% if request.user.profile.usertype == "supplier" %}
+        <button class="btn btn-dark mb-3" data-bs-toggle="modal" data-bs-target="#{{x.0.name}}">update reading</button>
+        {% else %}
+        <a href="{% url 'utilityDetails' x.0.name %}" class="btn btn-dark mb-3">details</a>
+        {% endif %}
+    </div>
+    <div class="modal fade" id="{{x.0.name}}">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Update {{x.0.name}}</h2>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        <label class="form-label">Reading</label>
+                        <input type="hidden" name="utility" value="{{x.0.id}}"/>
+                        <input type="number" class="form-control mb-3" name="reading"/>
+                        <button class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
 </div>
 
 {% endblock %}

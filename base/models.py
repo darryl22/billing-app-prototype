@@ -15,7 +15,6 @@ class Profile(models.Model):
     def __str__(self):
         return self.name
 
-
 class Utility(models.Model):
     user = models.ForeignKey(User, on_delete= models.CASCADE, null=True)
     supplier = models.ForeignKey(Profile, related_name="supplier", on_delete=models.CASCADE, null=True)
@@ -24,9 +23,20 @@ class Utility(models.Model):
     rate = models.IntegerField(default=100)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+    meternumber = models.CharField(max_length=30, null=True)
 
     def __str__(self):
         return self.name
+    
+class PaymentDetails(models.Model):
+    name = models.OneToOneField(Profile, on_delete=models.CASCADE)
+    bankname = models.CharField(max_length=30)
+    bankbranch = models.CharField(max_length=30)
+    bankaccountno = models.CharField(max_length=30)
+    bankaccountname = models.CharField(max_length=30)
+    swiftcode = models.CharField(max_length=20)
+    paybillno = models.CharField(max_length=15)
+    paybillaccountno = models.CharField(max_length=20)
 
 class Reading(models.Model):
     utility = models.ForeignKey(Utility, on_delete=models.CASCADE)
@@ -52,4 +62,11 @@ class Invoice(models.Model):
     arrears = models.CharField(max_length=20)
     amountpayable = models.CharField(max_length=20)
     approved = models.BooleanField(default=False)
+
+class Contract(models.Model):
+    user = models.OneToOneField(Profile, on_delete=models.CASCADE)
+    provider = models.OneToOneField(Profile, related_name="provider", on_delete=models.CASCADE)
+    consumersignature = models.ImageField()
+    suppliersignature = models.ImageField()
+    created = models.DateTimeField(auto_now_add=True)
 

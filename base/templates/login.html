@@ -10,14 +10,15 @@
 {% endfor %}
 
 <div class="container rounded-4 mt-5 shadow" style="overflow: hidden;">
-    <div class="row" style="height: 70vh;">
-        <div class="login-img col-7 d-flex flex-column justify-content-center align-items-center">
+    <div class="d-md-flex" style="height: 70vh;">
+        <div class="login-img col-7 d-md-flex d-none flex-column justify-content-center align-items-center">
             <h1 class="text-light">Don't have an account?</h1>
             <a href="/signup/" class="text-light">sign up</a>
         </div>
-        <div class="col d-flex justify-content-center align-items-center" style="background-color: white;">
+        <div class="col d-flex justify-content-center align-items-center mx-auto" style="background-color: white;">
             <form action="{% url 'login' %}" method="post" class="my-5 col-8">
                 {% csrf_token %}
+                <h3 class="text-center mb-4">Login</h3>
                 <label for="" class="form-label">Usename</label>
                 <input type="text" name="username" class="form-control mb-3" required>
 
@@ -25,6 +26,11 @@
                 <input type="password" name="password" class="form-control mb-4" required>
 
                 <input type="submit" value="Login" class="btn btn-primary col-4">
+
+                <div class="d-md-none d-block">
+                    <p class="mb-0 mt-4">Don't have an account?</p>
+                    <a href="/signup/">sign up</a>
+                </div>
             </form>
         </div>
     </div>
