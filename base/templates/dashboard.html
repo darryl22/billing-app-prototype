@@ -29,28 +29,25 @@
 <div>
     {% for x in data %}
     <div class="bg-primary text-light p-3 m-3 rounded-3 utilitycontainer">
-        <h3>{{x.0.name}}</h3>
-        <p>connected since: {{x.0.created}}</p>
-        <p>Last reading: {{x.1}} {{x.0.unit}}</p>
-        <p>provider: {{x.0.supplier}}</p>
-        {% if request.user.profile.usertype == "supplier" %}
-        <button class="btn btn-dark mb-3" data-bs-toggle="modal" data-bs-target="#{{x.0.name}}">update reading</button>
-        {% else %}
-        <a href="{% url 'utilityDetails' x.0.name %}" class="btn btn-dark mb-3">details</a>
-        {% endif %}
+        <h3>{{x.name}}</h3>
+        <p>for: {{x.user}}</p>
+        <p>connected since: {{x.created}}</p>
+        <p>provider: {{x.supplier}}</p>
+        <button class="btn btn-dark mb-3" data-bs-toggle="modal" data-bs-target="#{{x.name}}">update reading</button>
+        <a href="{% url 'utilityDetails' x.name %}" class="btn btn-dark mb-3">details</a>
     </div>
-    <div class="modal fade" id="{{x.0.name}}">
+    <div class="modal fade" id="{{x.name}}">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2 class="modal-title">Update {{x.0.name}}</h2>
+                    <h2 class="modal-title">Update {{x.name}}</h2>
                     <button class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
                     <form action="" method="POST">
                         {% csrf_token %}
                         <label class="form-label">Reading</label>
-                        <input type="hidden" name="utility" value="{{x.0.id}}"/>
+                        <input type="hidden" name="utility" value="{{x.id}}"/>
                         <input type="number" class="form-control mb-3" name="reading"/>
                         <button class="btn btn-primary">Submit</button>
                     </form>

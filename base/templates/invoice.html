@@ -7,6 +7,11 @@
         .notprintable{
             display: none;
         }
+
+        .invoice-payment-info{
+            background-color: rgb(173, 114, 48);
+            print-color-adjust: exact;
+        }
     }
 </style>
 
@@ -33,11 +38,11 @@
             </tr>
             <tr>
                 <td>Invoice No:</td>
-                <td>1000017</td>
+                <td>100060</td>
             </tr>
             <tr>
                 <td>Customer ID:</td>
-                <td>{{request.user.id}}</td>
+                <td>003</td>
             </tr>
         </table>
     </div>
@@ -45,7 +50,7 @@
     <table class="table table-bordered">
         <tr>
             <td>Billing Month</td>
-            <td>{{month}}</td>
+            <td>March 2023</td>
         </tr>
         <tr>
             <td>Previous Reading</td>
@@ -73,7 +78,7 @@
         </tr>
         <tr>
             <td>Arrears</td>
-            <td>0</td>
+            <td>{{arrears}}</td>
         </tr>
         <tr>
             <td></td>
@@ -81,12 +86,12 @@
         </tr>
         <tr>
             <td>Amount Payable</td>
-            <td>{{consumedAmount}}</td>
+            <td>{{amountpayable}}</td>
         </tr>
     </table>
     
     <div class="border border-dark" style="margin-top: 130px;">
-        <p style="background-color: rgb(173, 114, 48);">Special Notes and Instructions</p>
+        <p class="invoice-payment-info" style="background-color: rgb(173, 114, 48);">Special Notes and Instructions</p>
         <div class="p-3">
             <p class="my-3">Payment due by 5th of every month</p>
             <p class="fw-bold">Payment Details:</p>

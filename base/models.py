@@ -11,6 +11,7 @@ class Profile(models.Model):
     nationalID = models.CharField(max_length=15)
     address = models.CharField(max_length=30)
     phone = models.CharField(max_length=20)
+    arrears = models.CharField(max_length=20, default=0)
 
     def __str__(self):
         return self.name
@@ -48,6 +49,7 @@ class Reading(models.Model):
         return str(self.reading)
 
 class Invoice(models.Model):
+    invoiceNo = models.AutoField(primary_key=True, default=100060)
     user = models.CharField(max_length=30)
     address = models.CharField(max_length=30)
     phone = models.CharField(max_length=20)

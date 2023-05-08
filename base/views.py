@@ -72,12 +72,11 @@ def dashboard(request):
         if request.user.profile.usertype == "supplier":
             utility = Utility.objects.all()
             for x in utility:
-                ctx.append([x])
+                ctx.append(x)
         else:
             utility = Utility.objects.filter(user = request.user)
             for x in utility:
-                temp = Reading.objects.filter(utility = x).latest("created")
-                ctx.append([x, temp.reading])
+                ctx.append(x)
             
     print(ctx)
     if request.method == "POST":
@@ -138,6 +137,8 @@ def invoice(request, pk):
     data = []
     labels = []
     profile = Profile.objects.get(name = request.user)
+    arrears = int(profile.arrears)
+    print(arrears)
     utility = Utility.objects.filter(user = request.user).get(name = pk)
     readings = Reading.objects.filter(utility = utility)
     for x in readings:
@@ -153,10 +154,12 @@ def invoice(request, pk):
         "previous": data[-2],
         "consumed": consumed,
         "consumedAmount": consumedAmount,
+        "amountpayable": consumedAmount + arrears,
         "month": day.strftime("%B"),
         "day": day.strftime("%d"),
         "year": day.strftime("%Y"),
-        "profile": profile
+        "profile": profile,
+        "arrears": arrears
     }
     return render(request, 'invoice.html', ctx)
 
@@ -169,7 +172,7 @@ def contract(request, pk):
         "day": day.strftime("%d"),
         "month": day.strftime("%B"),
         "year": day.strftime("%Y"),
-        "utility": utility
+        "utility": utility,
     }
 
     return render(request, 'contract.html', ctx)
