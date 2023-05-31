@@ -10,10 +10,12 @@
                 <p>Easily track you utility usage and get analytics of past expenses, pay for your expenses in one place</p>
                 <div class="d-flex align-items-center">
                     <a href="/dashboard/" class="btn btn-outline-light rounded-pill col-3 me-3 fw-bold home-links">dashboard</a>
+                    {% if request.user.is_authenticated == False %}
                     <a href="/signup/" class="btn btn-light rounded-pill col-3 m-3 fw-bold home-links">signup</a>
+                    {% endif %}
                 </div>
             </div>
-            <div class="dash-img col rounded-3">
+            <div class="dash-img col rounded-3 mt-3">
             </div>
         </div>
     </div>

@@ -4,6 +4,11 @@
 
 <style>
     @media print{
+        @page{
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        
         .notprintable{
             display: none;
         }
@@ -16,7 +21,7 @@
     <p>This agreement is made this day {{day}} {{month}} {{year}} between;</p>
     <ol type="A">
         <li>Bico Noriss Hamalah of P.O Box 5824-00200, Nairobi (hereinafter referred to as the Supplier.) and;</li>
-        <li>{{request.user.first_name}} {{request.user.last_name}}, National Identity Number – {{profile.nationalID}} of P.O Box {{profile.address}} Nairobi, (hereinafter referred to as the Consumer).</li>
+        <li>{{request.user.first_name}} {{request.user.last_name}}, National Identity Number – {{profile.nationalID}} of P.O Box {{profile.address}}, (hereinafter referred to as the Consumer).</li>
     </ol>
 
     <h4>Background</h4>
@@ -33,7 +38,7 @@
                 <li>The Consumer will at his cost terminate a connection pipe to the Supplier’s premises.</li>
                 <li>The Consumer will pay non-refundable connection charge of KSH 20,000.00.</li>
                 <li>The Supplier has installed and connected Consumer’s through Meter No. {{utility.meternumber}} (the Supply Meter).</li>
-                <li>The Supply Meter was connected on 06th day of November 2021 and the Consumer verified the meter reading as 0 units.</li>
+                <li>The Supply Meter was connected on {{utility.connectiondate}} and the Consumer verified the meter reading as 0 units.</li>
                 <li>The Supplier will bill the Consumer on periodic basis against the meter readings (monthly).</li>
                 <li>The Main Outflow pipe from the source will be from a 63mm pipe and distributed at an output supply to the client of between 32mm - 40mm pipe upon approval by the supplier.</li>
             </ol>
@@ -121,19 +126,56 @@
 
     <p>SIGNED by the supplier</p>
     <p class="fw-bold">Bico Noriss Hamalah</p>
-    <canvas class="signature-canvas" id="suppliersign"></canvas><br>
-    <button class="btn btn-primary notprintable" onclick="clearSupplier()">clear</button>
+    <button class="btn btn-primary notprintable" data-bs-toggle="modal" data-bs-target="#supplierModal">sign</button><br>
+    <img src="" alt="" id="supplierSignatureImage">
+
+    <div class="modal fade" id="supplierModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">Supplier signature</div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <canvas class="signature-canvas" id="suppliersign"></canvas><br>
+                    <button class="btn btn-primary notprintable" onclick="clearSupplier()">clear</button>
+                    <button class="btn btn-primary" onclick="savesupplierImage()" data-bs-dismiss="modal">save</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <p class="mt-5">SIGNED by the consumer</p>
     <p class="fw-bold">{{request.user.first_name}} {{request.user.last_name}}</p>
-    <canvas class="signature-canvas" id="consumersign"></canvas><br>
-    <button class="btn btn-primary notprintable" onclick="clearConsumer()">clear</button>
+    <button class="btn btn-primary notprintable" data-bs-toggle="modal" data-bs-target="#consumerModal">sign</button><br>
+    <img src="" alt="" id="consumerSignatureImage">
+
+    <div class="modal fade" id="consumerModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">Consumer signature</div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <canvas class="signature-canvas" id="consumersign"></canvas><br>
+                    <button class="btn btn-primary notprintable" onclick="clearConsumer()">clear</button>
+                    <button class="btn btn-primary" onclick="saveconsumerImage()" data-bs-dismiss="modal">save</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <p class="fw-bold">Drawn by:</p>
     <p>Bico Noriss Hamalah, <br>P.O. Box 5824-00200,</p>
     <p class="fw-bold">Nairobi.</p>
     <button class="btn btn-dark notprintable" onclick="window.print()">Save copy</button>
-    <button onclick="saveImage()" class="btn btn-dark ms-4 notprintable">Confirm</button>
+    <form action="" method="post" class="notprintable" id="submitSignatures">
+        {% csrf_token %}
+        <input type="hidden" name="suppliersignInput" style="display: none;" id="suppliersignInput">
+        <input type="hidden" name="consumersignInput" style="display: none;" id="consumersignInput">
+        <input type="submit" value="Confirm" class="btn btn-dark my-5">
+    </form>
 </div>
 
 <script>
@@ -141,12 +183,32 @@
     const consumercanvas = document.getElementById("consumersign")
     const supplierctx = suppliercanvas.getContext("2d")
     const consumerctx = consumercanvas.getContext("2d")
+    const suppliersignImage = document.getElementById("supplierSignatureImage")
+    const consumersignImage = document.getElementById("consumerSignatureImage")
     let writingMode = false
 
-    const saveImage = () => {
-        signone = suppliercanvas.toDataURL()
-        signtwo = consumercanvas.toDataURL()
-        console.log(signone)
+    const savesupplierImage = () => {
+        signone = suppliercanvas.toDataURL('image/png')
+        suppliersignImage.src = signone
+        suppliersignImage.height = suppliercanvas.height
+        suppliersignImage.width = suppliercanvas.width
+
+        const suppliersignInput = document.getElementById("suppliersignInput")
+        suppliersignInput.value = signone
+        console.log(suppliersignInput.value)
+        clearSupplier()
+    }
+
+    const saveconsumerImage = () => {
+        signone = consumercanvas.toDataURL()
+        consumersignImage.src = signone
+        consumersignImage.height = suppliercanvas.height
+        consumersignImage.width = suppliercanvas.width
+
+        const consumersignInput = document.getElementById("consumersignInput")
+        consumersignInput.value = signone
+        console.log(consumersignInput.value)
+        clearConsumer()
     }
 
     const clearSupplier = () => {
@@ -158,8 +220,13 @@
     }
 
     const gettargetPosition = (event) => {
-        positionX = event.clientX - event.target.getBoundingClientRect().x
-        positionY = event.clientY - event.target.getBoundingClientRect().y
+        if (event.type === "touchmove"){
+            positionX = event.touches[0].clientX - event.target.getBoundingClientRect().x
+            positionY = event.touches[0].clientY - event.target.getBoundingClientRect().y
+        }else{
+            positionX = event.clientX - event.target.getBoundingClientRect().x
+            positionY = event.clientY - event.target.getBoundingClientRect().y
+        }
 
         return [positionX, positionY]
     }
@@ -206,12 +273,19 @@
     consumerctx.lineJoin = consumerctx.lineCap = "round"
 
     suppliercanvas.addEventListener("pointerdown", supplierPointerDown, {passive: true})
+    suppliercanvas.addEventListener("touchstart", supplierPointerDown, {passive: true})
     suppliercanvas.addEventListener("pointerup", setPointerUp, {passive: true})
+    suppliercanvas.addEventListener("touchend", setPointerUp, {passive: true})
     suppliercanvas.addEventListener("pointermove", supplierPointerMove, {passive: true})
+    suppliercanvas.addEventListener("touchmove", supplierPointerMove, {passive: true})
+
 
     consumercanvas.addEventListener("pointerdown", consumerPointerDown, {passive: true})
+    consumercanvas.addEventListener("touchstart", consumerPointerDown, {passive: true})
     consumercanvas.addEventListener("pointerup", setPointerUp, {passive: true})
+    consumercanvas.addEventListener("touchend", setPointerUp, {passive: true})
     consumercanvas.addEventListener("pointermove", consumerPointerMove, {passive: true})
+    consumercanvas.addEventListener("touchmove", consumerPointerMove, {passive: true})
 </script>
 
 {% endblock %}

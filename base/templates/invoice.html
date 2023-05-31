@@ -4,6 +4,11 @@
 
 <style>
     @media print{
+        @page{
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        
         .notprintable{
             display: none;
         }
@@ -11,6 +16,10 @@
         .invoice-payment-info{
             background-color: rgb(173, 114, 48);
             print-color-adjust: exact;
+        }
+
+        .invoice-top{
+            flex-direction: row;
         }
     }
 </style>
@@ -24,11 +33,11 @@
     </div>
     <hr>
     <h1 style="background-color: rgb(198, 198, 198);" class="mb-4">INVOICE</h1>
-    <div class="d-flex justify-content-between flex-column flex-md-row">
+    <div class="d-flex justify-content-between flex-md-row invoice-top">
         <div>
             <p class="mb-4">To:</p>
             <p class="mb-4">Client Name: {{request.user.first_name}} {{request.user.last_name}}</p>
-            <p class="mb-4">Address: {{profile.address}} Nairobi</p>
+            <p class="mb-4">Address: {{profile.address}}</p>
             <hr>
         </div>
         <table class="table table-bordered w-50">
@@ -38,11 +47,11 @@
             </tr>
             <tr>
                 <td>Invoice No:</td>
-                <td>100060</td>
+                <td>100069</td>
             </tr>
             <tr>
                 <td>Customer ID:</td>
-                <td>003</td>
+                <td>005</td>
             </tr>
         </table>
     </div>
@@ -50,7 +59,7 @@
     <table class="table table-bordered">
         <tr>
             <td>Billing Month</td>
-            <td>March 2023</td>
+            <td>April 2023</td>
         </tr>
         <tr>
             <td>Previous Reading</td>
@@ -81,6 +90,10 @@
             <td>{{arrears}}</td>
         </tr>
         <tr>
+            <td>prepayment</td>
+            <td>0</td>
+        </tr>
+        <tr>
             <td></td>
             <td></td>
         </tr>
@@ -90,7 +103,7 @@
         </tr>
     </table>
     
-    <div class="border border-dark" style="margin-top: 130px;">
+    <div class="border border-dark" style="margin-top: 130px; page-break-before: always;">
         <p class="invoice-payment-info" style="background-color: rgb(173, 114, 48);">Special Notes and Instructions</p>
         <div class="p-3">
             <p class="my-3">Payment due by 5th of every month</p>

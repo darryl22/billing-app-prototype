@@ -17,24 +17,21 @@
 <h1 class="ms-3">Dashboard</h1>
 
 {% if request.user.profile.usertype == "consumer" %}
-<div class="dropdown m-3">
-    <button class="btn btn-primary dropdown-toggle" type="button" id="utilityDropdown" data-bs-toggle="dropdown" aria-expanded="false">Add Utility</button>
-    <ul class="dropdown-menu" aria-labelledby="utilityDropdown">
-        <li><a href="{% url 'contract' 'Water'%}" class="dropdown-item">Water</a></li>
-        <li><a href="#Electricity" class="dropdown-item">electricity</a></li>
-        <li><a href="#Gas" class="dropdown-item">Gas</a></li>
-    </ul>
-</div>
+<a href="{% url 'contract' %}" class="btn btn-primary ms-3">Sign Contract</a>
 {% endif %}
 <div>
     {% for x in data %}
     <div class="bg-primary text-light p-3 m-3 rounded-3 utilitycontainer">
         <h3>{{x.name}}</h3>
-        <p>for: {{x.user}}</p>
+        <p>user: {{x.user}}</p>
         <p>connected since: {{x.created}}</p>
         <p>provider: {{x.supplier}}</p>
+        {% if request.user.profile.usertype == "supplier" %}
         <button class="btn btn-dark mb-3" data-bs-toggle="modal" data-bs-target="#{{x.name}}">update reading</button>
-        <a href="{% url 'utilityDetails' x.name %}" class="btn btn-dark mb-3">details</a>
+        {% else %}
+        <a href="{% url 'utilityDetails' x.name %}" class="btn btn-dark mb-3">Billing History</a>
+        <a href="{% url 'payment' %}" class="btn btn-dark mb-3">make payment</a>
+        {% endif %}
     </div>
     <div class="modal fade" id="{{x.name}}">
         <div class="modal-dialog">
@@ -57,5 +54,12 @@
     </div>
     {% endfor %}
 </div>
+{% if request.user.profile.usertype == "consumer" %}
+<a href="{% url 'invoice' %}" class="btn btn-primary m-3">get invoice</a>
+<h1 class="ms-3">Recent readings</h1>
+<div style="width: 90%;" class="ms-3">
+    {{line | safe}}
+</div>
+{% endif %}
 
 {% endblock %}

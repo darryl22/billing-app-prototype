@@ -8,6 +8,10 @@ django = "*"
 pandas = "*"
 plotly = "==5.14.1"
 pillow = "*"
+psycopg2 = "*"
+django-dump-load-utf8 = "*"
+python-decouple = "*"
+django-daraja = "*"
 
 [dev-packages]
 

@@ -7,7 +7,6 @@
 <div class="profile-banner">
     <div class="circle">
         <img src="{% static 'images/avatar.svg'%}" alt="profile picture" class="profile-picture">
-        <!-- <button class="change-picture btn btn-primary rounded-circle" data-bs-toggle="modal" data-bs-target="#imageModal">+</button> -->
     </div>
     <button class="change-picture btn btn-primary rounded-circle" data-bs-toggle="modal" data-bs-target="#imageModal">+</button>
     <div class="modal fade" id="imageModal">
@@ -27,7 +26,7 @@
         </div>
     </div>
 </div>
-
+<a href="{% url 'backup' %}" class="btn btn-dark m-3">system backup</a>
 <div class="profile-info d-flex flex-column align-items-center">
     <h2>General</h2>
     <p>username: {{user.username}}</p>
@@ -35,5 +34,9 @@
     <p>last name: {{user.last_name}}</p>
     <p>email: {{user.email}}</p>
     <p>date joined: {{user.date_joined}}</p>
+    {% if contract != 0 %}
+    <p>signature</p>
+    <img src="{{contract.consumersignature}}" alt="signature">
+    {% endif %}
 </div>
 {% endblock %}

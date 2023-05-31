@@ -10,16 +10,12 @@
     }
 </style>
 
-<h1 class="ms-3">{{utility}}</h1>
-
-<h3 class="ms-3">Usage history</h3>
-<a href="{% url 'invoice' utility %}" class="btn btn-primary m-3">get invoice</a>
 <div style="width: 90%;" class="mx-auto">
     {{line | safe}}
 </div>
 
-<h2 class="text-center my-3">Previous readings</h2>
-<table class="table table-striped table-bordered w-75 mt-4 mx-auto tablefont">
+<h2 class="text-center my-3">Billing History</h2>
+<table class="table table-striped table-bordered mt-4 mx-auto tablefont" style="width: 90%;">
     <thead class="table-dark">
         <tr class="">
             <th>Reading</th>

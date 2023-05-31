@@ -1,0 +1,3070 @@
+[
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2023-03-29T06:13:18.223Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "1",
+        "object_repr": "Utility object (1)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2023-03-29T06:13:36.249Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "2",
+        "object_repr": "Utility object (2)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2023-03-29T06:15:33.574Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "2",
+        "object_repr": "Utility object (2)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2023-03-29T06:15:33.590Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "1",
+        "object_repr": "Utility object (1)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2023-03-29T06:15:43.194Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "3",
+        "object_repr": "Utility object (3)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2023-03-29T06:16:05.694Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "1",
+        "object_repr": "Reading object (1)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2023-03-29T06:18:11.629Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "4",
+        "object_repr": "Water",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2023-03-29T06:18:24.877Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "1",
+        "object_repr": "100kwh",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Reading\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2023-03-29T06:18:40.153Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "2",
+        "object_repr": "50kwh",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2023-03-29T06:24:28.946Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "2",
+        "object_repr": "50",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Reading\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2023-03-29T06:24:33.895Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "1",
+        "object_repr": "100",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Reading\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2023-03-29T06:24:44.062Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "3",
+        "object_repr": "12",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2023-03-29T06:24:51.533Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "4",
+        "object_repr": "24",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2023-03-29T06:25:00.035Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "5",
+        "object_repr": "65",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2023-03-29T06:27:04.332Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "6",
+        "object_repr": "22",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2023-03-29T06:27:11.693Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "7",
+        "object_repr": "125",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2023-03-29T06:27:21.924Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "8",
+        "object_repr": "64",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2023-03-29T06:27:33.793Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "9",
+        "object_repr": "43",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2023-03-29T06:27:42.273Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "10",
+        "object_repr": "77",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2023-04-03T07:39:20.120Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "5",
+        "object_repr": "Gas",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2023-04-03T07:40:08.644Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "11",
+        "object_repr": "10",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2023-04-03T07:40:19.231Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "12",
+        "object_repr": "13",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2023-04-03T07:40:25.178Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "13",
+        "object_repr": "50",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2023-04-03T07:41:02.044Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "14",
+        "object_repr": "2",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2023-04-03T07:41:07.584Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "15",
+        "object_repr": "30",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2023-04-03T10:55:56.828Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "3",
+        "object_repr": "Electricity",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Unit\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2023-04-03T10:56:07.849Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "4",
+        "object_repr": "Water",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Unit\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2023-04-03T10:56:40.257Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "5",
+        "object_repr": "Gas",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Unit\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2023-04-03T11:22:43.781Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "16",
+        "object_repr": "12",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2023-04-05T05:42:47.877Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "5",
+        "object_repr": "Gas",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2023-04-05T05:42:57.125Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "4",
+        "object_repr": "Water",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2023-04-05T05:43:02.022Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "3",
+        "object_repr": "Electricity",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2023-04-20T06:03:21.129Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "6",
+        "object_repr": "Water",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2023-04-26T10:29:20.061Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "3",
+        "object_repr": "patrick",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2023-04-26T10:29:20.550Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "2",
+        "object_repr": "peter",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2023-04-26T10:31:19.003Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "Profile object (1)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2023-04-26T10:33:20.316Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "5",
+        "object_repr": "supplierone",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2023-04-26T10:43:58.737Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "1",
+        "object_repr": "",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2023-04-26T10:44:38.175Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "2",
+        "object_repr": "supplier",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2023-04-26T10:44:55.481Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "1",
+        "object_repr": "Water",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2023-04-26T11:29:21.192Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "6",
+        "object_repr": "james",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2023-04-26T11:51:29.182Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "4",
+        "object_repr": "darryl",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2023-04-27T05:44:50.126Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "2",
+        "object_repr": "Electricity",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2023-04-27T05:55:28.311Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "2",
+        "object_repr": "Electricity",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Supplier\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2023-04-27T05:55:37.277Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "2",
+        "object_repr": "Electricity",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Supplier\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2023-04-27T07:58:21.781Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "2",
+        "object_repr": "Electricity",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Meternumber\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2023-04-27T07:58:35.742Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "1",
+        "object_repr": "Water",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Meternumber\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2023-04-27T07:58:46.445Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "1",
+        "object_repr": "Water",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Meternumber\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+        "action_time": "2023-04-27T09:55:57.952Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "1",
+        "object_repr": "darryl",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+        "action_time": "2023-04-28T05:19:15.087Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "3",
+        "object_repr": "Water",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+        "action_time": "2023-04-28T05:37:06.233Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "3",
+        "object_repr": "Water",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Rate\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+        "action_time": "2023-04-28T12:06:49.626Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "9",
+        "object_repr": "stephenodinyo",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+        "action_time": "2023-05-02T11:29:36.404Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "2",
+        "object_repr": "supplier",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Usertype\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+        "action_time": "2023-05-04T11:00:33.058Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "4",
+        "object_repr": "Water",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+        "action_time": "2023-05-04T11:01:28.958Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "5",
+        "object_repr": "Water",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+        "action_time": "2023-05-04T11:03:12.577Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "6",
+        "object_repr": "Water",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+        "action_time": "2023-05-04T11:04:18.402Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "7",
+        "object_repr": "Water",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+        "action_time": "2023-05-04T11:05:25.251Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "8",
+        "object_repr": "Water",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+        "action_time": "2023-05-04T11:20:00.282Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "4",
+        "object_repr": "Waterr",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+        "action_time": "2023-05-04T11:21:04.037Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "4",
+        "object_repr": "Water",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+        "action_time": "2023-05-04T11:41:56.471Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "29",
+        "object_repr": "0",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+        "action_time": "2023-05-04T11:41:56.963Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "28",
+        "object_repr": "0",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+        "action_time": "2023-05-04T11:41:57.068Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "27",
+        "object_repr": "2",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 64,
+    "fields": {
+        "action_time": "2023-05-04T11:41:57.174Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "26",
+        "object_repr": "0",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 65,
+    "fields": {
+        "action_time": "2023-05-04T11:41:57.280Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "25",
+        "object_repr": "35",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 66,
+    "fields": {
+        "action_time": "2023-05-04T11:41:57.386Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "24",
+        "object_repr": "13",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 67,
+    "fields": {
+        "action_time": "2023-05-04T11:41:57.492Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "23",
+        "object_repr": "70",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 68,
+    "fields": {
+        "action_time": "2023-05-04T11:41:57.586Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "22",
+        "object_repr": "43",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 69,
+    "fields": {
+        "action_time": "2023-05-04T12:19:37.866Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "42",
+        "object_repr": "105",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 70,
+    "fields": {
+        "action_time": "2023-05-04T13:38:31.840Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "6",
+        "object_repr": "stephenodinyo",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Arrears\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 71,
+    "fields": {
+        "action_time": "2023-05-04T13:39:02.270Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "8",
+        "object_repr": "alexmbatha",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Arrears\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 72,
+    "fields": {
+        "action_time": "2023-05-04T13:40:24.485Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "11",
+        "object_repr": "leonardmatheka",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Arrears\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 73,
+    "fields": {
+        "action_time": "2023-05-05T06:20:37.088Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "10",
+        "object_repr": "margretkiige",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Arrears\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 74,
+    "fields": {
+        "action_time": "2023-05-05T15:27:22.833Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "9",
+        "object_repr": "Water",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 75,
+    "fields": {
+        "action_time": "2023-05-05T15:28:31.485Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "10",
+        "object_repr": "Water",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 76,
+    "fields": {
+        "action_time": "2023-05-05T15:29:04.908Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "8",
+        "object_repr": "Water",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 77,
+    "fields": {
+        "action_time": "2023-05-05T16:12:37.579Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "13",
+        "object_repr": "wycliffeodhiambo",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Address\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 78,
+    "fields": {
+        "action_time": "2023-05-05T16:15:46.400Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "8",
+        "object_repr": "alexmbatha",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Arrears\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 79,
+    "fields": {
+        "action_time": "2023-05-08T17:16:03.056Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "8",
+        "object_repr": "alexmbatha",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Arrears\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 80,
+    "fields": {
+        "action_time": "2023-05-08T17:17:01.900Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "6",
+        "object_repr": "stephenodinyo",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Arrears\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 81,
+    "fields": {
+        "action_time": "2023-05-08T17:17:30.539Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "11",
+        "object_repr": "leonardmatheka",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Arrears\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 82,
+    "fields": {
+        "action_time": "2023-05-08T17:17:49.584Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "9",
+        "object_repr": "danielmalakwen",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Address\", \"Arrears\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 83,
+    "fields": {
+        "action_time": "2023-05-08T17:18:09.370Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "10",
+        "object_repr": "margretkiige",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Arrears\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 84,
+    "fields": {
+        "action_time": "2023-05-17T06:29:38.973Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "2",
+        "object_repr": "Electricity",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 85,
+    "fields": {
+        "action_time": "2023-05-17T06:30:09.152Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "10",
+        "object_repr": "Water(Molly)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 86,
+    "fields": {
+        "action_time": "2023-05-17T06:30:21.705Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "9",
+        "object_repr": "Water(Wycliffe)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 87,
+    "fields": {
+        "action_time": "2023-05-17T06:30:34.546Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "7",
+        "object_repr": "Water(Leonard)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 88,
+    "fields": {
+        "action_time": "2023-05-17T06:30:48.075Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "6",
+        "object_repr": "Water(Margret)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 89,
+    "fields": {
+        "action_time": "2023-05-17T06:31:01.622Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "5",
+        "object_repr": "Water(Daniel)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 90,
+    "fields": {
+        "action_time": "2023-05-17T06:31:09.151Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "4",
+        "object_repr": "Water(Alex)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 91,
+    "fields": {
+        "action_time": "2023-05-17T06:32:25.446Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "10",
+        "object_repr": "Water",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 92,
+    "fields": {
+        "action_time": "2023-05-17T06:32:35.370Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "9",
+        "object_repr": "Water",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 93,
+    "fields": {
+        "action_time": "2023-05-17T06:32:41.480Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "7",
+        "object_repr": "Water",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 94,
+    "fields": {
+        "action_time": "2023-05-17T06:32:47.459Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "6",
+        "object_repr": "Water",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 95,
+    "fields": {
+        "action_time": "2023-05-17T06:32:53.459Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "5",
+        "object_repr": "Water",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 96,
+    "fields": {
+        "action_time": "2023-05-17T06:32:59.648Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "4",
+        "object_repr": "Water",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 97,
+    "fields": {
+        "action_time": "2023-05-17T08:28:26.609Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "10",
+        "object_repr": "margretkiige",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Arrears\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 98,
+    "fields": {
+        "action_time": "2023-05-18T05:48:35.661Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "5",
+        "object_repr": "supplierone",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 99,
+    "fields": {
+        "action_time": "2023-05-18T05:49:45.208Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "5",
+        "object_repr": "supplierone",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Staff status\", \"Superuser status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 100,
+    "fields": {
+        "action_time": "2023-05-18T05:50:30.887Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "5",
+        "object_repr": "supplierone",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 101,
+    "fields": {
+        "action_time": "2023-05-19T05:27:21.177Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "10",
+        "object_repr": "Water(Molly)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 102,
+    "fields": {
+        "action_time": "2023-05-19T05:27:44.429Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "57",
+        "object_repr": "0",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 103,
+    "fields": {
+        "action_time": "2023-05-19T05:27:52.778Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "58",
+        "object_repr": "0",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 104,
+    "fields": {
+        "action_time": "2023-05-19T05:50:25.228Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "13",
+        "object_repr": "wycliffeodhiambo",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Address\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 105,
+    "fields": {
+        "action_time": "2023-05-19T05:51:12.392Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "9",
+        "object_repr": "danielmalakwen",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Arrears\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 106,
+    "fields": {
+        "action_time": "2023-05-19T06:52:01.545Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "10",
+        "object_repr": "Water(Molly)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Connectiondate\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 107,
+    "fields": {
+        "action_time": "2023-05-19T06:55:30.198Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "7",
+        "object_repr": "Water",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Connectiondate\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 108,
+    "fields": {
+        "action_time": "2023-05-19T06:56:56.630Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "6",
+        "object_repr": "Water",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Connectiondate\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 109,
+    "fields": {
+        "action_time": "2023-05-19T06:58:20.053Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "5",
+        "object_repr": "Water",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Connectiondate\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 110,
+    "fields": {
+        "action_time": "2023-05-19T06:58:56.409Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "4",
+        "object_repr": "Water",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Connectiondate\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 111,
+    "fields": {
+        "action_time": "2023-05-19T07:00:02.962Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "3",
+        "object_repr": "Water",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Connectiondate\"]}}]"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 1,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 2,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 2,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 2,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 2,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 3,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 4,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 4,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 4,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 4,
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 5,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 5,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 5,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 5,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 6,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 6,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 6,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 6,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add utility",
+        "content_type": 7,
+        "codename": "add_utility"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change utility",
+        "content_type": 7,
+        "codename": "change_utility"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete utility",
+        "content_type": 7,
+        "codename": "delete_utility"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view utility",
+        "content_type": 7,
+        "codename": "view_utility"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add reading",
+        "content_type": 8,
+        "codename": "add_reading"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change reading",
+        "content_type": 8,
+        "codename": "change_reading"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete reading",
+        "content_type": 8,
+        "codename": "delete_reading"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view reading",
+        "content_type": 8,
+        "codename": "view_reading"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add invoice",
+        "content_type": 9,
+        "codename": "add_invoice"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change invoice",
+        "content_type": 9,
+        "codename": "change_invoice"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete invoice",
+        "content_type": 9,
+        "codename": "delete_invoice"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view invoice",
+        "content_type": 9,
+        "codename": "view_invoice"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add profile",
+        "content_type": 10,
+        "codename": "add_profile"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change profile",
+        "content_type": 10,
+        "codename": "change_profile"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete profile",
+        "content_type": 10,
+        "codename": "delete_profile"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view profile",
+        "content_type": 10,
+        "codename": "view_profile"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+        "name": "Can add contract",
+        "content_type": 11,
+        "codename": "add_contract"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+        "name": "Can change contract",
+        "content_type": 11,
+        "codename": "change_contract"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+        "name": "Can delete contract",
+        "content_type": 11,
+        "codename": "delete_contract"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+        "name": "Can view contract",
+        "content_type": 11,
+        "codename": "view_contract"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+        "name": "Can add payment details",
+        "content_type": 12,
+        "codename": "add_paymentdetails"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+        "name": "Can change payment details",
+        "content_type": 12,
+        "codename": "change_paymentdetails"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+        "name": "Can delete payment details",
+        "content_type": 12,
+        "codename": "delete_paymentdetails"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+        "name": "Can view payment details",
+        "content_type": 12,
+        "codename": "view_paymentdetails"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+        "name": "Can add access token",
+        "content_type": 13,
+        "codename": "add_accesstoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+        "name": "Can change access token",
+        "content_type": 13,
+        "codename": "change_accesstoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+        "name": "Can delete access token",
+        "content_type": 13,
+        "codename": "delete_accesstoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+        "name": "Can view access token",
+        "content_type": 13,
+        "codename": "view_accesstoken"
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$U314X5QlWfZ81MhNtTPknD$DxLk32pim2VABSvFzo1utXcNWD12dYGyqcXhqt+LXE0=",
+        "last_login": "2023-05-30T05:28:00.883Z",
+        "is_superuser": true,
+        "username": "darryl",
+        "first_name": "darryl",
+        "last_name": "mbatia",
+        "email": "darryl@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2023-03-29T06:12:41Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$ophKlVvpy7b36fpil597cj$pF6Q4yQgMFdwjHNH1usSvPyiZZvtVrsUdqxX3dqypR0=",
+        "last_login": null,
+        "is_superuser": true,
+        "username": "jason",
+        "first_name": "",
+        "last_name": "",
+        "email": "jason@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2023-04-25T05:51:27.769Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$fFyS3pThIKOfIU6z9HcYYj$cVHXSoiiICcF4+NevM/f0LCV80x1vxt49Cbs23bY0M4=",
+        "last_login": "2023-05-18T13:16:00.418Z",
+        "is_superuser": true,
+        "username": "supplierone",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2023-04-26T10:33:19Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 7,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$VgC3uBbUmcdNeVXqmVc4iS$b66BHBmnpSzchTSh9F/f6MZJsgJ/8/LwK4Ewa5/X3G4=",
+        "last_login": "2023-04-26T11:29:47.421Z",
+        "is_superuser": false,
+        "username": "james",
+        "first_name": "",
+        "last_name": "",
+        "email": "james@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-04-26T11:29:46.357Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 8,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$U3AsSpRQTWRu11GbZIdcsF$3FXyZM3TwYVsgtGrgzX9RN557gpr2kzR8O+zqVLH5To=",
+        "last_login": "2023-04-27T09:52:10.896Z",
+        "is_superuser": false,
+        "username": "joe",
+        "first_name": "Joe",
+        "last_name": "Mama",
+        "email": "joe@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-04-27T09:50:58.422Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 9,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$GQRLMJSjFZmSn3rlCLcDQx$RpYh8RW6OIFJXXOuh23/Av7R9bg0kyfXKRgu/jbTubY=",
+        "last_login": "2023-05-08T17:26:46.460Z",
+        "is_superuser": false,
+        "username": "stephenodinyo",
+        "first_name": "Stephen",
+        "last_name": "Odinyo",
+        "email": "stephen@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2023-04-28T05:16:53Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 10,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$R2gwtXb1WEbl7mmunnwDRg$t0DIMCaubaIH/mhxKKAEwhOkCSFPvj1Mv8k8KDgLj/E=",
+        "last_login": "2023-04-28T07:50:17.043Z",
+        "is_superuser": false,
+        "username": "test",
+        "first_name": "test",
+        "last_name": "test",
+        "email": "test@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-04-28T07:50:15.876Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 11,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$BgkmzbOF44XsefyFcwstTJ$5PQMnhC2BE3sQY+SW5dEGpYmI4lQ6m5lyZnbha6kY7w=",
+        "last_login": "2023-05-18T05:21:12.202Z",
+        "is_superuser": false,
+        "username": "alexmbatha",
+        "first_name": "Alex",
+        "last_name": "Mbatha",
+        "email": "alexmbatha@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-04T10:42:18.492Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 12,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$IqqGdqBmELe52iriKsTKXB$SMo/H2G7yDP+LDKQPUE/MKfso7CFQkBLFCajo/a8BS4=",
+        "last_login": "2023-05-08T17:38:56.005Z",
+        "is_superuser": false,
+        "username": "danielmalakwen",
+        "first_name": "Daniel",
+        "last_name": "Malakwen",
+        "email": "danielmalakwen@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-04T10:44:30.627Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 13,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$Cd9Grbfp272rMSZXqdugQU$SprCeaC3QTXduZcFwk4M2OJ48aWw/BEhKNDpYoMmHvU=",
+        "last_login": "2023-05-08T17:41:14.564Z",
+        "is_superuser": false,
+        "username": "margretkiige",
+        "first_name": "Margret",
+        "last_name": "Kiige",
+        "email": "margretkiige@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-04T10:47:49.926Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 14,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$sbDKUKRd2jeDSvzSrqJJdE$TzTQ7/PCqCby5A790pJD2FdEksTgTATqfxsEjyDiy9k=",
+        "last_login": "2023-05-08T17:36:48.363Z",
+        "is_superuser": false,
+        "username": "leonardmatheka",
+        "first_name": "Leonard",
+        "last_name": "Matheka",
+        "email": "leonardmatheka@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-04T10:49:51.805Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 15,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$2LYPMvilduPFWzCtr6LwNB$hSxAQQ/SFp4OVrcHgcUUgd5FDdQi4jxM0mwOFOXW4s8=",
+        "last_login": "2023-05-19T07:03:29.247Z",
+        "is_superuser": false,
+        "username": "mollyakinyi",
+        "first_name": "Molly",
+        "last_name": "Akinyi",
+        "email": "mollyakinyi@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-04T10:55:54.822Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 16,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$gCx6EFZedtrkfntQMTN2ro$CM152q8nKJPgE9vJtnX+dOu7PRjWXiVV7KCGPNM3+Fc=",
+        "last_login": "2023-05-05T16:12:54.126Z",
+        "is_superuser": false,
+        "username": "wycliffeodhiambo",
+        "first_name": "Wycliffe",
+        "last_name": "Odhiambo",
+        "email": "wycliffeodhiambo@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-05-05T15:20:54.318Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "base",
+        "model": "utility"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "base",
+        "model": "reading"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "base",
+        "model": "invoice"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+        "app_label": "base",
+        "model": "profile"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+        "app_label": "base",
+        "model": "contract"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+        "app_label": "base",
+        "model": "paymentdetails"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+        "app_label": "django_daraja",
+        "model": "accesstoken"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "3yxvt5lca3lwc5ieknt303cl2sx0hb20",
+    "fields": {
+        "session_data": ".eJxVjEsOAiEQRO_C2hBghk-7dO8ZJg3dyKiBZD4r492VZBa6q9R7VS8x4b6VaV95mWYSZ6HF6beLmB5cO6A71luTqdVtmaPsijzoKq-N-Hk53L-Dgmvpa6cHIB_YM5N1hHpk4wZjUlQ6AIWcA2pKqL4RvB9SJhttBgCFYQTx_gD1DDhX:1pzwZa:AvD0hV8wU1EaVMV9272iKqFirriajjC6JQQTVjakOrs",
+        "expire_date": "2023-06-02T09:38:54.167Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "7084juh0sshmsfst8h79hpabjk965ozb",
+    "fields": {
+        "session_data": ".eJxVjEsOAiEQRO_C2hBghk-7dO8ZJg3dyKiBZD4r492VZBa6q9R7VS8x4b6VaV95mWYSZ6HF6beLmB5cO6A71luTqdVtmaPsijzoKq-N-Hk53L-Dgmvpa6cHIB_YM5N1hHpk4wZjUlQ6AIWcA2pKqL4RvB9SJhttBgCFYQTx_gD1DDhX:1q3rto:B3q-Inw6tobtU5Ej9PsZG1f2ss1jkjYk6zLWJ3qihS4",
+        "expire_date": "2023-06-13T05:28:00.897Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "e1o6r6yl4zog2m5can1t7qvpletyotgq",
+    "fields": {
+        "session_data": ".eJxVjEsOwiAUAO_C2hC-r-LSfc9AePCQqoGktCvj3ZWkC93OTObFfNi34vdOq18SuzDNTr8MQ3xQHSLdQ701Hlvd1gX5SPhhO59bouf1aP8GJfQytupMQURSCSUA2iSzljo6Z1ABqJyRpDUGpkQGSWSdEb4-g5u0sAjs_QHtQjf_:1pjaYV:r_u-eJbyYOdiBiR7OTtCLhEiPHE9Zhi5JRjhf1kM3A8",
+        "expire_date": "2023-04-18T06:54:11.691Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "fvd1j08817bg6vyaqk90ywq811wh0qj9",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQBe_iGlnr9VeU9JzB2vU6OIASKZ8q4u7IUgpo38y8Q2Xat5b3tS55FHVVRl1-N6byqlMH8qTpMesyT9sysu6KPumq77PU9-10_w4ara3X4BiCjbam5NkToA1skgGJFAFLiVS9RXYpIhYTRDxYQBZBO7ghqs8Xvx83IA:1pjEYp:PHen7x6da_29sQlD28sEkTM8Ab22AZouqSaA2HrRZHE",
+        "expire_date": "2023-04-17T07:25:03.256Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "i3zxgi83noboshonjkh3g73sm3ijf1jr",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQBe_iGlnr9VeU9JzB2vU6OIASKZ8q4u7IUgpo38y8Q2Xat5b3tS55FHVVRl1-N6byqlMH8qTpMesyT9sysu6KPumq77PU9-10_w4ara3X4BiCjbam5NkToA1skgGJFAFLiVS9RXYpIhYTRDxYQBZBO7ghqs8Xvx83IA:1pjvuZ:o8WkV5IB1s2tGF-twqbI6ReS_lxehjHXz61OTZaWlag",
+        "expire_date": "2023-04-19T05:42:23.906Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "jnck5wajboz9n7mzl9ywqpcm1a9msari",
+    "fields": {
+        "session_data": ".eJxVjEsOAiEQRO_C2hBghk-7dO8ZJg3dyKiBZD4r492VZBa6q9R7VS8x4b6VaV95mWYSZ6HF6beLmB5cO6A71luTqdVtmaPsijzoKq-N-Hk53L-Dgmvpa6cHIB_YM5N1hHpk4wZjUlQ6AIWcA2pKqL4RvB9SJhttBgCFYQTx_gD1DDhX:1pqwWd:VYm79E2vMbrkjmU4p5OAwrgIvVRiLdLAVLJ0unGh9J0",
+        "expire_date": "2023-05-08T13:46:39.238Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "npixczfjsechgfasj2a1vpnv62hbrntr",
+    "fields": {
+        "session_data": ".eJxVjEsOAiEQRO_C2hBghk-7dO8ZJg3dyKiBZD4r492VZBa6q9R7VS8x4b6VaV95mWYSZ6HF6beLmB5cO6A71luTqdVtmaPsijzoKq-N-Hk53L-Dgmvpa6cHIB_YM5N1hHpk4wZjUlQ6AIWcA2pKqL4RvB9SJhttBgCFYQTx_gD1DDhX:1pwhgb:KJtkq_T2xL_K7rZoMg5-pYk9V51dTT6eXZ57JLdYWuo",
+        "expire_date": "2023-05-24T11:08:45.247Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "t0imhxo06p7thwe7l6bi9hfsvme8rqiw",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQBe_iGlnr9VeU9JzB2vU6OIASKZ8q4u7IUgpo38y8Q2Xat5b3tS55FHVVRl1-N6byqlMH8qTpMesyT9sysu6KPumq77PU9-10_w4ara3X4BiCjbam5NkToA1skgGJFAFLiVS9RXYpIhYTRDxYQBZBO7ghqs8Xvx83IA:1phP3R:lCt8iY6kVUOrV3TphWDaZYJswh0Yuf-IPzGOQj1mBTQ",
+        "expire_date": "2023-04-12T06:13:05.219Z"
+    }
+},
+{
+    "model": "base.profile",
+    "pk": 2,
+    "fields": {
+        "user": 5,
+        "name": "supplier",
+        "usertype": "supplier",
+        "nationalID": "12341234",
+        "address": "place 1",
+        "phone": "07234244144",
+        "arrears": "0"
+    }
+},
+{
+    "model": "base.profile",
+    "pk": 3,
+    "fields": {
+        "user": 7,
+        "name": "james",
+        "usertype": "consumer",
+        "nationalID": "12341234",
+        "address": "place 1",
+        "phone": "07234244144",
+        "arrears": "0"
+    }
+},
+{
+    "model": "base.profile",
+    "pk": 4,
+    "fields": {
+        "user": 1,
+        "name": "darryl",
+        "usertype": "consumer",
+        "nationalID": "12221122",
+        "address": "place 2",
+        "phone": "1722123123",
+        "arrears": "0"
+    }
+},
+{
+    "model": "base.profile",
+    "pk": 5,
+    "fields": {
+        "user": 8,
+        "name": "joe",
+        "usertype": "consumer",
+        "nationalID": "12344321",
+        "address": "1234-00200",
+        "phone": "0212232123",
+        "arrears": "0"
+    }
+},
+{
+    "model": "base.profile",
+    "pk": 6,
+    "fields": {
+        "user": 9,
+        "name": "stephenodinyo",
+        "usertype": "consumer",
+        "nationalID": "12340987",
+        "address": "12343-00100",
+        "phone": "0711321331",
+        "arrears": "381220"
+    }
+},
+{
+    "model": "base.profile",
+    "pk": 7,
+    "fields": {
+        "user": 10,
+        "name": "test",
+        "usertype": "supplier",
+        "nationalID": "214325354362",
+        "address": "23412424151",
+        "phone": "0924225215",
+        "arrears": "0"
+    }
+},
+{
+    "model": "base.profile",
+    "pk": 8,
+    "fields": {
+        "user": 11,
+        "name": "alexmbatha",
+        "usertype": "consumer",
+        "nationalID": "21768969",
+        "address": "75825, 00200",
+        "phone": "0700123123`",
+        "arrears": "7500"
+    }
+},
+{
+    "model": "base.profile",
+    "pk": 9,
+    "fields": {
+        "user": 12,
+        "name": "danielmalakwen",
+        "usertype": "consumer",
+        "nationalID": "23516636",
+        "address": "4923, Eldoret",
+        "phone": "0712345345",
+        "arrears": "0"
+    }
+},
+{
+    "model": "base.profile",
+    "pk": 10,
+    "fields": {
+        "user": 13,
+        "name": "margretkiige",
+        "usertype": "consumer",
+        "nationalID": "5974223",
+        "address": "310, Kitengela",
+        "phone": "0733445234",
+        "arrears": "0"
+    }
+},
+{
+    "model": "base.profile",
+    "pk": 11,
+    "fields": {
+        "user": 14,
+        "name": "leonardmatheka",
+        "usertype": "consumer",
+        "nationalID": "11606251",
+        "address": "102837-00101 Nairobi",
+        "phone": "0711432324",
+        "arrears": "12200"
+    }
+},
+{
+    "model": "base.profile",
+    "pk": 12,
+    "fields": {
+        "user": 15,
+        "name": "mollyakinyi",
+        "usertype": "consumer",
+        "nationalID": "23522640",
+        "address": "P.O Box xxxx Nairobi",
+        "phone": "0717223123",
+        "arrears": "0"
+    }
+},
+{
+    "model": "base.profile",
+    "pk": 13,
+    "fields": {
+        "user": 16,
+        "name": "wycliffeodhiambo",
+        "usertype": "consumer",
+        "nationalID": "87631234",
+        "address": "9244-00100 Nairobi",
+        "phone": "0744145454",
+        "arrears": "0"
+    }
+},
+{
+    "model": "base.utility",
+    "pk": 1,
+    "fields": {
+        "user": 1,
+        "supplier": 2,
+        "name": "Water",
+        "unit": "Liters",
+        "rate": 100,
+        "meternumber": "13212",
+        "connectiondate": "0",
+        "created": "2023-04-26T10:44:55.479Z",
+        "updated": "2023-04-27T07:58:46.441Z"
+    }
+},
+{
+    "model": "base.utility",
+    "pk": 3,
+    "fields": {
+        "user": 9,
+        "supplier": 2,
+        "name": "Water",
+        "unit": "Liters",
+        "rate": 90,
+        "meternumber": "2020 322",
+        "connectiondate": "08th day of September 2021",
+        "created": "2023-04-28T05:19:15.085Z",
+        "updated": "2023-05-19T07:00:02.959Z"
+    }
+},
+{
+    "model": "base.utility",
+    "pk": 4,
+    "fields": {
+        "user": 11,
+        "supplier": 2,
+        "name": "Water",
+        "unit": "Liters",
+        "rate": 100,
+        "meternumber": "2107067",
+        "connectiondate": "06th day of November 2021",
+        "created": "2023-05-04T11:00:33.024Z",
+        "updated": "2023-05-19T06:58:56.407Z"
+    }
+},
+{
+    "model": "base.utility",
+    "pk": 5,
+    "fields": {
+        "user": 12,
+        "supplier": 2,
+        "name": "Water",
+        "unit": "Liters",
+        "rate": 100,
+        "meternumber": "2020305",
+        "connectiondate": "25th day of September 2021",
+        "created": "2023-05-04T11:01:28.955Z",
+        "updated": "2023-05-19T06:58:20.052Z"
+    }
+},
+{
+    "model": "base.utility",
+    "pk": 6,
+    "fields": {
+        "user": 13,
+        "supplier": 2,
+        "name": "Water",
+        "unit": "Liters",
+        "rate": 100,
+        "meternumber": "2020847",
+        "connectiondate": "06th day of November 2021",
+        "created": "2023-05-04T11:03:12.572Z",
+        "updated": "2023-05-19T06:56:56.629Z"
+    }
+},
+{
+    "model": "base.utility",
+    "pk": 7,
+    "fields": {
+        "user": 14,
+        "supplier": 2,
+        "name": "Water",
+        "unit": "Liters",
+        "rate": 100,
+        "meternumber": "2012776",
+        "connectiondate": "22nd January 2022",
+        "created": "2023-05-04T11:04:18.397Z",
+        "updated": "2023-05-19T06:55:30.197Z"
+    }
+},
+{
+    "model": "base.utility",
+    "pk": 9,
+    "fields": {
+        "user": 16,
+        "supplier": 2,
+        "name": "Water",
+        "unit": "Liters",
+        "rate": 130,
+        "meternumber": "2207084",
+        "connectiondate": "0",
+        "created": "2023-05-05T15:27:22.830Z",
+        "updated": "2023-05-17T06:32:35.368Z"
+    }
+},
+{
+    "model": "base.utility",
+    "pk": 10,
+    "fields": {
+        "user": 15,
+        "supplier": 2,
+        "name": "Water(Molly)",
+        "unit": "Liters",
+        "rate": 130,
+        "meternumber": "202303001",
+        "connectiondate": "06th day of November 2021",
+        "created": "2023-05-05T15:28:31.482Z",
+        "updated": "2023-05-19T06:52:01.544Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 1,
+    "fields": {
+        "utility": 1,
+        "reading": 0,
+        "created": "2023-04-26T10:46:05.648Z",
+        "updated": "2023-04-26T10:46:05.648Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 2,
+    "fields": {
+        "utility": 1,
+        "reading": 20,
+        "created": "2023-04-26T10:46:09.902Z",
+        "updated": "2023-04-26T10:46:09.902Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 3,
+    "fields": {
+        "utility": 1,
+        "reading": 23,
+        "created": "2023-04-26T10:57:13.518Z",
+        "updated": "2023-04-26T10:57:13.518Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 4,
+    "fields": {
+        "utility": 1,
+        "reading": 30,
+        "created": "2023-04-26T10:57:28.476Z",
+        "updated": "2023-04-26T10:57:28.476Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 8,
+    "fields": {
+        "utility": 3,
+        "reading": 5632,
+        "created": "2023-04-28T05:20:10.912Z",
+        "updated": "2023-04-28T05:20:10.912Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 9,
+    "fields": {
+        "utility": 3,
+        "reading": 6134,
+        "created": "2023-04-28T05:20:20.719Z",
+        "updated": "2023-04-28T05:20:20.719Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 10,
+    "fields": {
+        "utility": 1,
+        "reading": 65,
+        "created": "2023-04-28T09:07:52.345Z",
+        "updated": "2023-04-28T09:07:52.345Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 11,
+    "fields": {
+        "utility": 1,
+        "reading": 70,
+        "created": "2023-04-28T11:29:57.139Z",
+        "updated": "2023-04-28T11:29:57.140Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 12,
+    "fields": {
+        "utility": 1,
+        "reading": 70,
+        "created": "2023-04-28T11:30:00.204Z",
+        "updated": "2023-04-28T11:30:00.204Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 13,
+    "fields": {
+        "utility": 1,
+        "reading": 988,
+        "created": "2023-05-03T10:25:39.450Z",
+        "updated": "2023-05-03T10:25:39.450Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 14,
+    "fields": {
+        "utility": 1,
+        "reading": 1321,
+        "created": "2023-05-03T10:25:51.535Z",
+        "updated": "2023-05-03T10:25:51.535Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 15,
+    "fields": {
+        "utility": 3,
+        "reading": 988,
+        "created": "2023-05-03T10:31:20.061Z",
+        "updated": "2023-05-03T10:31:20.061Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 16,
+    "fields": {
+        "utility": 3,
+        "reading": 988,
+        "created": "2023-05-03T10:31:24.080Z",
+        "updated": "2023-05-03T10:31:24.080Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 17,
+    "fields": {
+        "utility": 3,
+        "reading": 1321,
+        "created": "2023-05-03T10:31:32.037Z",
+        "updated": "2023-05-03T10:31:32.037Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 18,
+    "fields": {
+        "utility": 3,
+        "reading": 2119,
+        "created": "2023-05-03T10:35:58.297Z",
+        "updated": "2023-05-03T10:35:58.297Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 19,
+    "fields": {
+        "utility": 3,
+        "reading": 2447,
+        "created": "2023-05-03T10:36:07.117Z",
+        "updated": "2023-05-03T10:36:07.117Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 20,
+    "fields": {
+        "utility": 1,
+        "reading": 0,
+        "created": "2023-05-03T11:48:15.177Z",
+        "updated": "2023-05-03T11:48:15.177Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 21,
+    "fields": {
+        "utility": 1,
+        "reading": 10,
+        "created": "2023-05-03T11:49:20.215Z",
+        "updated": "2023-05-03T11:49:20.215Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 30,
+    "fields": {
+        "utility": 4,
+        "reading": 43,
+        "created": "2023-05-04T11:49:07.242Z",
+        "updated": "2023-05-04T11:49:07.242Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 31,
+    "fields": {
+        "utility": 4,
+        "reading": 70,
+        "created": "2023-05-04T11:49:12.088Z",
+        "updated": "2023-05-04T11:49:12.088Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 32,
+    "fields": {
+        "utility": 5,
+        "reading": 96,
+        "created": "2023-05-04T11:50:33.969Z",
+        "updated": "2023-05-04T11:50:33.969Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 33,
+    "fields": {
+        "utility": 5,
+        "reading": 105,
+        "created": "2023-05-04T11:50:38.082Z",
+        "updated": "2023-05-04T11:50:38.082Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 34,
+    "fields": {
+        "utility": 6,
+        "reading": 0,
+        "created": "2023-05-04T11:52:34.847Z",
+        "updated": "2023-05-04T11:52:34.847Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 35,
+    "fields": {
+        "utility": 6,
+        "reading": 2,
+        "created": "2023-05-04T11:52:38.658Z",
+        "updated": "2023-05-04T11:52:38.658Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 36,
+    "fields": {
+        "utility": 7,
+        "reading": 0,
+        "created": "2023-05-04T11:53:46.618Z",
+        "updated": "2023-05-04T11:53:46.618Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 37,
+    "fields": {
+        "utility": 7,
+        "reading": 0,
+        "created": "2023-05-04T11:53:50.028Z",
+        "updated": "2023-05-04T11:53:50.029Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 38,
+    "fields": {
+        "utility": 4,
+        "reading": 117,
+        "created": "2023-05-04T11:55:20.550Z",
+        "updated": "2023-05-04T11:55:20.550Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 39,
+    "fields": {
+        "utility": 4,
+        "reading": 637,
+        "created": "2023-05-04T12:15:10.722Z",
+        "updated": "2023-05-04T12:15:10.722Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 40,
+    "fields": {
+        "utility": 4,
+        "reading": 705,
+        "created": "2023-05-04T12:15:18.980Z",
+        "updated": "2023-05-04T12:15:18.980Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 41,
+    "fields": {
+        "utility": 4,
+        "reading": 780,
+        "created": "2023-05-04T12:17:30.855Z",
+        "updated": "2023-05-04T12:17:30.855Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 43,
+    "fields": {
+        "utility": 5,
+        "reading": 111,
+        "created": "2023-05-04T12:21:09.570Z",
+        "updated": "2023-05-04T12:21:09.571Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 44,
+    "fields": {
+        "utility": 6,
+        "reading": 5,
+        "created": "2023-05-04T12:23:02.929Z",
+        "updated": "2023-05-04T12:23:02.929Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 45,
+    "fields": {
+        "utility": 7,
+        "reading": 384,
+        "created": "2023-05-04T12:24:14.452Z",
+        "updated": "2023-05-04T12:24:14.452Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 46,
+    "fields": {
+        "utility": 7,
+        "reading": 429,
+        "created": "2023-05-04T12:24:22.200Z",
+        "updated": "2023-05-04T12:24:22.200Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 47,
+    "fields": {
+        "utility": 7,
+        "reading": 483,
+        "created": "2023-05-04T12:25:29.907Z",
+        "updated": "2023-05-04T12:25:29.907Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 48,
+    "fields": {
+        "utility": 3,
+        "reading": 5130,
+        "created": "2023-05-04T12:27:44.493Z",
+        "updated": "2023-05-04T12:27:44.493Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 49,
+    "fields": {
+        "utility": 3,
+        "reading": 5632,
+        "created": "2023-05-04T12:27:52.165Z",
+        "updated": "2023-05-04T12:27:52.165Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 50,
+    "fields": {
+        "utility": 3,
+        "reading": 6134,
+        "created": "2023-05-04T12:28:42.075Z",
+        "updated": "2023-05-04T12:28:42.075Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 51,
+    "fields": {
+        "utility": 3,
+        "reading": 6255,
+        "created": "2023-05-08T17:18:43.117Z",
+        "updated": "2023-05-08T17:18:43.117Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 52,
+    "fields": {
+        "utility": 4,
+        "reading": 848,
+        "created": "2023-05-08T17:19:48.027Z",
+        "updated": "2023-05-08T17:19:48.027Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 53,
+    "fields": {
+        "utility": 7,
+        "reading": 483,
+        "created": "2023-05-08T17:24:56.070Z",
+        "updated": "2023-05-08T17:24:56.070Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 54,
+    "fields": {
+        "utility": 5,
+        "reading": 112,
+        "created": "2023-05-08T17:39:04.661Z",
+        "updated": "2023-05-08T17:39:04.661Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 55,
+    "fields": {
+        "utility": 6,
+        "reading": 8,
+        "created": "2023-05-08T17:41:22.934Z",
+        "updated": "2023-05-08T17:41:22.934Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 56,
+    "fields": {
+        "utility": 1,
+        "reading": 998,
+        "created": "2023-05-18T05:57:50.057Z",
+        "updated": "2023-05-18T05:57:50.057Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 57,
+    "fields": {
+        "utility": 10,
+        "reading": 0,
+        "created": "2023-05-19T05:27:44.427Z",
+        "updated": "2023-05-19T05:27:44.427Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 58,
+    "fields": {
+        "utility": 10,
+        "reading": 0,
+        "created": "2023-05-19T05:27:52.776Z",
+        "updated": "2023-05-19T05:27:52.776Z"
+    }
+},
+{
+    "model": "base.contract",
+    "pk": 1,
+    "fields": {
+        "user": 4,
+        "provider": 2,
+        "consumersignature": "data:image/png;base64,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",
+        "suppliersignature": "data:image/png;base64,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",
+        "created": "2023-05-17T12:03:19.274Z"
+    }
+},
+{
+    "model": "django_daraja.accesstoken",
+    "pk": 3,
+    "fields": {
+        "token": "PY3ZGy1Atw9j3khZPBWQAZe5pAgD",
+        "created_at": "2023-05-31T05:17:44.830Z"
+    }
+}
+]

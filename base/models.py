@@ -22,9 +22,10 @@ class Utility(models.Model):
     name = models.CharField(max_length=30)
     unit = models.CharField(max_length=10, null=True)
     rate = models.IntegerField(default=100)
+    meternumber = models.CharField(max_length=30, null=True)
+    connectiondate = models.CharField(max_length=30, default=0)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
-    meternumber = models.CharField(max_length=30, null=True)
 
     def __str__(self):
         return self.name
@@ -49,7 +50,6 @@ class Reading(models.Model):
         return str(self.reading)
 
 class Invoice(models.Model):
-    invoiceNo = models.AutoField(primary_key=True, default=100060)
     user = models.CharField(max_length=30)
     address = models.CharField(max_length=30)
     phone = models.CharField(max_length=20)
@@ -65,10 +65,16 @@ class Invoice(models.Model):
     amountpayable = models.CharField(max_length=20)
     approved = models.BooleanField(default=False)
 
+    def __str__(self):
+        return str(self.invoiceNo)
+
 class Contract(models.Model):
     user = models.OneToOneField(Profile, on_delete=models.CASCADE)
     provider = models.OneToOneField(Profile, related_name="provider", on_delete=models.CASCADE)
-    consumersignature = models.ImageField()
-    suppliersignature = models.ImageField()
+    consumersignature = models.TextField()
+    suppliersignature = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return str(self.id)
 

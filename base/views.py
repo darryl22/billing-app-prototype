@@ -1,11 +1,17 @@
 from django.shortcuts import render, redirect
-from .models import Utility, Reading, Profile
+from .models import Utility, Reading, Profile, Contract
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 import plotly.express as px
+from django.http import HttpResponse
+from django_daraja.mpesa.core import MpesaClient
 import datetime
+import re
+from django.core import management
+import sys
+import subprocess
 
 # Create your views here.
 
@@ -67,34 +73,54 @@ def logoutUser(request):
 @login_required(login_url="login")
 def dashboard(request):
     ctx = []
-    print(request.user.profile.usertype)
+    labels = []
+    data = []
+    line = 0
     if request.user.is_authenticated:
         if request.user.profile.usertype == "supplier":
             utility = Utility.objects.all()
             for x in utility:
                 ctx.append(x)
         else:
-            utility = Utility.objects.filter(user = request.user)
-            for x in utility:
-                ctx.append(x)
+            utility = Utility.objects.get(user = request.user)
+            readings = Reading.objects.filter(utility = utility)
+            unit = utility.unit
+            for x in readings:
+                data.append(x.reading)
+                labels.append(x.created)
+            ctx.append(utility)
+
+            fig = px.line(
+                x = labels,
+                y = data,
+                title = "meter readings",
+                markers = True,
+                labels = {
+                    "x": "dates",
+                    "y": unit,
+                    "variable": "utilities"
+                },
+                template = "simple_white",
+                # height = 580,
+                # width = 1000
+            )
+            line = fig.to_html()
             
-    print(ctx)
     if request.method == "POST":
         reading = request.POST.get("reading")
         utilId = request.POST.get("utility")
         util = Utility.objects.get(id = utilId)
-        print(reading, utility)
         r = Reading(utility = util, reading = reading)
         r.save()
     
-    return render(request, 'dashboard.html', {"data": ctx, "length": len(ctx)})
+    return render(request, 'dashboard.html', {"data": ctx, "length": len(ctx), "line": line})
 
 def UtilityDetails(request, pk):
     data = []
     labels = []
     dif = []
     amount = []
-    utility = Utility.objects.filter(user = request.user).get(name = pk)
+    utility = Utility.objects.get(user = request.user)
     readings = Reading.objects.filter(utility = utility)
     temp = 0
     for x in readings:
@@ -108,38 +134,21 @@ def UtilityDetails(request, pk):
     if len(data) < 2:
         return redirect("dashboard")
 
-    fig = px.line(
-        x = labels,
-        y = data,
-        title = "meter readings",
-        markers = True,
-        labels = {
-            "x": "dates",
-            "y": unit,
-            "variable": "utilities"
-        },
-        template = "simple_white",
-        # height = 580,
-        # width = 1000
-    )
-    line = fig.to_html()
     x = list(zip(data, dif, labels, amount))
 
     ctx = {
         "utility": utility,
-        "line": line,
         "unit": unit,
         "data": x
     }
     return render(request, 'utilityDetails.html', ctx)
 
-def invoice(request, pk):
+def invoice(request):
     data = []
     labels = []
     profile = Profile.objects.get(name = request.user)
     arrears = int(profile.arrears)
-    print(arrears)
-    utility = Utility.objects.filter(user = request.user).get(name = pk)
+    utility = Utility.objects.get(user = request.user)
     readings = Reading.objects.filter(utility = utility)
     for x in readings:
         data.append(x.reading)
@@ -163,9 +172,9 @@ def invoice(request, pk):
     }
     return render(request, 'invoice.html', ctx)
 
-def contract(request, pk):
+def contract(request):
     profile = request.user.profile
-    utility = Utility.objects.filter(user = request.user).get(name = pk)
+    utility = Utility.objects.get(user = request.user)
     day = datetime.datetime.now()
     ctx = {
         "profile": profile,
@@ -175,12 +184,55 @@ def contract(request, pk):
         "utility": utility,
     }
 
+    if request.method == "POST":
+        supplierSignature = request.POST.get("suppliersignInput")
+        consumerSignature = request.POST.get("consumersignInput")
+
+        contract = Contract(user = utility.user.profile, provider = utility.supplier, consumersignature = consumerSignature, suppliersignature = supplierSignature)
+        contract.save()
+
+        # try:
+        #     contract = Contract(user = utility.user.profile, provider = utility.supplier, consumersignature = consumerSignature, suppliersignature = supplierSignature)
+        #     contract.save()
+        # except:
+        #     print("already have contract")
+        #     print(Exception)
+
     return render(request, 'contract.html', ctx)
 
 def paymentDetails(request):
     return render(request, 'paymentDetails.html')
 
 def ProfilePage(request):
-    user = User.objects.get(username = request.user)
-    print(user)
-    return render(request, 'profile.html', {"user": user})
+    contract = 0
+    try:
+        user = User.objects.get(username = request.user)
+        contract = Contract.objects.get(user = request.user.profile)
+        print(contract)
+    except:
+        print("no contract information")
+
+    if (request.method == "POST"):
+        print("req")
+    return render(request, 'profile.html', {"user": user, "contract": contract})
+
+def backupPage(request):
+    # sysout = sys.stdout
+    # sys.stdout = open("data2.json", "w")
+    # management.call_command("dumpdata", "base")
+    # sys.stdout = sysout
+    prs = subprocess.run('python manage.py dumpdata --indent 4 > newdata.json', shell=True)
+    print("status :", prs.returncode)
+    return render(request, 'backup.html')
+
+def payment(request):
+    cl = MpesaClient()
+    # Use a Safaricom phone number that you have access to, for you to be able to view the prompt.
+    phone_number = '0708323035'
+    amount = 1
+    account_reference = 'reference'
+    transaction_desc = 'Description'
+    callback_url = 'https://api.darajambili.com/express-payment'
+    response = cl.stk_push(phone_number, amount, account_reference, transaction_desc, callback_url)
+    print(response)
+    return HttpResponse(response)
