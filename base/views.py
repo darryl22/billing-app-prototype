@@ -227,6 +227,7 @@ def backupPage(request):
 
 def payment(request):
     cl = MpesaClient()
+    token = cl.access_token()
     # Use a Safaricom phone number that you have access to, for you to be able to view the prompt.
     phone_number = '0708323035'
     amount = 1
