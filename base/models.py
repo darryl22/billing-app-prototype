@@ -6,12 +6,14 @@ from django.conf import settings
 
 class Profile(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    userID = models.CharField(unique=True, null=True)
     name = models.CharField(max_length=20, default="")
     usertype = models.CharField(max_length=15, default="consumer")
     nationalID = models.CharField(max_length=15)
     address = models.CharField(max_length=30)
     phone = models.CharField(max_length=20)
     arrears = models.CharField(max_length=20, default=0)
+    prepayment = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return self.name
@@ -28,7 +30,7 @@ class Utility(models.Model):
     updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.name
+        return self.user.username
     
 class PaymentDetails(models.Model):
     name = models.OneToOneField(Profile, on_delete=models.CASCADE)
@@ -42,12 +44,13 @@ class PaymentDetails(models.Model):
 
 class Reading(models.Model):
     utility = models.ForeignKey(Utility, on_delete=models.CASCADE)
-    reading = models.PositiveIntegerField()
+    reading = models.FloatField()
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return str(self.reading)
+        n = str(self.reading) + " " + str(self.utility.user.username)
+        return n
 
 class Invoice(models.Model):
     user = models.CharField(max_length=30)

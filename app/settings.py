@@ -25,11 +25,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('SECRET_KEY')
+# SECURE_SSL_REDIRECT = True
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
+# SECURE_HSTS_SECONDS = 31536000
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['20d8-41-215-18-254.ngrok-free.app', '127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://20d8-41-215-18-254.ngrok-free.app']
 
 
 # Application definition

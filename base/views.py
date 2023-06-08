@@ -6,12 +6,14 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 import plotly.express as px
 from django.http import HttpResponse
-from django_daraja.mpesa.core import MpesaClient
 import datetime
 import re
-from django.core import management
-import sys
 import subprocess
+import requests
+from django.conf import settings
+import base64
+from django.views.decorators.csrf import csrf_exempt
+import hashlib
 
 # Create your views here.
 
@@ -105,11 +107,12 @@ def dashboard(request):
                 # width = 1000
             )
             line = fig.to_html()
-            
+
     if request.method == "POST":
         reading = request.POST.get("reading")
         utilId = request.POST.get("utility")
         util = Utility.objects.get(id = utilId)
+        print(util.user)
         r = Reading(utility = util, reading = reading)
         r.save()
     
@@ -148,27 +151,30 @@ def invoice(request):
     labels = []
     profile = Profile.objects.get(name = request.user)
     arrears = int(profile.arrears)
+    prepayment = profile.prepayment
     utility = Utility.objects.get(user = request.user)
     readings = Reading.objects.filter(utility = utility)
     for x in readings:
         data.append(x.reading)
         labels.append(x.created)
     consumed = data[-1] - data[-2]
-    consumedAmount = consumed * utility.rate
+    consumedAmount = round((consumed * utility.rate), 2)
     day = datetime.datetime.now()
+    amountpayable = consumedAmount + arrears - prepayment
 
     ctx = {
         "utility": utility,
         "current": data[-1],
         "previous": data[-2],
-        "consumed": consumed,
-        "consumedAmount": consumedAmount,
-        "amountpayable": consumedAmount + arrears,
+        "consumed": round(consumed, 2),
+        "consumedAmount": "{:,}".format(consumedAmount),
+        "amountpayable": "{:,}".format(amountpayable),
         "month": day.strftime("%B"),
         "day": day.strftime("%d"),
         "year": day.strftime("%Y"),
         "profile": profile,
-        "arrears": arrears
+        "arrears": "{:,}".format(arrears),
+        "prepayment": "{:,}".format(prepayment)
     }
     return render(request, 'invoice.html', ctx)
 
@@ -226,14 +232,46 @@ def backupPage(request):
     return render(request, 'backup.html')
 
 def payment(request):
-    cl = MpesaClient()
-    token = cl.access_token()
-    # Use a Safaricom phone number that you have access to, for you to be able to view the prompt.
-    phone_number = '0708323035'
-    amount = 1
-    account_reference = 'reference'
-    transaction_desc = 'Description'
-    callback_url = 'https://api.darajambili.com/express-payment'
-    response = cl.stk_push(phone_number, amount, account_reference, transaction_desc, callback_url)
-    print(response)
-    return HttpResponse(response)
+    
+    encoded_credentials = base64.b64encode(f"{settings.MPESA_CONSUMER_KEY}:{settings.MPESA_CONSUMER_SECRET}".encode('utf-8')).decode('utf-8')
+    get_token = requests.get("https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials", headers={"Authorization": f"Basic {encoded_credentials}"})
+    print(get_token.status_code)
+    token = get_token.json()['access_token']
+    
+    url = "https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest"
+    headers = {
+        "Authorization" : f"Bearer {token}",
+        "Content-Type" : "application/json"
+    }
+
+    def generatepassword(passkey, shortcode):
+        timestamp = datetime.datetime.now().strftime('%Y%m%d%H%M%S')
+        hashdata = shortcode + passkey + timestamp
+        encoded_password = base64.b64encode(hashdata.encode()).decode('utf-8')
+        return encoded_password
+
+    payload = {
+        "BusinessShortCode" : settings.MPESA_SHORTCODE,
+        "Password" : generatepassword(settings.MPESA_PASSKEY, settings.MPESA_SHORTCODE),
+        "Timestamp" : datetime.datetime.now().strftime('%Y%m%d%H%M%S'),
+        "TransactionType": "CustomerPayBillOnline",
+        "Amount" : "1",
+        "PartyA" : "254708323035",
+        "PartyB" : settings.MPESA_SHORTCODE,
+        "PhoneNumber" : "254708323035",
+        "CallBackURL" : "https://20d8-41-215-18-254.ngrok-free.app/paymentcallback/",
+        "AccountReference" : settings.MPESA_INITIATOR_USERNAME,
+        "TransactionDesc" : "water payment"
+    }
+
+    response = requests.post(url, json=payload, headers=headers)
+    response_json = response.json()
+    print(response_json)
+    
+    return HttpResponse(response_json)
+
+@csrf_exempt
+def paymentcallback(request):
+    if request.method == "POST":
+        print(request.body)
+    return HttpResponse(status=200)

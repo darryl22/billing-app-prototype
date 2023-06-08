@@ -14,4 +14,5 @@ urlpatterns = [
     path('profile/', views.ProfilePage, name="profile"),
     path('backup/', views.backupPage, name="backup"),
     path('payment/', views.payment, name="payment"),
+    path('paymentcallback/', views.paymentcallback, name="paymentcallback"),
 ]

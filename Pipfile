@@ -12,6 +12,7 @@ psycopg2 = "*"
 django-dump-load-utf8 = "*"
 python-decouple = "*"
 django-daraja = "*"
+requests = "*"
 
 [dev-packages]
 

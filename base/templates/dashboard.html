@@ -27,13 +27,13 @@
         <p>connected since: {{x.created}}</p>
         <p>provider: {{x.supplier}}</p>
         {% if request.user.profile.usertype == "supplier" %}
-        <button class="btn btn-dark mb-3" data-bs-toggle="modal" data-bs-target="#{{x.name}}">update reading</button>
+        <button class="btn btn-dark mb-3" data-bs-toggle="modal" data-bs-target="#{{x.user.username}}">update reading</button>
         {% else %}
         <a href="{% url 'utilityDetails' x.name %}" class="btn btn-dark mb-3">Billing History</a>
         <a href="{% url 'payment' %}" class="btn btn-dark mb-3">make payment</a>
         {% endif %}
     </div>
-    <div class="modal fade" id="{{x.name}}">
+    <div class="modal fade" id="{{x.user.username}}">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
