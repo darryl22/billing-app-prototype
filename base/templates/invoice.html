@@ -37,21 +37,21 @@
         <div>
             <p class="mb-4">To:</p>
             <p class="mb-4">Client Name: {{request.user.first_name}} {{request.user.last_name}}</p>
-            <p class="mb-4">Address: {{profile.address}}</p>
+            <p class="mb-4">Address: {{request.user.profile.address}}</p>
             <hr>
         </div>
         <table class="table table-bordered w-50">
             <tr>
                 <td>Date:</td>
-                <td>{{day}} {{month}} {{year}}</td>
+                <td>{{invoice.created}}</td>
             </tr>
             <tr>
                 <td>Invoice No:</td>
-                <td>100070</td>
+                <td>{{invoice.invoiceNo}}</td>
             </tr>
             <tr>
                 <td>Customer ID:</td>
-                <td>{{profile.userID}}</td>
+                <td>{{request.user.profile.userID}}</td>
             </tr>
         </table>
     </div>
@@ -59,15 +59,15 @@
     <table class="table table-bordered">
         <tr>
             <td>Billing Month</td>
-            <td>May 2023</td>
+            <td>{{invoice.billingmonth}} {{invoice.year}}</td>
         </tr>
         <tr>
             <td>Previous Reading</td>
-            <td>{{previous}}</td>
+            <td>{{previousreading}}</td>
         </tr>
         <tr>
             <td>Current Reading</td>
-            <td>{{current}}</td>
+            <td>{{currentreading}}</td>
         </tr>
         <tr>
             <td>Units Consumed</td>
@@ -75,7 +75,7 @@
         </tr>
         <tr>
             <td>Consumer Rate</td>
-            <td>{{utility.rate}}</td>
+            <td>{{invoice.rate}}</td>
         </tr>
         <tr>
             <td>Total</td>
@@ -83,7 +83,7 @@
         </tr>
         <tr>
             <td>Consumption Amount</td>
-            <td>{{consumedAmount}}</td>
+            <td>{{consumptionamount}}</td>
         </tr>
         <tr>
             <td>Arrears</td>
@@ -110,8 +110,8 @@
             <p class="fw-bold">Payment Details:</p>
             <p>MPESA: Send money to 0724856614</p>
             <p>Or</p>
-            <p>Lipa na Mpesa paybill number 329329</p>
-            <p>and the a/c number is 0100328420500</p>
+            <p>Lipa na Mpesa paybill number 247247</p>
+            <p>and the a/c number is 0150190299440</p>
         </div>
     </div>
 

@@ -1443,6 +1443,682 @@
     }
 },
 {
+    "model": "admin.logentry",
+    "pk": 112,
+    "fields": {
+        "action_time": "2023-06-02T09:19:28.579Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "8",
+        "object_repr": "alexmbatha",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Arrears\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 113,
+    "fields": {
+        "action_time": "2023-06-02T09:19:57.377Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "11",
+        "object_repr": "leonardmatheka",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Arrears\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 114,
+    "fields": {
+        "action_time": "2023-06-02T09:25:54.689Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "10",
+        "object_repr": "Water",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 115,
+    "fields": {
+        "action_time": "2023-06-02T09:33:23.464Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "3",
+        "object_repr": "Water(steve)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 116,
+    "fields": {
+        "action_time": "2023-06-02T09:33:51.789Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "1",
+        "object_repr": "Water(sup)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 117,
+    "fields": {
+        "action_time": "2023-06-02T09:34:17.445Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "1",
+        "object_repr": "Water",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 118,
+    "fields": {
+        "action_time": "2023-06-02T09:34:23.877Z",
+        "user": 1,
+        "content_type": 7,
+        "object_id": "3",
+        "object_repr": "Water",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 119,
+    "fields": {
+        "action_time": "2023-06-02T09:57:02.390Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "65",
+        "object_repr": "72",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 120,
+    "fields": {
+        "action_time": "2023-06-02T09:57:02.395Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "64",
+        "object_repr": "256",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 121,
+    "fields": {
+        "action_time": "2023-06-02T09:57:02.396Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "63",
+        "object_repr": "4835",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 122,
+    "fields": {
+        "action_time": "2023-06-02T09:57:02.397Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "62",
+        "object_repr": "1148",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 123,
+    "fields": {
+        "action_time": "2023-06-02T09:57:02.398Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "61",
+        "object_repr": "136",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 124,
+    "fields": {
+        "action_time": "2023-06-02T09:57:02.398Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "60",
+        "object_repr": "899",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 125,
+    "fields": {
+        "action_time": "2023-06-02T09:57:02.399Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "59",
+        "object_repr": "6426",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 126,
+    "fields": {
+        "action_time": "2023-06-02T11:36:15.173Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "72",
+        "object_repr": "72 wycliffeodhiambo",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 127,
+    "fields": {
+        "action_time": "2023-06-02T11:42:28.913Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "8",
+        "object_repr": "alexmbatha",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"UserID\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 128,
+    "fields": {
+        "action_time": "2023-06-02T11:42:44.003Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "9",
+        "object_repr": "danielmalakwen",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"UserID\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 129,
+    "fields": {
+        "action_time": "2023-06-02T11:42:57.542Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "10",
+        "object_repr": "margretkiige",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"UserID\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 130,
+    "fields": {
+        "action_time": "2023-06-02T11:43:26.223Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "11",
+        "object_repr": "leonardmatheka",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"UserID\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 131,
+    "fields": {
+        "action_time": "2023-06-02T11:43:38.338Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "6",
+        "object_repr": "stephenodinyo",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"UserID\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 132,
+    "fields": {
+        "action_time": "2023-06-02T11:43:54.552Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "4",
+        "object_repr": "darryl",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"UserID\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 133,
+    "fields": {
+        "action_time": "2023-06-02T11:46:48.323Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "12",
+        "object_repr": "mollyakinyi",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"UserID\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 134,
+    "fields": {
+        "action_time": "2023-06-02T11:47:03.854Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "13",
+        "object_repr": "wycliffeodhiambo",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"UserID\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 135,
+    "fields": {
+        "action_time": "2023-06-02T11:54:25.169Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "8",
+        "object_repr": "alexmbatha",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Prepayment\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 136,
+    "fields": {
+        "action_time": "2023-06-02T12:08:31.842Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "6",
+        "object_repr": "stephenodinyo",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Arrears\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 137,
+    "fields": {
+        "action_time": "2023-06-05T17:52:05.364Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "68",
+        "object_repr": "13 margretkiige",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Reading\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 138,
+    "fields": {
+        "action_time": "2023-06-05T17:53:22.587Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "68",
+        "object_repr": "13.6 margretkiige",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Reading\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 139,
+    "fields": {
+        "action_time": "2023-06-05T17:53:39.155Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "69",
+        "object_repr": "114.8 danielmalakwen",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Reading\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 140,
+    "fields": {
+        "action_time": "2023-06-05T17:53:53.229Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "70",
+        "object_repr": "483.5 leonardmatheka",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Reading\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 141,
+    "fields": {
+        "action_time": "2023-06-05T17:54:09.971Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "71",
+        "object_repr": "25.6 mollyakinyi",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Reading\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 142,
+    "fields": {
+        "action_time": "2023-06-05T17:54:18.590Z",
+        "user": 1,
+        "content_type": 8,
+        "object_id": "74",
+        "object_repr": "7.2 wycliffeodhiambo",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Reading\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 143,
+    "fields": {
+        "action_time": "2023-06-07T11:38:39.179Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "12",
+        "object_repr": "mollyakinyi",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Address\", \"Phone\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 144,
+    "fields": {
+        "action_time": "2023-06-07T11:39:50.952Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "15",
+        "object_repr": "mollyakinyi",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Email address\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 145,
+    "fields": {
+        "action_time": "2023-06-07T11:44:28.801Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "8",
+        "object_repr": "alexmbatha",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Arrears\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 146,
+    "fields": {
+        "action_time": "2023-06-07T11:55:36.799Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "8",
+        "object_repr": "alexmbatha",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Prepayment\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 147,
+    "fields": {
+        "action_time": "2023-06-12T10:00:58.392Z",
+        "user": 5,
+        "content_type": 10,
+        "object_id": "4",
+        "object_repr": "darryl",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Prepayment\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 148,
+    "fields": {
+        "action_time": "2023-06-12T10:01:55.165Z",
+        "user": 5,
+        "content_type": 10,
+        "object_id": "4",
+        "object_repr": "darryl",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Prepayment\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 149,
+    "fields": {
+        "action_time": "2023-06-12T10:12:02.496Z",
+        "user": 5,
+        "content_type": 10,
+        "object_id": "4",
+        "object_repr": "darryl",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Arrears\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 150,
+    "fields": {
+        "action_time": "2023-06-12T11:31:42.595Z",
+        "user": 5,
+        "content_type": 8,
+        "object_id": "81",
+        "object_repr": "1141.0 darryl",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 151,
+    "fields": {
+        "action_time": "2023-06-12T11:31:42.603Z",
+        "user": 5,
+        "content_type": 8,
+        "object_id": "80",
+        "object_repr": "1140.0 darryl",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 152,
+    "fields": {
+        "action_time": "2023-06-12T11:31:42.605Z",
+        "user": 5,
+        "content_type": 8,
+        "object_id": "79",
+        "object_repr": "1132.0 darryl",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 153,
+    "fields": {
+        "action_time": "2023-06-12T11:31:42.606Z",
+        "user": 5,
+        "content_type": 8,
+        "object_id": "78",
+        "object_repr": "1131.0 darryl",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 154,
+    "fields": {
+        "action_time": "2023-06-12T11:31:42.607Z",
+        "user": 5,
+        "content_type": 8,
+        "object_id": "77",
+        "object_repr": "1130.0 darryl",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 155,
+    "fields": {
+        "action_time": "2023-06-12T11:33:32.953Z",
+        "user": 5,
+        "content_type": 10,
+        "object_id": "4",
+        "object_repr": "darryl",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Arrears\", \"Previousarrears\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 156,
+    "fields": {
+        "action_time": "2023-06-12T13:18:08.391Z",
+        "user": 5,
+        "content_type": 8,
+        "object_id": "67",
+        "object_repr": "899.0 alexmbatha",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 157,
+    "fields": {
+        "action_time": "2023-06-12T13:23:24.223Z",
+        "user": 5,
+        "content_type": 8,
+        "object_id": "69",
+        "object_repr": "114.8 danielmalakwen",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 158,
+    "fields": {
+        "action_time": "2023-06-12T13:30:03.896Z",
+        "user": 5,
+        "content_type": 8,
+        "object_id": "68",
+        "object_repr": "13.6 margretkiige",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 159,
+    "fields": {
+        "action_time": "2023-06-12T13:32:58.273Z",
+        "user": 5,
+        "content_type": 8,
+        "object_id": "70",
+        "object_repr": "483.5 leonardmatheka",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 160,
+    "fields": {
+        "action_time": "2023-06-12T13:34:32.048Z",
+        "user": 5,
+        "content_type": 8,
+        "object_id": "71",
+        "object_repr": "25.6 mollyakinyi",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 161,
+    "fields": {
+        "action_time": "2023-06-12T13:36:15.234Z",
+        "user": 5,
+        "content_type": 8,
+        "object_id": "66",
+        "object_repr": "6426.0 stephenodinyo",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 162,
+    "fields": {
+        "action_time": "2023-06-12T13:40:05.013Z",
+        "user": 5,
+        "content_type": 8,
+        "object_id": "74",
+        "object_repr": "7.2 wycliffeodhiambo",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 163,
+    "fields": {
+        "action_time": "2023-06-19T06:36:23.765Z",
+        "user": 1,
+        "content_type": 10,
+        "object_id": "10",
+        "object_repr": "margretkiige",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Arrears\"]}}]"
+    }
+},
+{
     "model": "auth.permission",
     "pk": 1,
     "fields": {
@@ -1915,7 +2591,7 @@
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$600000$U314X5QlWfZ81MhNtTPknD$DxLk32pim2VABSvFzo1utXcNWD12dYGyqcXhqt+LXE0=",
-        "last_login": "2023-05-30T05:28:00.883Z",
+        "last_login": "2023-06-19T06:36:02.906Z",
         "is_superuser": true,
         "username": "darryl",
         "first_name": "darryl",
@@ -1951,7 +2627,7 @@
     "pk": 5,
     "fields": {
         "password": "pbkdf2_sha256$600000$fFyS3pThIKOfIU6z9HcYYj$cVHXSoiiICcF4+NevM/f0LCV80x1vxt49Cbs23bY0M4=",
-        "last_login": "2023-05-18T13:16:00.418Z",
+        "last_login": "2023-06-19T07:13:41.177Z",
         "is_superuser": true,
         "username": "supplierone",
         "first_name": "",
@@ -2005,7 +2681,7 @@
     "pk": 9,
     "fields": {
         "password": "pbkdf2_sha256$600000$GQRLMJSjFZmSn3rlCLcDQx$RpYh8RW6OIFJXXOuh23/Av7R9bg0kyfXKRgu/jbTubY=",
-        "last_login": "2023-05-08T17:26:46.460Z",
+        "last_login": "2023-06-05T19:10:15.944Z",
         "is_superuser": false,
         "username": "stephenodinyo",
         "first_name": "Stephen",
@@ -2041,7 +2717,7 @@
     "pk": 11,
     "fields": {
         "password": "pbkdf2_sha256$600000$BgkmzbOF44XsefyFcwstTJ$5PQMnhC2BE3sQY+SW5dEGpYmI4lQ6m5lyZnbha6kY7w=",
-        "last_login": "2023-05-18T05:21:12.202Z",
+        "last_login": "2023-06-19T06:15:08.667Z",
         "is_superuser": false,
         "username": "alexmbatha",
         "first_name": "Alex",
@@ -2059,7 +2735,7 @@
     "pk": 12,
     "fields": {
         "password": "pbkdf2_sha256$600000$IqqGdqBmELe52iriKsTKXB$SMo/H2G7yDP+LDKQPUE/MKfso7CFQkBLFCajo/a8BS4=",
-        "last_login": "2023-05-08T17:38:56.005Z",
+        "last_login": "2023-06-19T06:20:49.117Z",
         "is_superuser": false,
         "username": "danielmalakwen",
         "first_name": "Daniel",
@@ -2077,7 +2753,7 @@
     "pk": 13,
     "fields": {
         "password": "pbkdf2_sha256$600000$Cd9Grbfp272rMSZXqdugQU$SprCeaC3QTXduZcFwk4M2OJ48aWw/BEhKNDpYoMmHvU=",
-        "last_login": "2023-05-08T17:41:14.564Z",
+        "last_login": "2023-06-19T06:35:23.804Z",
         "is_superuser": false,
         "username": "margretkiige",
         "first_name": "Margret",
@@ -2095,7 +2771,7 @@
     "pk": 14,
     "fields": {
         "password": "pbkdf2_sha256$600000$sbDKUKRd2jeDSvzSrqJJdE$TzTQ7/PCqCby5A790pJD2FdEksTgTATqfxsEjyDiy9k=",
-        "last_login": "2023-05-08T17:36:48.363Z",
+        "last_login": "2023-06-05T19:12:36.663Z",
         "is_superuser": false,
         "username": "leonardmatheka",
         "first_name": "Leonard",
@@ -2113,15 +2789,15 @@
     "pk": 15,
     "fields": {
         "password": "pbkdf2_sha256$600000$2LYPMvilduPFWzCtr6LwNB$hSxAQQ/SFp4OVrcHgcUUgd5FDdQi4jxM0mwOFOXW4s8=",
-        "last_login": "2023-05-19T07:03:29.247Z",
+        "last_login": "2023-06-09T11:33:21.098Z",
         "is_superuser": false,
         "username": "mollyakinyi",
         "first_name": "Molly",
         "last_name": "Akinyi",
-        "email": "mollyakinyi@gmail.com",
+        "email": "mollyakinyi38@gmail.com",
         "is_staff": false,
         "is_active": true,
-        "date_joined": "2023-05-04T10:55:54.822Z",
+        "date_joined": "2023-05-04T10:55:54Z",
         "groups": [],
         "user_permissions": []
     }
@@ -2131,7 +2807,7 @@
     "pk": 16,
     "fields": {
         "password": "pbkdf2_sha256$600000$gCx6EFZedtrkfntQMTN2ro$CM152q8nKJPgE9vJtnX+dOu7PRjWXiVV7KCGPNM3+Fc=",
-        "last_login": "2023-05-05T16:12:54.126Z",
+        "last_login": "2023-06-05T19:14:31.239Z",
         "is_superuser": false,
         "username": "wycliffeodhiambo",
         "first_name": "Wycliffe",
@@ -2250,6 +2926,14 @@
 },
 {
     "model": "sessions.session",
+    "pk": "1go5xb0v6zsln9a31he2jg8p552uc22p",
+    "fields": {
+        "session_data": ".eJxVjEsOAiEQRO_C2hBghk-7dO8ZJg3dyKiBZD4r492VZBa6q9R7VS8x4b6VaV95mWYSZ6HF6beLmB5cO6A71luTqdVtmaPsijzoKq-N-Hk53L-Dgmvpa6cHIB_YM5N1hHpk4wZjUlQ6AIWcA2pKqL4RvB9SJhttBgCFYQTx_gD1DDhX:1q63YX:LElgPBfwTRNiNdQqqE8QEnZ1mcrG150JMIcOHU-iVEk",
+        "expire_date": "2023-06-19T06:19:05.106Z"
+    }
+},
+{
+    "model": "sessions.session",
     "pk": "3yxvt5lca3lwc5ieknt303cl2sx0hb20",
     "fields": {
         "session_data": ".eJxVjEsOAiEQRO_C2hBghk-7dO8ZJg3dyKiBZD4r492VZBa6q9R7VS8x4b6VaV95mWYSZ6HF6beLmB5cO6A71luTqdVtmaPsijzoKq-N-Hk53L-Dgmvpa6cHIB_YM5N1hHpk4wZjUlQ6AIWcA2pKqL4RvB9SJhttBgCFYQTx_gD1DDhX:1pzwZa:AvD0hV8wU1EaVMV9272iKqFirriajjC6JQQTVjakOrs",
@@ -2258,10 +2942,26 @@
 },
 {
     "model": "sessions.session",
-    "pk": "7084juh0sshmsfst8h79hpabjk965ozb",
+    "pk": "aolwaft5xbyqlr81iae0feycs3d1ag2t",
     "fields": {
-        "session_data": ".eJxVjEsOAiEQRO_C2hBghk-7dO8ZJg3dyKiBZD4r492VZBa6q9R7VS8x4b6VaV95mWYSZ6HF6beLmB5cO6A71luTqdVtmaPsijzoKq-N-Hk53L-Dgmvpa6cHIB_YM5N1hHpk4wZjUlQ6AIWcA2pKqL4RvB9SJhttBgCFYQTx_gD1DDhX:1q3rto:B3q-Inw6tobtU5Ej9PsZG1f2ss1jkjYk6zLWJ3qihS4",
-        "expire_date": "2023-06-13T05:28:00.897Z"
+        "session_data": ".eJxVjDsOwyAQRO9CHaHFfJ0yvc-AlgWCkwgkY1dR7h5bcpFMOe_NvJnHbS1-62nxc2RXptnltwtIz1QPEB9Y741Tq-syB34o_KSdTy2m1-10_w4K9rKvwx5wclSk0UUV0TgjsgE1pCHb7MACIEBGkYV2Rkmy0mRLoyaRiCL7fAHnPzf9:1q8e6D:fZcVvgPyW9z2Eb9lRtUZ7_-rm7vuM6apNNetDy76jdQ",
+        "expire_date": "2023-06-26T09:44:33.267Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "c3hwhsep37s5kaw16n06podfcct2jg5l",
+    "fields": {
+        "session_data": ".eJxVjE0OwiAYBe_C2hAoAcGle89Avj-kamhS2lXj3bVJF7p9M_M2lWFdal67zHlkdVHWq9PviEBPaTvhB7T7pGlqyzyi3hV90K5vE8vrerh_BxV6_dbeRCSPjjzZQJFLlEQRrcjgkEMJ4IxzBJgYmIoxxYXEeCZOdvAR1fsDNMg5Ug:1q6rrh:6QQnLKeAgaflv1jYSjDUsw6b5GpR2wH42Ari25UjTUg",
+        "expire_date": "2023-06-21T12:02:13.290Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "e18q56bajmq1dsu3i8guw3snn3ue3mi0",
+    "fields": {
+        "session_data": ".eJxVjDsOwyAQRO9CHaHFfJ0yvc-AlgWCkwgkY1dR7h5bcpFMOe_NvJnHbS1-62nxc2RXptnltwtIz1QPEB9Y741Tq-syB34o_KSdTy2m1-10_w4K9rKvwx5wclSk0UUV0TgjsgE1pCHb7MACIEBGkYV2Rkmy0mRLoyaRiCL7fAHnPzf9:1qB953:JyKuCFtBrZmf1Ga_7XvIc7YqEpTk6yZ5plMtw-K2O_A",
+        "expire_date": "2023-07-03T07:13:41.241Z"
     }
 },
 {
@@ -2306,6 +3006,14 @@
 },
 {
     "model": "sessions.session",
+    "pk": "r26arm7lqv71gxkwdevtszvebgesjw0q",
+    "fields": {
+        "session_data": ".eJxVjEsOAiEQRO_C2hBghk-7dO8ZJg3dyKiBZD4r492VZBa6q9R7VS8x4b6VaV95mWYSZ6HF6beLmB5cO6A71luTqdVtmaPsijzoKq-N-Hk53L-Dgmvpa6cHIB_YM5N1hHpk4wZjUlQ6AIWcA2pKqL4RvB9SJhttBgCFYQTx_gD1DDhX:1q63zv:LZ0tCrgC_cIfEaWtsRLjStShP_Op-o5gF_ABd2EDX3E",
+        "expire_date": "2023-06-19T06:47:23.332Z"
+    }
+},
+{
+    "model": "sessions.session",
     "pk": "t0imhxo06p7thwe7l6bi9hfsvme8rqiw",
     "fields": {
         "session_data": ".eJxVjDsOwjAQBe_iGlnr9VeU9JzB2vU6OIASKZ8q4u7IUgpo38y8Q2Xat5b3tS55FHVVRl1-N6byqlMH8qTpMesyT9sysu6KPumq77PU9-10_w4ara3X4BiCjbam5NkToA1skgGJFAFLiVS9RXYpIhYTRDxYQBZBO7ghqs8Xvx83IA:1phP3R:lCt8iY6kVUOrV3TphWDaZYJswh0Yuf-IPzGOQj1mBTQ",
@@ -2313,16 +3021,27 @@
     }
 },
 {
+    "model": "sessions.session",
+    "pk": "uryh316rgk547r8d523pe3mp0xgck6kg",
+    "fields": {
+        "session_data": ".eJxVjEsOAiEQRO_C2hBghk-7dO8ZJg3dyKiBZD4r492VZBa6q9R7VS8x4b6VaV95mWYSZ6HF6beLmB5cO6A71luTqdVtmaPsijzoKq-N-Hk53L-Dgmvpa6cHIB_YM5N1hHpk4wZjUlQ6AIWcA2pKqL4RvB9SJhttBgCFYQTx_gD1DDhX:1q6nCo:OAU-4kWS7EjIZyXYpn27X-_3RXkYTAvfok4-4PeA0CY",
+        "expire_date": "2023-06-21T07:03:42.273Z"
+    }
+},
+{
     "model": "base.profile",
     "pk": 2,
     "fields": {
         "user": 5,
+        "userID": null,
         "name": "supplier",
         "usertype": "supplier",
         "nationalID": "12341234",
         "address": "place 1",
         "phone": "07234244144",
-        "arrears": "0"
+        "arrears": 0,
+        "previousarrears": 0,
+        "prepayment": 0
     }
 },
 {
@@ -2330,12 +3049,15 @@
     "pk": 3,
     "fields": {
         "user": 7,
+        "userID": null,
         "name": "james",
         "usertype": "consumer",
         "nationalID": "12341234",
         "address": "place 1",
         "phone": "07234244144",
-        "arrears": "0"
+        "arrears": 0,
+        "previousarrears": 0,
+        "prepayment": 0
     }
 },
 {
@@ -2343,12 +3065,15 @@
     "pk": 4,
     "fields": {
         "user": 1,
+        "userID": "000",
         "name": "darryl",
         "usertype": "consumer",
         "nationalID": "12221122",
         "address": "place 2",
         "phone": "1722123123",
-        "arrears": "0"
+        "arrears": 900,
+        "previousarrears": 800,
+        "prepayment": 0
     }
 },
 {
@@ -2356,12 +3081,15 @@
     "pk": 5,
     "fields": {
         "user": 8,
+        "userID": null,
         "name": "joe",
         "usertype": "consumer",
         "nationalID": "12344321",
         "address": "1234-00200",
         "phone": "0212232123",
-        "arrears": "0"
+        "arrears": 0,
+        "previousarrears": 0,
+        "prepayment": 0
     }
 },
 {
@@ -2369,12 +3097,15 @@
     "pk": 6,
     "fields": {
         "user": 9,
+        "userID": "002",
         "name": "stephenodinyo",
         "usertype": "consumer",
         "nationalID": "12340987",
         "address": "12343-00100",
         "phone": "0711321331",
-        "arrears": "381220"
+        "arrears": 407500,
+        "previousarrears": 392110,
+        "prepayment": 0
     }
 },
 {
@@ -2382,12 +3113,15 @@
     "pk": 7,
     "fields": {
         "user": 10,
+        "userID": null,
         "name": "test",
         "usertype": "supplier",
         "nationalID": "214325354362",
         "address": "23412424151",
         "phone": "0924225215",
-        "arrears": "0"
+        "arrears": 0,
+        "previousarrears": 0,
+        "prepayment": 0
     }
 },
 {
@@ -2395,12 +3129,15 @@
     "pk": 8,
     "fields": {
         "user": 11,
+        "userID": "003",
         "name": "alexmbatha",
         "usertype": "consumer",
         "nationalID": "21768969",
         "address": "75825, 00200",
         "phone": "0700123123`",
-        "arrears": "7500"
+        "arrears": 7400,
+        "previousarrears": 2300,
+        "prepayment": 0
     }
 },
 {
@@ -2408,12 +3145,15 @@
     "pk": 9,
     "fields": {
         "user": 12,
+        "userID": "001",
         "name": "danielmalakwen",
         "usertype": "consumer",
         "nationalID": "23516636",
         "address": "4923, Eldoret",
         "phone": "0712345345",
-        "arrears": "0"
+        "arrears": 280,
+        "previousarrears": 0,
+        "prepayment": 0
     }
 },
 {
@@ -2421,12 +3161,15 @@
     "pk": 10,
     "fields": {
         "user": 13,
+        "userID": "005",
         "name": "margretkiige",
         "usertype": "consumer",
         "nationalID": "5974223",
         "address": "310, Kitengela",
         "phone": "0733445234",
-        "arrears": "0"
+        "arrears": 0,
+        "previousarrears": 0,
+        "prepayment": 0
     }
 },
 {
@@ -2434,12 +3177,15 @@
     "pk": 11,
     "fields": {
         "user": 14,
+        "userID": "004",
         "name": "leonardmatheka",
         "usertype": "consumer",
         "nationalID": "11606251",
         "address": "102837-00101 Nairobi",
         "phone": "0711432324",
-        "arrears": "12200"
+        "arrears": 50,
+        "previousarrears": 0,
+        "prepayment": 0
     }
 },
 {
@@ -2447,12 +3193,15 @@
     "pk": 12,
     "fields": {
         "user": 15,
+        "userID": "006",
         "name": "mollyakinyi",
         "usertype": "consumer",
         "nationalID": "23522640",
-        "address": "P.O Box xxxx Nairobi",
-        "phone": "0717223123",
-        "arrears": "0"
+        "address": "Dubai",
+        "phone": "+971522672434",
+        "arrears": 3328,
+        "previousarrears": 0,
+        "prepayment": 0
     }
 },
 {
@@ -2460,12 +3209,15 @@
     "pk": 13,
     "fields": {
         "user": 16,
+        "userID": "007",
         "name": "wycliffeodhiambo",
         "usertype": "consumer",
         "nationalID": "87631234",
         "address": "9244-00100 Nairobi",
         "phone": "0744145454",
-        "arrears": "0"
+        "arrears": 936,
+        "previousarrears": 0,
+        "prepayment": 0
     }
 },
 {
@@ -2480,7 +3232,7 @@
         "meternumber": "13212",
         "connectiondate": "0",
         "created": "2023-04-26T10:44:55.479Z",
-        "updated": "2023-04-27T07:58:46.441Z"
+        "updated": "2023-06-02T09:34:17.442Z"
     }
 },
 {
@@ -2495,7 +3247,7 @@
         "meternumber": "2020 322",
         "connectiondate": "08th day of September 2021",
         "created": "2023-04-28T05:19:15.085Z",
-        "updated": "2023-05-19T07:00:02.959Z"
+        "updated": "2023-06-02T09:34:23.875Z"
     }
 },
 {
@@ -2579,13 +3331,13 @@
     "fields": {
         "user": 15,
         "supplier": 2,
-        "name": "Water(Molly)",
+        "name": "Water",
         "unit": "Liters",
         "rate": 130,
         "meternumber": "202303001",
         "connectiondate": "06th day of November 2021",
         "created": "2023-05-05T15:28:31.482Z",
-        "updated": "2023-05-19T06:52:01.544Z"
+        "updated": "2023-06-02T09:25:54.687Z"
     }
 },
 {
@@ -2593,7 +3345,7 @@
     "pk": 1,
     "fields": {
         "utility": 1,
-        "reading": 0,
+        "reading": 0.0,
         "created": "2023-04-26T10:46:05.648Z",
         "updated": "2023-04-26T10:46:05.648Z"
     }
@@ -2603,7 +3355,7 @@
     "pk": 2,
     "fields": {
         "utility": 1,
-        "reading": 20,
+        "reading": 20.0,
         "created": "2023-04-26T10:46:09.902Z",
         "updated": "2023-04-26T10:46:09.902Z"
     }
@@ -2613,7 +3365,7 @@
     "pk": 3,
     "fields": {
         "utility": 1,
-        "reading": 23,
+        "reading": 23.0,
         "created": "2023-04-26T10:57:13.518Z",
         "updated": "2023-04-26T10:57:13.518Z"
     }
@@ -2623,7 +3375,7 @@
     "pk": 4,
     "fields": {
         "utility": 1,
-        "reading": 30,
+        "reading": 30.0,
         "created": "2023-04-26T10:57:28.476Z",
         "updated": "2023-04-26T10:57:28.476Z"
     }
@@ -2633,7 +3385,7 @@
     "pk": 8,
     "fields": {
         "utility": 3,
-        "reading": 5632,
+        "reading": 5632.0,
         "created": "2023-04-28T05:20:10.912Z",
         "updated": "2023-04-28T05:20:10.912Z"
     }
@@ -2643,7 +3395,7 @@
     "pk": 9,
     "fields": {
         "utility": 3,
-        "reading": 6134,
+        "reading": 6134.0,
         "created": "2023-04-28T05:20:20.719Z",
         "updated": "2023-04-28T05:20:20.719Z"
     }
@@ -2653,7 +3405,7 @@
     "pk": 10,
     "fields": {
         "utility": 1,
-        "reading": 65,
+        "reading": 65.0,
         "created": "2023-04-28T09:07:52.345Z",
         "updated": "2023-04-28T09:07:52.345Z"
     }
@@ -2663,7 +3415,7 @@
     "pk": 11,
     "fields": {
         "utility": 1,
-        "reading": 70,
+        "reading": 70.0,
         "created": "2023-04-28T11:29:57.139Z",
         "updated": "2023-04-28T11:29:57.140Z"
     }
@@ -2673,7 +3425,7 @@
     "pk": 12,
     "fields": {
         "utility": 1,
-        "reading": 70,
+        "reading": 70.0,
         "created": "2023-04-28T11:30:00.204Z",
         "updated": "2023-04-28T11:30:00.204Z"
     }
@@ -2683,7 +3435,7 @@
     "pk": 13,
     "fields": {
         "utility": 1,
-        "reading": 988,
+        "reading": 988.0,
         "created": "2023-05-03T10:25:39.450Z",
         "updated": "2023-05-03T10:25:39.450Z"
     }
@@ -2693,7 +3445,7 @@
     "pk": 14,
     "fields": {
         "utility": 1,
-        "reading": 1321,
+        "reading": 1321.0,
         "created": "2023-05-03T10:25:51.535Z",
         "updated": "2023-05-03T10:25:51.535Z"
     }
@@ -2703,7 +3455,7 @@
     "pk": 15,
     "fields": {
         "utility": 3,
-        "reading": 988,
+        "reading": 988.0,
         "created": "2023-05-03T10:31:20.061Z",
         "updated": "2023-05-03T10:31:20.061Z"
     }
@@ -2713,7 +3465,7 @@
     "pk": 16,
     "fields": {
         "utility": 3,
-        "reading": 988,
+        "reading": 988.0,
         "created": "2023-05-03T10:31:24.080Z",
         "updated": "2023-05-03T10:31:24.080Z"
     }
@@ -2723,7 +3475,7 @@
     "pk": 17,
     "fields": {
         "utility": 3,
-        "reading": 1321,
+        "reading": 1321.0,
         "created": "2023-05-03T10:31:32.037Z",
         "updated": "2023-05-03T10:31:32.037Z"
     }
@@ -2733,7 +3485,7 @@
     "pk": 18,
     "fields": {
         "utility": 3,
-        "reading": 2119,
+        "reading": 2119.0,
         "created": "2023-05-03T10:35:58.297Z",
         "updated": "2023-05-03T10:35:58.297Z"
     }
@@ -2743,7 +3495,7 @@
     "pk": 19,
     "fields": {
         "utility": 3,
-        "reading": 2447,
+        "reading": 2447.0,
         "created": "2023-05-03T10:36:07.117Z",
         "updated": "2023-05-03T10:36:07.117Z"
     }
@@ -2753,7 +3505,7 @@
     "pk": 20,
     "fields": {
         "utility": 1,
-        "reading": 0,
+        "reading": 0.0,
         "created": "2023-05-03T11:48:15.177Z",
         "updated": "2023-05-03T11:48:15.177Z"
     }
@@ -2763,7 +3515,7 @@
     "pk": 21,
     "fields": {
         "utility": 1,
-        "reading": 10,
+        "reading": 10.0,
         "created": "2023-05-03T11:49:20.215Z",
         "updated": "2023-05-03T11:49:20.215Z"
     }
@@ -2773,7 +3525,7 @@
     "pk": 30,
     "fields": {
         "utility": 4,
-        "reading": 43,
+        "reading": 43.0,
         "created": "2023-05-04T11:49:07.242Z",
         "updated": "2023-05-04T11:49:07.242Z"
     }
@@ -2783,7 +3535,7 @@
     "pk": 31,
     "fields": {
         "utility": 4,
-        "reading": 70,
+        "reading": 70.0,
         "created": "2023-05-04T11:49:12.088Z",
         "updated": "2023-05-04T11:49:12.088Z"
     }
@@ -2793,7 +3545,7 @@
     "pk": 32,
     "fields": {
         "utility": 5,
-        "reading": 96,
+        "reading": 96.0,
         "created": "2023-05-04T11:50:33.969Z",
         "updated": "2023-05-04T11:50:33.969Z"
     }
@@ -2803,7 +3555,7 @@
     "pk": 33,
     "fields": {
         "utility": 5,
-        "reading": 105,
+        "reading": 105.0,
         "created": "2023-05-04T11:50:38.082Z",
         "updated": "2023-05-04T11:50:38.082Z"
     }
@@ -2813,7 +3565,7 @@
     "pk": 34,
     "fields": {
         "utility": 6,
-        "reading": 0,
+        "reading": 0.0,
         "created": "2023-05-04T11:52:34.847Z",
         "updated": "2023-05-04T11:52:34.847Z"
     }
@@ -2823,7 +3575,7 @@
     "pk": 35,
     "fields": {
         "utility": 6,
-        "reading": 2,
+        "reading": 2.0,
         "created": "2023-05-04T11:52:38.658Z",
         "updated": "2023-05-04T11:52:38.658Z"
     }
@@ -2833,7 +3585,7 @@
     "pk": 36,
     "fields": {
         "utility": 7,
-        "reading": 0,
+        "reading": 0.0,
         "created": "2023-05-04T11:53:46.618Z",
         "updated": "2023-05-04T11:53:46.618Z"
     }
@@ -2843,7 +3595,7 @@
     "pk": 37,
     "fields": {
         "utility": 7,
-        "reading": 0,
+        "reading": 0.0,
         "created": "2023-05-04T11:53:50.028Z",
         "updated": "2023-05-04T11:53:50.029Z"
     }
@@ -2853,7 +3605,7 @@
     "pk": 38,
     "fields": {
         "utility": 4,
-        "reading": 117,
+        "reading": 117.0,
         "created": "2023-05-04T11:55:20.550Z",
         "updated": "2023-05-04T11:55:20.550Z"
     }
@@ -2863,7 +3615,7 @@
     "pk": 39,
     "fields": {
         "utility": 4,
-        "reading": 637,
+        "reading": 637.0,
         "created": "2023-05-04T12:15:10.722Z",
         "updated": "2023-05-04T12:15:10.722Z"
     }
@@ -2873,7 +3625,7 @@
     "pk": 40,
     "fields": {
         "utility": 4,
-        "reading": 705,
+        "reading": 705.0,
         "created": "2023-05-04T12:15:18.980Z",
         "updated": "2023-05-04T12:15:18.980Z"
     }
@@ -2883,7 +3635,7 @@
     "pk": 41,
     "fields": {
         "utility": 4,
-        "reading": 780,
+        "reading": 780.0,
         "created": "2023-05-04T12:17:30.855Z",
         "updated": "2023-05-04T12:17:30.855Z"
     }
@@ -2893,7 +3645,7 @@
     "pk": 43,
     "fields": {
         "utility": 5,
-        "reading": 111,
+        "reading": 111.0,
         "created": "2023-05-04T12:21:09.570Z",
         "updated": "2023-05-04T12:21:09.571Z"
     }
@@ -2903,7 +3655,7 @@
     "pk": 44,
     "fields": {
         "utility": 6,
-        "reading": 5,
+        "reading": 5.0,
         "created": "2023-05-04T12:23:02.929Z",
         "updated": "2023-05-04T12:23:02.929Z"
     }
@@ -2913,7 +3665,7 @@
     "pk": 45,
     "fields": {
         "utility": 7,
-        "reading": 384,
+        "reading": 384.0,
         "created": "2023-05-04T12:24:14.452Z",
         "updated": "2023-05-04T12:24:14.452Z"
     }
@@ -2923,7 +3675,7 @@
     "pk": 46,
     "fields": {
         "utility": 7,
-        "reading": 429,
+        "reading": 429.0,
         "created": "2023-05-04T12:24:22.200Z",
         "updated": "2023-05-04T12:24:22.200Z"
     }
@@ -2933,7 +3685,7 @@
     "pk": 47,
     "fields": {
         "utility": 7,
-        "reading": 483,
+        "reading": 483.0,
         "created": "2023-05-04T12:25:29.907Z",
         "updated": "2023-05-04T12:25:29.907Z"
     }
@@ -2943,7 +3695,7 @@
     "pk": 48,
     "fields": {
         "utility": 3,
-        "reading": 5130,
+        "reading": 5130.0,
         "created": "2023-05-04T12:27:44.493Z",
         "updated": "2023-05-04T12:27:44.493Z"
     }
@@ -2953,7 +3705,7 @@
     "pk": 49,
     "fields": {
         "utility": 3,
-        "reading": 5632,
+        "reading": 5632.0,
         "created": "2023-05-04T12:27:52.165Z",
         "updated": "2023-05-04T12:27:52.165Z"
     }
@@ -2963,7 +3715,7 @@
     "pk": 50,
     "fields": {
         "utility": 3,
-        "reading": 6134,
+        "reading": 6134.0,
         "created": "2023-05-04T12:28:42.075Z",
         "updated": "2023-05-04T12:28:42.075Z"
     }
@@ -2973,7 +3725,7 @@
     "pk": 51,
     "fields": {
         "utility": 3,
-        "reading": 6255,
+        "reading": 6255.0,
         "created": "2023-05-08T17:18:43.117Z",
         "updated": "2023-05-08T17:18:43.117Z"
     }
@@ -2983,7 +3735,7 @@
     "pk": 52,
     "fields": {
         "utility": 4,
-        "reading": 848,
+        "reading": 848.0,
         "created": "2023-05-08T17:19:48.027Z",
         "updated": "2023-05-08T17:19:48.027Z"
     }
@@ -2993,7 +3745,7 @@
     "pk": 53,
     "fields": {
         "utility": 7,
-        "reading": 483,
+        "reading": 483.0,
         "created": "2023-05-08T17:24:56.070Z",
         "updated": "2023-05-08T17:24:56.070Z"
     }
@@ -3003,7 +3755,7 @@
     "pk": 54,
     "fields": {
         "utility": 5,
-        "reading": 112,
+        "reading": 112.0,
         "created": "2023-05-08T17:39:04.661Z",
         "updated": "2023-05-08T17:39:04.661Z"
     }
@@ -3013,7 +3765,7 @@
     "pk": 55,
     "fields": {
         "utility": 6,
-        "reading": 8,
+        "reading": 8.0,
         "created": "2023-05-08T17:41:22.934Z",
         "updated": "2023-05-08T17:41:22.934Z"
     }
@@ -3023,7 +3775,7 @@
     "pk": 56,
     "fields": {
         "utility": 1,
-        "reading": 998,
+        "reading": 998.0,
         "created": "2023-05-18T05:57:50.057Z",
         "updated": "2023-05-18T05:57:50.057Z"
     }
@@ -3033,7 +3785,7 @@
     "pk": 57,
     "fields": {
         "utility": 10,
-        "reading": 0,
+        "reading": 0.0,
         "created": "2023-05-19T05:27:44.427Z",
         "updated": "2023-05-19T05:27:44.427Z"
     }
@@ -3043,9 +3795,329 @@
     "pk": 58,
     "fields": {
         "utility": 10,
-        "reading": 0,
+        "reading": 0.0,
         "created": "2023-05-19T05:27:52.776Z",
         "updated": "2023-05-19T05:27:52.776Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 73,
+    "fields": {
+        "utility": 9,
+        "reading": 0.0,
+        "created": "2023-06-02T11:37:07.732Z",
+        "updated": "2023-06-02T11:37:07.732Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 75,
+    "fields": {
+        "utility": 1,
+        "reading": 123456.0,
+        "created": "2023-06-05T06:46:19.893Z",
+        "updated": "2023-06-05T06:46:19.893Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 76,
+    "fields": {
+        "utility": 1,
+        "reading": 1123.0,
+        "created": "2023-06-05T06:46:42.540Z",
+        "updated": "2023-06-05T06:46:42.540Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 82,
+    "fields": {
+        "utility": 1,
+        "reading": 1124.0,
+        "created": "2023-06-12T11:33:54.925Z",
+        "updated": "2023-06-12T11:33:54.925Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 83,
+    "fields": {
+        "utility": 1,
+        "reading": 1126.0,
+        "created": "2023-06-12T11:34:13.062Z",
+        "updated": "2023-06-12T11:34:13.062Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 84,
+    "fields": {
+        "utility": 1,
+        "reading": 1130.0,
+        "created": "2023-06-12T13:08:21.071Z",
+        "updated": "2023-06-12T13:08:21.071Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 85,
+    "fields": {
+        "utility": 4,
+        "reading": 899.0,
+        "created": "2023-06-12T13:18:18.853Z",
+        "updated": "2023-06-12T13:18:18.853Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 86,
+    "fields": {
+        "utility": 5,
+        "reading": 114.8,
+        "created": "2023-06-12T13:25:30.341Z",
+        "updated": "2023-06-12T13:25:30.341Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 87,
+    "fields": {
+        "utility": 6,
+        "reading": 13.6,
+        "created": "2023-06-12T13:30:22.774Z",
+        "updated": "2023-06-12T13:30:22.774Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 88,
+    "fields": {
+        "utility": 7,
+        "reading": 483.5,
+        "created": "2023-06-12T13:33:13.997Z",
+        "updated": "2023-06-12T13:33:13.997Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 89,
+    "fields": {
+        "utility": 10,
+        "reading": 25.6,
+        "created": "2023-06-12T13:34:51.495Z",
+        "updated": "2023-06-12T13:34:51.495Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 90,
+    "fields": {
+        "utility": 3,
+        "reading": 6426.0,
+        "created": "2023-06-12T13:36:26.856Z",
+        "updated": "2023-06-12T13:36:26.856Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 91,
+    "fields": {
+        "utility": 9,
+        "reading": 7.2,
+        "created": "2023-06-12T13:40:26.202Z",
+        "updated": "2023-06-12T13:40:26.202Z"
+    }
+},
+{
+    "model": "base.reading",
+    "pk": 92,
+    "fields": {
+        "utility": 1,
+        "reading": 1131.0,
+        "created": "2023-06-19T07:43:42.141Z",
+        "updated": "2023-06-19T07:43:42.141Z"
+    }
+},
+{
+    "model": "base.invoice",
+    "pk": 1,
+    "fields": {
+        "user": 1,
+        "invoiceNo": null,
+        "billingmonth": "June",
+        "year": "2023",
+        "previousreading": 1126.0,
+        "currentreading": 1130.0,
+        "consumed": 4.0,
+        "rate": "100",
+        "consumptionamount": 400.0,
+        "arrears": 400,
+        "prepayment": 0,
+        "amountpayable": 800,
+        "created": "2023-06-12T13:08:21.051Z",
+        "updated": "2023-06-12T13:08:21.051Z"
+    }
+},
+{
+    "model": "base.invoice",
+    "pk": 2,
+    "fields": {
+        "user": 11,
+        "invoiceNo": null,
+        "billingmonth": "June",
+        "year": "2023",
+        "previousreading": 848.0,
+        "currentreading": 899.0,
+        "consumed": 51.0,
+        "rate": "100",
+        "consumptionamount": 5100.0,
+        "arrears": 2300,
+        "prepayment": 0,
+        "amountpayable": 7400,
+        "created": "2023-06-12T13:18:18.850Z",
+        "updated": "2023-06-12T13:18:18.850Z"
+    }
+},
+{
+    "model": "base.invoice",
+    "pk": 3,
+    "fields": {
+        "user": 12,
+        "invoiceNo": null,
+        "billingmonth": "June",
+        "year": "2023",
+        "previousreading": 112.0,
+        "currentreading": 114.8,
+        "consumed": 2.799999999999997,
+        "rate": "100",
+        "consumptionamount": 280.0,
+        "arrears": 0,
+        "prepayment": 0,
+        "amountpayable": 280,
+        "created": "2023-06-12T13:25:30.337Z",
+        "updated": "2023-06-12T13:25:30.337Z"
+    }
+},
+{
+    "model": "base.invoice",
+    "pk": 4,
+    "fields": {
+        "user": 13,
+        "invoiceNo": null,
+        "billingmonth": "June",
+        "year": "2023",
+        "previousreading": 8.0,
+        "currentreading": 13.6,
+        "consumed": 5.6,
+        "rate": "100",
+        "consumptionamount": 560.0,
+        "arrears": 0,
+        "prepayment": 0,
+        "amountpayable": 560,
+        "created": "2023-06-12T13:30:22.770Z",
+        "updated": "2023-06-12T13:30:22.770Z"
+    }
+},
+{
+    "model": "base.invoice",
+    "pk": 5,
+    "fields": {
+        "user": 14,
+        "invoiceNo": null,
+        "billingmonth": "June",
+        "year": "2023",
+        "previousreading": 483.0,
+        "currentreading": 483.5,
+        "consumed": 0.5,
+        "rate": "100",
+        "consumptionamount": 50.0,
+        "arrears": 0,
+        "prepayment": 0,
+        "amountpayable": 50,
+        "created": "2023-06-12T13:33:13.993Z",
+        "updated": "2023-06-12T13:33:13.993Z"
+    }
+},
+{
+    "model": "base.invoice",
+    "pk": 6,
+    "fields": {
+        "user": 15,
+        "invoiceNo": null,
+        "billingmonth": "June",
+        "year": "2023",
+        "previousreading": 0.0,
+        "currentreading": 25.6,
+        "consumed": 25.6,
+        "rate": "130",
+        "consumptionamount": 3328.0,
+        "arrears": 0,
+        "prepayment": 0,
+        "amountpayable": 3328,
+        "created": "2023-06-12T13:34:51.491Z",
+        "updated": "2023-06-12T13:34:51.491Z"
+    }
+},
+{
+    "model": "base.invoice",
+    "pk": 7,
+    "fields": {
+        "user": 9,
+        "invoiceNo": null,
+        "billingmonth": "June",
+        "year": "2023",
+        "previousreading": 6255.0,
+        "currentreading": 6426.0,
+        "consumed": 171.0,
+        "rate": "90",
+        "consumptionamount": 15390.0,
+        "arrears": 392110,
+        "prepayment": 0,
+        "amountpayable": 407500,
+        "created": "2023-06-12T13:36:26.852Z",
+        "updated": "2023-06-12T13:36:26.852Z"
+    }
+},
+{
+    "model": "base.invoice",
+    "pk": 8,
+    "fields": {
+        "user": 16,
+        "invoiceNo": null,
+        "billingmonth": "June",
+        "year": "2023",
+        "previousreading": 0.0,
+        "currentreading": 7.2,
+        "consumed": 7.2,
+        "rate": "130",
+        "consumptionamount": 936.0,
+        "arrears": 0,
+        "prepayment": 0,
+        "amountpayable": 936,
+        "created": "2023-06-12T13:40:26.200Z",
+        "updated": "2023-06-12T13:40:26.200Z"
+    }
+},
+{
+    "model": "base.invoice",
+    "pk": 9,
+    "fields": {
+        "user": 1,
+        "invoiceNo": null,
+        "billingmonth": "June",
+        "year": "2023",
+        "previousreading": 1130.0,
+        "currentreading": 1131.0,
+        "consumed": 1.0,
+        "rate": "100",
+        "consumptionamount": 100.0,
+        "arrears": 800,
+        "prepayment": 0,
+        "amountpayable": 900,
+        "created": "2023-06-19T07:43:42.084Z",
+        "updated": "2023-06-19T07:43:42.084Z"
     }
 },
 {
@@ -3061,10 +4133,10 @@
 },
 {
     "model": "django_daraja.accesstoken",
-    "pk": 3,
+    "pk": 5,
     "fields": {
-        "token": "PY3ZGy1Atw9j3khZPBWQAZe5pAgD",
-        "created_at": "2023-05-31T05:17:44.830Z"
+        "token": "GfSEA1mAGPibanIMGDBYNj8ZxFJu",
+        "created_at": "2023-06-05T06:47:33.491Z"
     }
 }
 ]

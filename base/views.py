@@ -1,11 +1,12 @@
 from django.shortcuts import render, redirect
-from .models import Utility, Reading, Profile, Contract
+from .models import Utility, Reading, Profile, Contract, Invoice
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 import plotly.express as px
 from django.http import HttpResponse
+from django_daraja.mpesa.core import MpesaClient
 import datetime
 import re
 import subprocess
@@ -48,7 +49,6 @@ def signup(request):
         phone = request.POST.get("phone")
         address = request.POST.get("address")
         nationalID = request.POST.get("nationalID")
-        usertype = request.POST.get("usertype")
         firstname = request.POST.get("firstname")
         lastname = request.POST.get("lastname")
 
@@ -57,13 +57,15 @@ def signup(request):
             user.first_name = firstname
             user.last_name = lastname
             user.save()
-            profile = Profile(user = user, name = user.username, usertype = usertype, nationalID = nationalID, address = address, phone = phone)
+            profile = Profile(user = user, name = user.username, usertype = "consumer", nationalID = nationalID, address = address, phone = phone)
             profile.save()
+            utility = Utility(user = user, name = "Water", unit = "Liters")
+            utility.save()
+            reading = Reading(utility = utility, reading = 0)
+            reading.save()
             login(request, user)
-            if usertype == "supplier":
-                return redirect("paymentDetails")
-            else:
-                return redirect("dashboard")
+            return redirect("dashboard")
+                
         else:
             messages.error(request, "passwords did not match")
     return render(request, 'signup.html')
@@ -82,6 +84,7 @@ def dashboard(request):
         if request.user.profile.usertype == "supplier":
             utility = Utility.objects.all()
             for x in utility:
+                print(x.reading_set.latest("created"))
                 ctx.append(x)
         else:
             utility = Utility.objects.get(user = request.user)
@@ -109,10 +112,57 @@ def dashboard(request):
             line = fig.to_html()
 
     if request.method == "POST":
-        reading = request.POST.get("reading")
+
+        day = datetime.datetime.now()
+        reading = float(request.POST.get("reading"))
         utilId = request.POST.get("utility")
         util = Utility.objects.get(id = utilId)
-        print(util.user)
+        latest_reading = Reading.objects.filter(utility = util).latest("created")
+        profile = Profile.objects.get(user = util.user)
+        amount = round(((reading - latest_reading.reading) * util.rate), 2)
+
+        if profile.prepayment >= amount:
+            newprepayment = profile.prepayment - amount
+            profile.prepayment = newprepayment
+            profile.save()
+
+            invoice = Invoice(
+                user = util.user,
+                billingmonth = day.strftime("%B"),
+                year = day.strftime("%Y"), 
+                previousreading = latest_reading.reading,
+                currentreading = reading,
+                consumed = round((reading - latest_reading.reading), 2),
+                rate = util.rate,
+                consumptionamount = amount,
+                arrears = profile.arrears,
+                prepayment = profile.prepayment,
+                amountpayable = profile.arrears
+                )
+            invoice.save()
+        else:
+            prevarrears = profile.arrears
+            newarrears = profile.arrears + amount - profile.prepayment
+            profile.previousarrears = prevarrears
+            profile.arrears = newarrears
+            profile.prepayment = 0
+            profile.save()
+
+            invoice = Invoice(
+                user = util.user,
+                billingmonth = day.strftime("%B"),
+                year = day.strftime("%Y"),
+                previousreading = latest_reading.reading,
+                currentreading = reading,
+                consumed = round((reading - latest_reading.reading), 2),
+                rate = util.rate,
+                consumptionamount = amount,
+                arrears = prevarrears,
+                prepayment = profile.prepayment,
+                amountpayable = newarrears
+                )
+            invoice.save()
+
         r = Reading(utility = util, reading = reading)
         r.save()
     
@@ -147,54 +197,39 @@ def UtilityDetails(request, pk):
     return render(request, 'utilityDetails.html', ctx)
 
 def invoice(request):
-    data = []
-    labels = []
-    profile = Profile.objects.get(name = request.user)
-    arrears = int(profile.arrears)
-    prepayment = profile.prepayment
-    utility = Utility.objects.get(user = request.user)
-    readings = Reading.objects.filter(utility = utility)
-    for x in readings:
-        data.append(x.reading)
-        labels.append(x.created)
-    consumed = data[-1] - data[-2]
-    consumedAmount = round((consumed * utility.rate), 2)
-    day = datetime.datetime.now()
-    amountpayable = consumedAmount + arrears - prepayment
+    try:
+        invoice = Invoice.objects.filter(user = request.user).latest("created")
+        print(invoice.created)
+    except:
+        return redirect("dashboard")
 
     ctx = {
-        "utility": utility,
-        "current": data[-1],
-        "previous": data[-2],
-        "consumed": round(consumed, 2),
-        "consumedAmount": "{:,}".format(consumedAmount),
-        "amountpayable": "{:,}".format(amountpayable),
-        "month": day.strftime("%B"),
-        "day": day.strftime("%d"),
-        "year": day.strftime("%Y"),
-        "profile": profile,
-        "arrears": "{:,}".format(arrears),
-        "prepayment": "{:,}".format(prepayment)
+        "invoice": invoice,
+        "previousreading": "{:,}".format(invoice.previousreading),
+        "currentreading": "{:,}".format(invoice.currentreading),
+        "consumed": "{:,}".format(round(invoice.consumed, 2)),
+        "consumptionamount": "{:,}".format(invoice.consumptionamount),
+        "arrears": "{:,}".format(invoice.arrears),
+        "prepayment": "{:,}".format(invoice.prepayment),
+        "amountpayable": "{:,}".format(invoice.amountpayable),
     }
     return render(request, 'invoice.html', ctx)
 
 def contract(request):
     profile = request.user.profile
-    utility = Utility.objects.get(user = request.user)
     day = datetime.datetime.now()
     ctx = {
         "profile": profile,
         "day": day.strftime("%d"),
         "month": day.strftime("%B"),
         "year": day.strftime("%Y"),
-        "utility": utility,
     }
 
     if request.method == "POST":
         supplierSignature = request.POST.get("suppliersignInput")
         consumerSignature = request.POST.get("consumersignInput")
 
-        contract = Contract(user = utility.user.profile, provider = utility.supplier, consumersignature = consumerSignature, suppliersignature = supplierSignature)
+        contract = Contract(user = request.user, consumersignature = consumerSignature, suppliersignature = supplierSignature)
         contract.save()
 
         # try:
@@ -233,45 +268,37 @@ def backupPage(request):
 
 def payment(request):
     
-    encoded_credentials = base64.b64encode(f"{settings.MPESA_CONSUMER_KEY}:{settings.MPESA_CONSUMER_SECRET}".encode('utf-8')).decode('utf-8')
-    get_token = requests.get("https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials", headers={"Authorization": f"Basic {encoded_credentials}"})
-    print(get_token.status_code)
-    token = get_token.json()['access_token']
-    
-    url = "https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest"
-    headers = {
-        "Authorization" : f"Bearer {token}",
-        "Content-Type" : "application/json"
-    }
+    cl = MpesaClient()
+    token = cl.access_token()
+    phone = "0708323035"
+    amount = 1
+    account_reference = "test"
+    transaction_desc = "billing payment"
+    callback_url = f"https://ecf2-41-215-18-254.ngrok-free.app/paymentcallback/{request.user.username}"
 
-    def generatepassword(passkey, shortcode):
-        timestamp = datetime.datetime.now().strftime('%Y%m%d%H%M%S')
-        hashdata = shortcode + passkey + timestamp
-        encoded_password = base64.b64encode(hashdata.encode()).decode('utf-8')
-        return encoded_password
-
-    payload = {
-        "BusinessShortCode" : settings.MPESA_SHORTCODE,
-        "Password" : generatepassword(settings.MPESA_PASSKEY, settings.MPESA_SHORTCODE),
-        "Timestamp" : datetime.datetime.now().strftime('%Y%m%d%H%M%S'),
-        "TransactionType": "CustomerPayBillOnline",
-        "Amount" : "1",
-        "PartyA" : "254708323035",
-        "PartyB" : settings.MPESA_SHORTCODE,
-        "PhoneNumber" : "254708323035",
-        "CallBackURL" : "https://20d8-41-215-18-254.ngrok-free.app/paymentcallback/",
-        "AccountReference" : settings.MPESA_INITIATOR_USERNAME,
-        "TransactionDesc" : "water payment"
-    }
-
-    response = requests.post(url, json=payload, headers=headers)
-    response_json = response.json()
-    print(response_json)
-    
-    return HttpResponse(response_json)
+    response = cl.stk_push(phone, amount, account_reference, transaction_desc, callback_url)
+    print(response.customer_message)
+    print(response.response_code)
+    print(response.content)
+    print(response.json())
+    return HttpResponse(response)
 
 @csrf_exempt
-def paymentcallback(request):
+def paymentcallback(request, pk):
+    profile = Profile.objects.get(name = pk)
+    print(profile.arrears)
+
     if request.method == "POST":
-        print(request.body)
+        res = request.body.decode("utf-8")
+        res_obj = eval(res)
+        callbackdata = res_obj['Body']['stkCallback']
+        print(callbackdata)
+        if callbackdata['ResultCode'] == 0:
+            print("successfull payment")
+            amount = callbackdata['CallbackMetadata']['Item'][0]['Value']
+            receiptnumber = callbackdata['CallbackMetadata']['Item'][1]['Value']
+            print("amount", amount)
+            print("receipt number", receiptnumber)
+        else:
+            print("error with payment process")
     return HttpResponse(status=200)

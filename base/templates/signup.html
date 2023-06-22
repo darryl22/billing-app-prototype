@@ -38,7 +38,7 @@
         <div class="d-md-flex gap-3">
             <div class="flex-grow-1">
                 <label for="phone" class="form-label">Phone number</label>
-                <input type="text" name="phone" class="form-control mb-3" required>
+                <input type="text" name="phone" class="form-control mb-3" minlength="10" required>
             </div>
     
             <div class="flex-grow-1">
@@ -52,7 +52,7 @@
                 <label for="password" class="form-label">Password</label>
                 <input type="password" name="password" class="form-control mb-4" required>
             </div>
-    
+
             <div class="flex-grow-1">
                 <label for="confirm-password" class="form-label">Confirm password</label>
                 <input type="password" name="confirm-password" class="form-control mb-4" required>
@@ -62,13 +62,7 @@
         <label for="address" class="form-label">Address</label>
         <input type="text" name="address" class="form-control mb-4" required>
     
-        <label for="usertype" class="form-label">Select account type</label>
-        <select name="usertype" class="form-control mb-4">
-            <option value="consumer">consumer</option>
-            <option value="supplier">supplier</option>
-        </select>
-    
-        <input type="submit" value="Signup" class="btn btn-primary col-4">
+        <input type="submit" value="Signup" class="btn btn-primary col-4 mb-4">
     </form>
 </div>
 

@@ -31,6 +31,17 @@
     cursor: url('../images/pen-tool.png'), pointer;
 }
 
+.scrollhide{
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: 1s;
+}
+
+.active{
+    opacity: 1;
+    transform: translateY(0);
+}
+
 @media screen and (max-width: 375px) {
     .signature-canvas{
         width: 100%;

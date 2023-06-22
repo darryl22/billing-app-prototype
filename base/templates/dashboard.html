@@ -17,8 +17,9 @@
 <h1 class="ms-3">Dashboard</h1>
 
 {% if request.user.profile.usertype == "consumer" %}
-<a href="{% url 'contract' %}" class="btn btn-primary ms-3">Sign Contract</a>
+    <a href="{% url 'contract' %}" class="btn btn-primary ms-3">New Contract</a>
 {% endif %}
+
 <div>
     {% for x in data %}
     <div class="bg-primary text-light p-3 m-3 rounded-3 utilitycontainer">
@@ -27,6 +28,7 @@
         <p>connected since: {{x.created}}</p>
         <p>provider: {{x.supplier}}</p>
         {% if request.user.profile.usertype == "supplier" %}
+        <p>latest: {{x.reading_set.latest.reading}}</p>
         <button class="btn btn-dark mb-3" data-bs-toggle="modal" data-bs-target="#{{x.user.username}}">update reading</button>
         {% else %}
         <a href="{% url 'utilityDetails' x.name %}" class="btn btn-dark mb-3">Billing History</a>
@@ -37,7 +39,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2 class="modal-title">Update {{x.name}}</h2>
+                    <h4 class="modal-title">Update {{x.name}} for {{x.user}}</h4>
                     <button class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
@@ -45,7 +47,7 @@
                         {% csrf_token %}
                         <label class="form-label">Reading</label>
                         <input type="hidden" name="utility" value="{{x.id}}"/>
-                        <input type="number" class="form-control mb-3" name="reading"/>
+                        <input type="number" step="any" class="form-control mb-3" name="reading"/>
                         <button class="btn btn-primary">Submit</button>
                     </form>
                 </div>
@@ -61,5 +63,4 @@
     {{line | safe}}
 </div>
 {% endif %}
-
 {% endblock %}
