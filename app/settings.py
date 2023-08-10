@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from pathlib import Path
 from decouple import config
 import locale
+import os
 
 locale.getdefaultlocale(lambda *args: ['en_US', 'utf-8'])
 
@@ -30,11 +31,21 @@ SECRET_KEY = config('SECRET_KEY')
 # CSRF_COOKIE_SECURE = True
 # SECURE_HSTS_SECONDS = 31536000
 
+EMAIL_HOST = 'smtp-mail.outlook.com'
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+TWILIO_ACCOUNT_SID = config('TWILIO_ACCOUNT_SID')
+TWILIO_AUTH_TOKEN = config('TWILIO_AUTH_TOKEN')
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ecf2-41-215-18-254.ngrok-free.app', '127.0.0.1']
-CSRF_TRUSTED_ORIGINS = ['https://ecf2-41-215-18-254.ngrok-free.app']
+ALLOWED_HOSTS = ['d68c-41-215-18-254.ngrok-free.app', '127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://d68c-41-215-18-254.ngrok-free.app']
 
 
 # Application definition
@@ -135,6 +146,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
@@ -145,11 +158,5 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MPESA_ENVIRONMENT = config('MPESA_ENVIRONMENT')
-MPESA_CONSUMER_KEY = config('MPESA_CONSUMER_KEY')
-MPESA_CONSUMER_SECRET = config('MPESA_CONSUMER_SECRET')
-MPESA_SHORTCODE = config('MPESA_SHORTCODE')
-MPESA_SHORTCODE_TYPE = config('MPESA_SHORTCODE_TYPE')
-MPESA_PASSKEY = config('MPESA_PASSKEY')
-MPESA_INITIATOR_USERNAME = config('MPESA_INITIATOR_USERNAME')
-MPESA_INITIATOR_SECURITY_CREDENTIAL = config('MPESA_INITIATOR_SECURITY_CREDENTIAL')
+PESAPAL_CONSUMER_KEY = config("PESAPAL_CONSUMER_KEY")
+PESAPAL_CONSUMER_SECRET = config("PESAPAL_CONSUMER_SECRET")

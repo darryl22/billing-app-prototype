@@ -1,0 +1,11 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+    <div style="width: 70%; margin: auto; margin-top: 3em;" class="border rounded-3 d-flex align-items-center justify-content-center p-3 flex-column">
+        <h1 class="mb-4">Your payment was successful</h1>
+        <p class="fs-4">new arrears : {{request.user.profile.arrears}}</p>
+        <p class="fs-4">prepayment : {{request.user.profile.prepayment}}</p>
+    </div>
+
+{% endblock %}

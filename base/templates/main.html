@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="..\..\static\plugin\bootstrap-5.2.3-dist\bootstrap-5.2.3-dist\css\bootstrap.min.css">
 </head>
 <body class="bg-light">
-    <div class="navbar navbar-expand navbar-dark bg-dark notprintable">
+    <div class="navbar navbar-expand navbar-dark bg-dark notprintable" style="position: sticky; top: 0;">
         <div class="container">
             <div class="dropdown d-block d-md-none me-4">
                 <button class="btn btn-primary" type="button" id="dropDownButton" data-bs-toggle="dropdown" aria-expanded="false">menu</button>
@@ -39,6 +39,13 @@
             </div>
         </div>
     </div>
+    {% for message in messages %}
+    <div class="alert m-3 alert-danger alert-dismissible fade show" role="alert">
+        <strong>{{message.tags}}</strong> {{message}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+    
     {% block content %}
 
     {% endblock %}

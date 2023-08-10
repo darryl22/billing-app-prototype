@@ -21,7 +21,7 @@
     <p>This agreement is made this day {{day}} {{month}} {{year}} between;</p>
     <ol type="A">
         <li>Bico Noriss Hamalah of P.O Box 5824-00200, Nairobi (hereinafter referred to as the Supplier.) and;</li>
-        <li>{{request.user.first_name}} {{request.user.last_name}}, National Identity Number – {{profile.nationalID}} of P.O Box {{profile.address}}, (hereinafter referred to as the Consumer).</li>
+        <li>{{profile.user.first_name}} {{profile.user.last_name}}, National Identity Number – {{profile.nationalID}} of P.O Box {{profile.address}}, (hereinafter referred to as the Consumer).</li>
     </ol>
 
     <h4>Background</h4>
@@ -47,7 +47,7 @@
             <h4>Water Charges</h4>
             <ol type="i">
                 <li>The cost of water will be KSH {{utility.rate}}.00 per Cubic Meter (M3). 1M3 =1,000 liters.</li>
-                <li>The Consumer will not pay a security deposit (the Deposit).</li>
+                <li>The Consumer will{% if not contract.refundabledeposit %} not {% endif %} pay a security deposit {% if contract.refundabledeposit %}({{contract.deposit}} ksh){% endif %} {% if contract.refundabledeposit %}that is refundable upon termination{% endif %}.</li>
                 <li>The Consumer shall not utilize the deposit payment for billing for any period.</li>
                 <li>The billing will generally be made on monthly basis or on such other convenient periods depending on consumption.</li>
                 <li>It is mutually agreed that any billed charges will be paid on or before the 5th day of the month. Proof of payment must be supported with a receipt.</li>
@@ -125,8 +125,44 @@
 
     <p>SIGNED by the supplier</p>
     <p class="fw-bold">Bico Noriss Hamalah</p>
+    {% if contract.status == "new" and request.user.profile.usertype == "supplier" %}
     <button class="btn btn-primary notprintable" data-bs-toggle="modal" data-bs-target="#supplierModal">sign</button><br>
     <img src="" alt="" id="supplierSignatureImage">
+
+    <form action="" method="post" class="notprintable w-25">
+        {% csrf_token %}
+        <input type="hidden" name="action" value="supplier">
+        <input type="hidden" name="suppliersignInput" style="display: none;" id="suppliersignInput">
+        <input type="number" name="rate" class="form-control mb-2" placeholder="utility rate" required>
+        <input type="text" name="meternumber" class="form-control" placeholder="meter number" required>
+        <input type="submit" value="Confirm supplier signature" class="btn btn-dark my-5">
+    </form>
+
+    {% else %}
+    <img src="{{contract.suppliersignature}}" alt="supplier signature">
+    {% endif %}
+
+    <p class="mt-5">SIGNED by the consumer</p>
+    <p class="fw-bold">{{request.user.first_name}} {{request.user.last_name}}</p>
+    {% if contract.status == "signed by supplier" and request.user.profile.usertype == "consumer" %}
+    <button class="btn btn-primary notprintable" data-bs-toggle="modal" data-bs-target="#consumerModal">sign</button><br>
+    <img src="" alt="" id="consumerSignatureImage">
+
+    <form action="" method="post" class="notprintable">
+        {% csrf_token %}
+        <input type="hidden" name="action" value="consumer">
+        <input type="hidden" name="consumersignInput" style="display: none;" id="consumersignInput">
+        <input type="submit" value="Confirm consumer signature" class="btn btn-dark my-5">
+    </form>
+
+    {% elif contract.status == "complete"%}
+    <img src="{{contract.consumersignature}}" alt="consumer signature">
+    {% endif %}
+
+    <p class="fw-bold">Drawn by:</p>
+    <p>Bico Noriss Hamalah, <br>P.O. Box 5824-00200,</p>
+    <p class="fw-bold">Nairobi.</p>
+    <button class="btn btn-dark notprintable" onclick="window.print()">Save copy</button>
 
     <div class="modal fade" id="supplierModal">
         <div class="modal-dialog">
@@ -144,11 +180,6 @@
         </div>
     </div>
 
-    <p class="mt-5">SIGNED by the consumer</p>
-    <p class="fw-bold">{{request.user.first_name}} {{request.user.last_name}}</p>
-    <button class="btn btn-primary notprintable" data-bs-toggle="modal" data-bs-target="#consumerModal">sign</button><br>
-    <img src="" alt="" id="consumerSignatureImage">
-
     <div class="modal fade" id="consumerModal">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -164,17 +195,7 @@
             </div>
         </div>
     </div>
-
-    <p class="fw-bold">Drawn by:</p>
-    <p>Bico Noriss Hamalah, <br>P.O. Box 5824-00200,</p>
-    <p class="fw-bold">Nairobi.</p>
-    <button class="btn btn-dark notprintable" onclick="window.print()">Save copy</button>
-    <form action="" method="post" class="notprintable" id="submitSignatures">
-        {% csrf_token %}
-        <input type="hidden" name="suppliersignInput" style="display: none;" id="suppliersignInput">
-        <input type="hidden" name="consumersignInput" style="display: none;" id="consumersignInput">
-        <input type="submit" value="Confirm" class="btn btn-dark my-5">
-    </form>
+    
 </div>
 
 <script>
@@ -237,7 +258,6 @@
     const supplierPointerDown = (event) => {
         writingMode = true
         supplierctx.beginPath()
-
         const [positionX, positionY] = gettargetPosition(event)
         supplierctx.moveTo(positionX, positionY)
     }
